@@ -13,16 +13,16 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ksdt_wi23' ) ); ?>">
+			<a href="<?php echo esc_url( __( 'https://ksdt.ucsd.edu', 'ksdt_wi23' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'ksdt_wi23' ), 'WordPress' );
+				printf( esc_html__( 'Unproudly powered by %s', 'ksdt_wi23' ), 'WordPress' );
 				?>
 			</a>
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'ksdt_wi23' ), 'ksdt_wi23', '<a href="http://underscores.me/">Underscores.me</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'ksdt_wi23' ), 'ksdt_wi23', '<a href="https://ksdt.ucsd.edu">Underscores.me</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

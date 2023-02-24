@@ -7,9 +7,9 @@
  * @package KSDT_WI23
  */
 
-if ( ! defined( '_S_VERSION' ) ) {
+if ( ! defined( 'ksdt_wi23_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( 'ksdt_wi23_VERSION', '1.0.0' );
 }
 
 /**
@@ -138,10 +138,10 @@ add_action( 'widgets_init', 'ksdt_wi23_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ksdt_wi23_scripts() {
-	wp_enqueue_style( 'ksdt_wi23-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'ksdt_wi23-style', get_stylesheet_uri(), array(), ksdt_wi23_VERSION );
 	wp_style_add_data( 'ksdt_wi23-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'ksdt_wi23-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'ksdt_wi23-navigation', get_template_directory_uri() . '/js/navigation.js', array(), ksdt_wi23_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

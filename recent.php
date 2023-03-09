@@ -12,7 +12,3 @@ $result = $client->search('spins', ['count' => 3]);
         <em>“<?= htmlspecialchars($spin['song'], ENT_NOQUOTES) ?>”</em>
         from <?= htmlspecialchars($spin['release'], ENT_NOQUOTES) ?></p>
 <?php endforeach ?>
-
-<p>
-    <small>(Updated <?= gmdate('H:i:s') ?> UTC)</small>
-</p>

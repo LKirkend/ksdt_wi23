@@ -21,3 +21,9 @@ node_modules/
 *.log
 *.sql
 *.sqlite
+
+#ignore api key
+api-key.txt
+
+#ignore cache
+cache/

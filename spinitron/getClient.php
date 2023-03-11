@@ -14,3 +14,5 @@ if (!isset($client)) {
         __DIR__ . '/../cache'
     );
 }
+
+//Note: caching issue still not fixed; load times are long bc of this

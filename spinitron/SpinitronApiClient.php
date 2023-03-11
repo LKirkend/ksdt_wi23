@@ -49,6 +49,10 @@ class SpinitronApiClient
         return json_decode($this->queryCached($endpoint, $url), true);
     }
 
+    public function getPersonaFromShow($show){
+        $personaId = explode('/', $show['_links']['personas'][0]['href'])[5];
+        return $this->search('personas/' . $personaId,'');
+    }
     /**
      * Request a resource from an endpoint using its ID
      *

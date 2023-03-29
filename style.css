@@ -77,9 +77,14 @@ html {
 /**
  * Remove the margin in all browsers.
  */
-body {
-	margin: 0;
-}
+ body{
+	background-image:url('<?php echo get_template_directory_uri();?>/img/gif/background.gif');
+	background-repeat:no-repeat;
+	background-size: cover;
+	height: 100vh;
+	padding:0;
+	margin:0;
+ }
 
 /**
  * Render the `main` element consistently in IE.
@@ -765,6 +770,45 @@ textarea {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+
+/* Background and Nav Bar */
+
+.flip-v-bg{
+	background-repeat: no-repeat;
+
+}
+.flip-h-bg{
+	background-repeat: no-repeat;
+}
+#canvas-flip-bg{
+	border:1px solid #000;
+	display:none;
+}
+
+.topnav {
+	overflow: hidden;
+	background-color: #333;
+}
+
+.topnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.topnav a.active {
+	background-color: #04AA6D;
+	color: white;
 }
 
 /* Comments

@@ -825,6 +825,7 @@ textarea {
 	overflow: hidden;
 	background-color: var(--black);
 	height: 5em;
+	margin-top: -2.1875em;
 }
 
 .navbar {
@@ -868,7 +869,7 @@ textarea {
 	background-position: 100%;
 	padding-right: 2.5em;
 	flex: 0 0 auto;
-	padding-top: 2em;
+	padding-top: 1.9em;
 }
 
 /* Home Page

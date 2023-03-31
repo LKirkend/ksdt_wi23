@@ -24,6 +24,9 @@
 
 <body class="gifbg">
     <div class="topnav">
+        <div id="onair">
+            <img href="<?php echo esc_url( home_url( '/' ) ); ?>">
+        </div>
         <ul class="navbar">
             <?php $main_menu = wp_get_nav_menu_items('Main'); ?>
                 <?php foreach ((array) $main_menu as $key => $menu_item): ?>

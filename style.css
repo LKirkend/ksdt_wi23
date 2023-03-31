@@ -811,20 +811,10 @@ textarea {
 	margin:0;
  }
 
-.navlogo{
-	font-family: "Porkys";
-	font-size: 18.75em; /* 300px */
-	font-weight: normal;
-	line-height: normal;
-	letter-spacing: 0%;
-	text-decoration: none;
-	color: #fff;
-}
-
 .topnav {
-	overflow: hidden;
+	overflow: auto;
 	background-color: var(--black);
-	height: 5em; /* 80px */
+	height: 5.1875em; /* 80px */
 	/* margin-top: -2.1875em; Admin bar fix. TODO */ 
 }
 
@@ -836,13 +826,14 @@ textarea {
     flex-direction: row;
 	justify-content: flex-end;
 	padding-right: 2em;
+	float:right;
 }
 
 .topnav a {
 	font-family: "Europa Grotesk SH";
 	font-size: 1.125em; /* 18px */
-	font-weight: normal;
-	line-height: normal;
+	font-weight: 400;
+	line-height: 1.1875em; /* 19px */
 	letter-spacing: 0%;
 	text-decoration: none;
 	color: #fff;
@@ -871,6 +862,49 @@ textarea {
 	flex: 0 0 auto;
 	padding-top: 1.9em;
 }
+
+/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+@media screen and (max-width: 900px) {
+	.topnav a {
+	  float: none;
+	  width: 100%;
+	}
+	.topnav{
+		position:fixed;
+		
+	}
+	.navbar{
+		flex-direction:column;
+		float:none;
+	}
+  }  
+
+/* ksdt. */
+.navlogo{
+	position: absolute;
+	width: 141px;
+	height: 65px;
+	left: 26px;
+	top: 0px;
+
+	font-family: 'Porkys';
+	font-weight: 700;
+	font-size: 64px;
+	line-height: 86px;
+
+	color: #FFFFFF;
+}
+
+#onair{
+	left: 2em;
+	display:flex;
+	float:left;
+}
+
+#onair img{
+	content:url("img/logos/onair.svg");
+}
+
 
 /* Home Page
 --------------------------------------------- */

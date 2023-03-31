@@ -73,10 +73,7 @@ html {
 
 /* Sections
 	 ========================================================================== */
-
-/* Global variables */
 :root{
-	/* Envoke any variable with 'var(--[var])', eg 'var(--yellow) */
 	--yellow: #FFDF50;
 	--orange: #F67225;
 	--blue: #0B89E6;
@@ -87,7 +84,14 @@ html {
 /**
  * Remove the margin in all browsers.
  */
-
+ body{
+	background-image:url('/img/gif/background.gif');
+	background-repeat:no-repeat;
+	background-size: cover;
+	height: 100vh;
+	padding:0;
+	margin:0;
+ }
 
 /**
  * Render the `main` element consistently in IE.
@@ -802,14 +806,21 @@ textarea {
 
 /* Background and Nav Bar 
 -------------------------------------------- */
-.gifbg{
-	background-image:url('img/gif/backgroundflip.gif');
-	background-repeat:repeat-y;
-	background-size: cover;
-	height: 100vh;
-	padding:0;
-	margin:0;
- }
+
+.flip-v-bg{
+	background-repeat: no-repeat;
+}
+
+.flip-h-bg{
+	background-repeat: no-repeat;
+}
+canvas{
+	border:1px solid #000;
+	display:none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
 
 .navlogo{
 	font-family: "Porkys";
@@ -824,17 +835,6 @@ textarea {
 .topnav {
 	overflow: hidden;
 	background-color: var(--black);
-	height: 5em;
-}
-
-.navbar {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	display: flex;
-    flex-direction: row;
-	justify-content: flex-end;
-	padding-right: 2em;
 }
 
 .topnav a {
@@ -845,13 +845,12 @@ textarea {
 	letter-spacing: 0%;
 	text-decoration: none;
 	color: #fff;
-	float: right;
+	float: left;
 	background-color: var(--black);
-	padding: 0 10px;
+	text-align: center;
+	padding: 14px 16px;
 	text-decoration: none;
-	border: 1px solid white;
-	border-radius: 10px;
-	padding-top: 2px;
+	border-radius: 5px;
 }
 
 .topnav a:hover {
@@ -862,13 +861,6 @@ textarea {
 .topnav a.active {
 	background-color: var(--black);
 	color: white;
-}
-
-.nav-item{
-	background-position: 100%;
-	padding-right: 2.5em;
-	flex: 0 0 auto;
-	padding-top: 2em;
 }
 
 /* Home Page

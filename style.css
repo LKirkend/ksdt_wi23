@@ -824,8 +824,8 @@ textarea {
 .topnav {
 	overflow: hidden;
 	background-color: var(--black);
-	height: 5em;
-	margin-top: -2.1875em;
+	height: 5em; /* 80px */
+	/* margin-top: -2.1875em; Admin bar fix. TODO */ 
 }
 
 .navbar {

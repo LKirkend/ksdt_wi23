@@ -141,7 +141,6 @@ function ksdt_wi23_scripts() {
 	/* The rand makes it so the version always updates when styles.css updates. Prevents caching for easier development. */
 	wp_enqueue_style( 'ksdt_wi23-style', get_stylesheet_uri(), array(), rand(111,9999), 'all' );
 
-
 	wp_style_add_data( 'ksdt_wi23-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'ksdt_wi23-navigation', get_template_directory_uri() . '/js/navigation.js', array(), ksdt_wi23_VERSION, true );

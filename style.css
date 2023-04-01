@@ -799,7 +799,6 @@ textarea {
 	margin: 0 0 1.5em;
 }
 
-
 /* Background and Nav Bar 
 -------------------------------------------- */
 .gifbg{
@@ -811,99 +810,63 @@ textarea {
 	margin:0;
  }
 
-.topnav {
-	overflow: auto;
-	background-color: var(--black);
-	height: 5.1875em; /* 80px */
-	/* margin-top: -2.1875em; Admin bar fix. TODO */ 
+.navbar-cheight{
+	height: 83px;
 }
-
-.navbar {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	display: flex;
-    flex-direction: row;
-	justify-content: flex-end;
-	padding-right: 2em;
-	float:right;
+.navbar-nav{
+    background-color: var(--black);
 }
-
-.topnav a {
-	font-family: "Europa Grotesk SH";
-	font-size: 1.125em; /* 18px */
-	font-weight: 400;
-	line-height: 1.1875em; /* 19px */
-	letter-spacing: 0%;
-	text-decoration: none;
-	color: #fff;
-	float: right;
-	background-color: var(--black);
-	padding: 0 10px;
-	text-decoration: none;
-	border: 1px solid white;
-	border-radius: 10px;
-	padding-top: 2px;
+.navbar-brand{
+	padding: 6px 15px;
 }
-
-.topnav a:hover {
-	background-color: var(--black);
-	color: var(--lpink);
+#navbar-adjLogo{
+	max-width: 50%;
+    max-height: 50%;
+    display: block;
 }
-
-.topnav a.active {
-	background-color: var(--black);
-	color: white;
+#nav-item-padding{
+	padding-left: 40px;
+	padding-bottom:5px;
 }
-
-.nav-item{
-	background-position: 100%;
-	padding-right: 2.5em;
-	flex: 0 0 auto;
-	padding-top: 1.9em;
-}
-
-/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
-@media screen and (max-width: 900px) {
-	.topnav a {
-	  float: none;
-	  width: 100%;
+@media (min-width:1100px){
+	.d-onair-block{
+		display: block!important;
 	}
-	.topnav{
-		position:fixed;
-		
-	}
-	.navbar{
-		flex-direction:column;
-		float:none;
-	}
-  }  
-
-/* ksdt. */
-.navlogo{
-	position: absolute;
-	width: 141px;
-	height: 65px;
-	left: 26px;
-	top: 0px;
-
-	font-family: 'Porkys';
-	font-weight: 700;
-	font-size: 64px;
-	line-height: 86px;
-
-	color: #FFFFFF;
 }
 
-#onair{
-	left: 2em;
-	display:flex;
-	float:left;
+@media(min-width:992px){
+	#nav-link-bordered {
+		font-family: "Europa Grotesk SH";
+		font-size: 1.125em; /* 18px */
+		font-weight: 400;
+		line-height: 0.3em; /* 19px */
+		background-color: var(--black);
+		text-decoration: none;
+		border: 1px solid white;
+		border-radius: 10px;
+	}
+}
+@media(max-width:991px){
+	#nav-link-bordered {
+		font-family: "Europa Grotesk SH";
+		font-size: 1.125em; /* 18px */
+		font-weight: 400;
+		line-height: 1.1875em; /* 19px */
+		letter-spacing: 0%;
+		text-decoration: none;
+		color: #fff;
+		background-color: var(--black);
+		text-decoration: none;
+	}
 }
 
-#onair img{
+#nav-ksdt{
+	content:url("img/logos/navksdt.svg");
+}
+#nav-onair{
 	content:url("img/logos/onair.svg");
 }
+
 
 
 /* Home Page

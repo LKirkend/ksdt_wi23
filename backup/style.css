@@ -73,10 +73,7 @@ html {
 
 /* Sections
 	 ========================================================================== */
-
-/* Global variables */
 :root{
-	/* Envoke any variable with 'var(--[var])', eg 'var(--yellow) */
 	--yellow: #FFDF50;
 	--orange: #F67225;
 	--blue: #0B89E6;
@@ -87,7 +84,14 @@ html {
 /**
  * Remove the margin in all browsers.
  */
-
+ body{
+	background-image:url('/img/gif/background.gif');
+	background-repeat:no-repeat;
+	background-size: cover;
+	height: 100vh;
+	padding:0;
+	margin:0;
+ }
 
 /**
  * Render the `main` element consistently in IE.
@@ -799,160 +803,64 @@ textarea {
 	margin: 0 0 1.5em;
 }
 
-/* Background, Navbar, Footer 
+
+/* Background and Nav Bar 
 -------------------------------------------- */
-.gifbg{
-	background-image:url('img/gif/backgroundflip.gif'); /* TODO: Change to MP4 for optimization */
-	background-repeat:repeat-y;
-	background-size: cover;
-	height: 100vh;
-	padding:0;
-	margin:0;
- }
-.navbar-cheight{
-	height: 83px;
-}
-.navbar-nav{
-    background-color: var(--black);
-}
-.navbar-brand{
-	padding: 6px 15px;
-}
-#nav-ksdt{
-	content:url("img/logos/navksdt.svg");
-}
-#nav-onair{
-	content:url("img/logos/onair.svg");
-}
-#navbar-adjLogo{
-	max-width: 50%;
-    max-height: 50%;
-    display: block;
-}
-#nav-item-padding{
-	padding-left: 40px;
-	padding-bottom:5px;
-}
-@media (min-width:1100px){
-	.d-onair-block{
-		display: block!important;
-	}
-}
-@media(min-width:992px){
-	#nav-link-bordered {
-		font-family: "Europa Grotesk SH";
-		font-size: 1.125em; /* 18px */
-		font-weight: 400;
-		line-height: 0.3em; /* 19px */
-		background-color: var(--black);
-		text-decoration: none;
-		border: 1px solid white;
-		border-radius: 10px;
-	}
-}
-@media(max-width:991px){
-	#nav-link-bordered {
-		font-family: "Europa Grotesk SH";
-		font-size: 1.125em; /* 18px */
-		font-weight: 400;
-		line-height: 1.1875em; /* 19px */
-		letter-spacing: 0%;
-		text-decoration: none;
-		color: #fff;
-		background-color: var(--black);
-		text-decoration: none;
-	}
+
+.flip-v-bg{
+	background-repeat: no-repeat;
 }
 
-
-.footer-cheight{
-	height:286px;
+.flip-h-bg{
+	background-repeat: no-repeat;
 }
-.navbar-text a:visited{
-	color:var(--black);
-}
-#insta-logo{
-	content:url("img/logos/insta.svg");
-	height: 47px;
-	width: 47px;
-}
-#twitter-logo{
-	content:url("img/logos/twitter.svg");
-	height: 47px;
-	width: 47px;
-}
-#flickr-logo{
-	content:url("img/logos/flickr.svg");
-	height: 47px;
-	width: 47px;
-}
-#fb-logo{
-	content:url("img/logos/facebook.svg");
-	height: 47px;
-	width: 47px;
+canvas{
+	border:1px solid #000;
+	display:none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
 }
 
-#contact{
-	height: 0px;
-	color:white; 	
-	width: 360px;
-	font-family: 'Europa Grotesk SH';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 36px;
-	line-height: 39px;
-	text-align: right;
-	padding-bottom: 140px;
+.navlogo{
+	font-family: "Porkys";
+	font-size: 18.75em; /* 300px */
+	font-weight: normal;
+	line-height: normal;
+	letter-spacing: 0%;
+	text-decoration: none;
+	color: #fff;
 }
 
-@media (min-width: 869px){
-	#views{
-		height:0px;
-		width: 485px;
-		color:white;
-		font-family: 'Europa Grotesk SH';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 23px;
-		padding-bottom: 69px;
-		padding-left: 38px;
-		
-	}
-	
+.topnav {
+	overflow: hidden;
+	background-color: var(--black);
 }
-@media (min-width: 484px) and (max-width: 868px){
-	#views{
-		height:0px;
-		width: 100px;
-		color:white;
-		font-family: 'Europa Grotesk SH';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 10px;
-		padding-bottom: 150px;
-		padding-left: 10px;
-	}	
+
+.topnav a {
+	font-family: "Europa Grotesk SH";
+	font-size: 1.125em; /* 18px */
+	font-weight: normal;
+	line-height: normal;
+	letter-spacing: 0%;
+	text-decoration: none;
+	color: #fff;
+	float: left;
+	background-color: var(--black);
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	border-radius: 5px;
 }
-@media (min-width: 434px) and (max-width:483px){
-	#views{
-		height:0px;
-		width: 50px;
-		color:white;
-		font-family: 'Europa Grotesk SH';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 10px;
-		padding-bottom: 150px;
-		padding-left: 0px;
-	}
+
+.topnav a:hover {
+	background-color: var(--black);
+	color: var(--lpink);
 }
-@media (max-width: 433px){
-	#views{
-		visibility: hidden;
-		font-size: 0px;
-		width:0px;
-		padding-bottom:0px;
-	}
+
+.topnav a.active {
+	background-color: var(--black);
+	color: white;
 }
 
 /* Home Page

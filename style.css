@@ -799,17 +799,16 @@ textarea {
 	margin: 0 0 1.5em;
 }
 
-/* Background and Nav Bar 
+/* Background, Navbar, Footer 
 -------------------------------------------- */
 .gifbg{
-	background-image:url('img/gif/backgroundflip.gif');
+	background-image:url('img/gif/backgroundflip.gif'); /* TODO: Change to MP4 for optimization */
 	background-repeat:repeat-y;
 	background-size: cover;
 	height: 100vh;
 	padding:0;
 	margin:0;
  }
-
 .navbar-cheight{
 	height: 83px;
 }
@@ -818,6 +817,12 @@ textarea {
 }
 .navbar-brand{
 	padding: 6px 15px;
+}
+#nav-ksdt{
+	content:url("img/logos/navksdt.svg");
+}
+#nav-onair{
+	content:url("img/logos/onair.svg");
 }
 #navbar-adjLogo{
 	max-width: 50%;
@@ -833,7 +838,6 @@ textarea {
 		display: block!important;
 	}
 }
-
 @media(min-width:992px){
 	#nav-link-bordered {
 		font-family: "Europa Grotesk SH";
@@ -860,14 +864,96 @@ textarea {
 	}
 }
 
-#nav-ksdt{
-	content:url("img/logos/navksdt.svg");
+
+.footer-cheight{
+	height:286px;
 }
-#nav-onair{
-	content:url("img/logos/onair.svg");
+.navbar-text a:visited{
+	color:var(--black);
+}
+#insta-logo{
+	content:url("img/logos/insta.svg");
+	height: 47px;
+	width: 47px;
+}
+#twitter-logo{
+	content:url("img/logos/twitter.svg");
+	height: 47px;
+	width: 47px;
+}
+#flickr-logo{
+	content:url("img/logos/flickr.svg");
+	height: 47px;
+	width: 47px;
+}
+#fb-logo{
+	content:url("img/logos/facebook.svg");
+	height: 47px;
+	width: 47px;
 }
 
+#contact{
+	height: 0px;
+	color:white; 	
+	width: 360px;
+	font-family: 'Europa Grotesk SH';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 39px;
+	text-align: right;
+	padding-bottom: 140px;
+}
 
+@media (min-width: 869px){
+	#views{
+		height:0px;
+		width: 485px;
+		color:white;
+		font-family: 'Europa Grotesk SH';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 23px;
+		padding-bottom: 69px;
+		padding-left: 38px;
+		
+	}
+	
+}
+@media (min-width: 484px) and (max-width: 868px){
+	#views{
+		height:0px;
+		width: 100px;
+		color:white;
+		font-family: 'Europa Grotesk SH';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 10px;
+		padding-bottom: 150px;
+		padding-left: 10px;
+	}	
+}
+@media (min-width: 434px) and (max-width:483px){
+	#views{
+		height:0px;
+		width: 50px;
+		color:white;
+		font-family: 'Europa Grotesk SH';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 10px;
+		padding-bottom: 150px;
+		padding-left: 0px;
+	}
+}
+@media (max-width: 433px){
+	#views{
+		visibility: hidden;
+		font-size: 0px;
+		width:0px;
+		padding-bottom:0px;
+	}
+}
 
 /* Home Page
 --------------------------------------------- */

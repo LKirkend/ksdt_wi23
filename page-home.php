@@ -17,4 +17,8 @@
 get_header();
 ?>
 
+
+<div id="show-current"><?php include(__DIR__ . '/spinitron/widgets/current-show.php') ?></div>
+
+
 <?php get_footer(); ?>

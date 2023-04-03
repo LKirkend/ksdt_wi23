@@ -4,8 +4,8 @@ include __DIR__ . '/../getClient.php';
 $show = $client->search('shows', ['count' => 1])['items'][0];
 $spin = $client->search('spins', ['count' => 1])['items'][0];
 
-$start = (new DateTime($show['start']))->setTimezone(new DateTimeZone($show['timezone'] ?? 'America/LosAngeles'))->format('g:ia');
-$end = (new DateTime($show['end']))->setTimezone(new DateTimeZone($show['timezone'] ?? 'America/LosAngeles'))->format('g:ia');
+$start = (new DateTime($show['start']))->setTimezone(new DateTimeZone($show['timezone'] ?? 'America/Los_Angeles'))->format('g:ia');
+$end = (new DateTime($show['end']))->setTimezone(new DateTimeZone($show['timezone'] ?? 'America/Los_Angeles'))->format('g:ia');
 ?>
 
 <b><?= htmlspecialchars($show['title'], ENT_NOQUOTES) ?></b>

@@ -10,6 +10,8 @@
  */
 
 ?>
+</a> 
+</section> <!-- The declarations are within the header> -->
 </body>
 
 <nav class="navbar footer-cheight w-100" style="background-color: var(--black)">
@@ -18,10 +20,10 @@
 		<span class="navbar-text align-text-bottom ms-auto pe-5" id="contact"> CONTACT <br /> 
 			Email: gm@ksdt.org <br /> 
 			Phone: (858) 534-KSDT <br /> 
-			<a href="https://www.instagram.com/ksdtradio/"><img id="insta-logo" class="ms-3 mt-2"></a> 
-			<a href="https://twitter.com/RADIOKSDT"><img id="twitter-logo" class="ms-3 mt-2"></a> 
-			<a href="https://www.flickr.com/photos/138845705@N02/albums/"><img id="flickr-logo" class="ms-3 mt-2"></a> 
-			<a href="https://www.facebook.com/KSDTCollegeRadio/"><img id="fb-logo" class="ms-3 mt-2"></a> 
+			<a href="https://www.instagram.com/ksdtradio/"><img id="insta-logo" class="ms-2 ms-sm-3 mt-2"></a> 
+			<a href="https://twitter.com/RADIOKSDT"><img id="twitter-logo" class="ms-2 ms-sm-3 mt-2"></a> 
+			<a href="https://www.flickr.com/photos/138845705@N02/albums/"><img id="flickr-logo" class="ms-2 ms-sm-3 mt-2"></a> 
+			<a href="https://www.facebook.com/KSDTCollegeRadio/"><img id="fb-logo" class="ms-2 ms-sm-3 mt-2"></a> 
 		</span>
 	</div>
 </nav>

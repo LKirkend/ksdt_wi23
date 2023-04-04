@@ -12,6 +12,12 @@
 ?>
 </body>
 
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://public.radio.co/playerapi/jquery.radiocoplayer.min.js"></script>
+<script type="text/javascript">
+	$('.radioplayer').radiocoPlayer();
+</script>
+
 <nav class="navbar fixed-bottom footer-cheight" style="background-color: var(--black)">
 	<div class="container-fluid">
 		<span class="navbar-text align-text-bottom me-auto" id="views"> The views presented on this website are not necessarily those of The University of California Regents, The University of California San Diego, or KSDT Radio. </span>

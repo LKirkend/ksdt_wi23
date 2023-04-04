@@ -17,8 +17,6 @@
 get_header();
 ?>
 
-
-<div id="show-current"><?php include(__DIR__ . '/spinitron/widgets/current-show.php') ?></div>
-
+<div class="radioplayer" data-src="https://s4.radio.co/s2c33c7adb/listen" data-autoplay="false" data-playbutton="true" data-volumeslider="true" data-elapsedtime="true" data-nowplaying="true" data-showplayer="true" data-volume="50" data-showartwork="false"></div>
 
 <?php get_footer(); ?>

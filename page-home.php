@@ -28,7 +28,7 @@ get_header();
             </div>
             <div class="row">
                 <div class="play-btn col-6 pt-4">
-                    <input type="image" class="play-button" onclick="togglePlay()">
+                    <input id="radio-toggle" type="image" class="play-button" onclick="togglePlay()">
                 </div>
                 <div class="col pt-5" id="show-current">
                     <?php include(__DIR__ . '/spinitron/widgets/current-show.php') ?>

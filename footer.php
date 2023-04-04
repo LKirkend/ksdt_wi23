@@ -16,10 +16,20 @@
 <script src="https://public.radio.co/playerapi/jquery.radiocoplayer.min.js"></script>
 <script type="text/javascript">
 	var player = $('.radioplayer').radiocoPlayer();
-	
+	var toggleButton = $('play-button');
+	//var onAir = HOW;
 	function togglePlay(){
-		player.playToggle(function(event){}, function(event){});
+		player.playToggle(
+			function(event){
+				document.getElementById('radio-toggle').className = "pause-button";
+				//toggleButton.css('content', 'url("img/logos/playbutton.svg")');
+			}, 
+			function(event){
+				document.getElementById('radio-toggle').className = "play-button";
+				//toggleButton.css('content', 'url("img/logos/pausebutton.svg")');
+			});
 	}
+
 </script>
 
 <nav class="navbar fixed-bottom footer-cheight" style="background-color: var(--black)">

@@ -15,7 +15,11 @@
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://public.radio.co/playerapi/jquery.radiocoplayer.min.js"></script>
 <script type="text/javascript">
-	$('.radioplayer').radiocoPlayer();
+	var player = $('.radioplayer').radiocoPlayer();
+	
+	function togglePlay(){
+		player.playToggle(function(event){}, function(event){});
+	}
 </script>
 
 <nav class="navbar fixed-bottom footer-cheight" style="background-color: var(--black)">

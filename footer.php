@@ -16,20 +16,29 @@
 <script src="https://public.radio.co/playerapi/jquery.radiocoplayer.min.js"></script>
 <script type="text/javascript">
 	var player = $('.radioplayer').radiocoPlayer();
-	var toggleButton = $('play-button');
-	//var onAir = HOW;
+	player.event('invalidStream', function(event){
+		console.log('invalid stream');
+	});
+	player.event('streamInfoError', function(event){
+		console.log('no stream info');
+	});
+	
+	if(!player.hasLoaded()){
+			player.load(function(event){
+		});
+	}
+	var toggleButton = document.getElementById('radio-toggle');
+	var onAir = document.getElementById('nav-onair');
+
 	function togglePlay(){
 		player.playToggle(
 			function(event){
-				document.getElementById('radio-toggle').className = "pause-button";
-				//toggleButton.css('content', 'url("img/logos/playbutton.svg")');
+				toggleButton.className = "pause-button";
 			}, 
 			function(event){
-				document.getElementById('radio-toggle').className = "play-button";
-				//toggleButton.css('content', 'url("img/logos/pausebutton.svg")');
+				toggleButton.className = "play-button";
 			});
 	}
-
 </script>
 
 <nav class="navbar fixed-bottom footer-cheight" style="background-color: var(--black)">

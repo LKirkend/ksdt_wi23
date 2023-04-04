@@ -16,6 +16,27 @@
 
 get_header();
 ?>
+<div class="container-fluid" id="main-header">
+    <div class="row">
+        <div class="col">
+            <img id="home-logo">
+        </div>
+        <div class="col card ms-auto me-5" id="tune-in-box">
+            <div class="row">
+                <div class="col"><h5 class="card-title mx-auto" id="tune-in">tune in now:</h5> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="play-btn col-6 pt-4">
+                    <img class="play-button">
+                </div>
+                <div class="col pt-5" id="show-current">
+                    <?php include(__DIR__ . '/spinitron/widgets/current-show.php') ?>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
 
 <div class="radioplayer" data-src="https://s4.radio.co/s2c33c7adb/listen" data-autoplay="false" data-playbutton="true" data-volumeslider="true" data-elapsedtime="true" data-nowplaying="true" data-showplayer="true" data-volume="50" data-showartwork="false"></div>
 

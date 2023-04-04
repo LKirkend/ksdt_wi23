@@ -19,6 +19,9 @@
 </script>
 
 <nav class="navbar fixed-bottom footer-cheight" style="background-color: var(--black)">
+
+<nav class="navbar footer-cheight w-100" style="background-color: var(--black)">
+
 	<div class="container-fluid">
 		<span class="navbar-text align-text-bottom me-auto" id="views"> The views presented on this website are not necessarily those of The University of California Regents, The University of California San Diego, or KSDT Radio. </span>
 		<span class="navbar-text align-text-bottom ms-auto pe-5" id="contact"> CONTACT <br /> 

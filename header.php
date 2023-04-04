@@ -27,7 +27,7 @@
 
 <body class="gifbg">
     <!-- Using https://getbootstrap.com/docs/5.3/components/navbar/ as a reference -->
-    <nav class="navbar navbar-expand-lg navbar-cheight fixed-top sticky-top" style="background-color: var(--black)" role="navigation">
+    <nav class="navbar navbar-expand-lg navbar-cheight sticky-top" style="background-color: var(--black)" role="navigation">
         <div class="container-fluid">
             <!-- Logo -->
             <a class="navbar-brand" id="navbar-adjLogo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img id="nav-ksdt"></a>

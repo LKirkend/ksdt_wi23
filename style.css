@@ -866,7 +866,8 @@ textarea {
 
 
 .footer-cheight{
-	height:286px;
+	height:358px;
+	position: absolute;
 }
 .navbar-text a:visited{
 	color:var(--black);
@@ -957,8 +958,56 @@ textarea {
 
 /* Home Page
 --------------------------------------------- */
+#home-logo{
+	content: url("img/logos/home-logo.svg");
+	width: 705px;
+	height: 375px;
+}
 
+#tune-in{
+	font-family: "Porkys";
+	width: 323px;
+	height: 73px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 58px;
+	line-height: 86px;
+	align-items: center;
+	color: #FFFFFF;
+	text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+}
 
+#tune-in-box{
+	/* Rectangle 14 */
+	box-sizing: border-box;
+	width: 450px;
+	height: 335px;
+	background: rgba(26, 23, 23, 0.2);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	border: 3px solid transparent;
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	border-image: linear-gradient(to bottom, var(--orange), var(--yellow), white, var(--hpink));
+  	border-image-slice: 1;
+}
+
+#main-header{
+	margin-top:100px;
+	margin-bottom:200px;
+}
+
+.play-button{
+	content:url("img/logos/playbutton.svg");
+	height:186px;
+	width:186px;
+}
+
+.pause-button{
+	content:url("img/logos/pausebutton.svg");
+	height:186px;
+	width:186px;
+}
 
 /* Comments
 --------------------------------------------- */

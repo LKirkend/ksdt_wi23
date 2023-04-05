@@ -991,6 +991,39 @@ textarea {
 	}
 }
 
+/* General Elements (Stickers etc)
+--------------------------------------------- */
+.orange-flower{
+	content:url("img/logos/sticker-orangeflower.svg");
+	height:122px;
+	width:122px;
+}
+.yellow-flower{
+	content:url("img/logos/sticker-yellowflower.svg");
+	width:126px;
+	height:126px;
+}
+.made-in-ucsd{
+	content:url("img/logos/sticker-made.svg");
+	width:104px;
+	height:106px;
+}
+.record{
+	content:url("img/logos/sticker-record.svg");
+	height:178px;
+	width:178px;
+}
+.triton{
+	content:url("img/logos/sticker-tritons.svg");
+	width:185px;
+	height:185px;
+}
+.ucsd-blue{
+	content:url("img/logos/sticker-ucsdblue.svg");
+	width:288px;
+	height:190px;
+}
+
 /* Home Page
 --------------------------------------------- */
 #home-logo{
@@ -1026,7 +1059,20 @@ textarea {
 	color: #FFFFFF;
 	text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
 }
-@media (min-width:736px){
+.spinitron{
+	font-family: 'Europa Grotesk SH';
+	color:var(--black);
+	display:flex;
+}
+/* Need to support 322px lowest width. This ensures no text overlap*/
+@media(min-width:338px){ 
+	.spinitron{
+		padding-bottom:30px;
+	}
+}
+
+
+@media (min-width:768px){
 	#show{
 		font-size:225%;
 	}
@@ -1037,18 +1083,7 @@ textarea {
 		font-size:175%;
 	}
 }
-@media (min-width: 576px) and (max-width:735px){
-	#show{
-		font-size:150%;
-	}
-	#time{
-		font-size:75%;
-	}
-	#song{
-		font-size:125%;
-	}
-}
-@media (max-width: 575px){
+@media (max-width: 767.5px){
 	#show{
 		font-size:250%;
 	}
@@ -1073,6 +1108,32 @@ textarea {
 	content:url("img/logos/pausebutton.svg");
 	height:186px;
 	width:186px;
+}
+#scroll{
+	content: url("img/logos/home-scrolllearn.svg");
+	padding-top: 100px;
+	height: 206px;
+	width: 100%;
+}
+
+#insta-box{
+	box-sizing: border-box;
+	background: rgba(26, 23, 23, 0.2);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	border: 3px solid transparent;
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	border-image: linear-gradient(to bottom, var(--orange), var(--yellow), white, var(--hpink));
+  	border-image-slice: 1;
+}
+#welcome{
+	content:url("img/logos/home-welcomeksdt.svg");
+	height:102px;
+	width:100%;
+}
+#botb{ /* PLACEHOLDER Todo: Insta integration */
+	content:url("img/logos/home-botb-ex.svg");
 }
 
 /* Comments

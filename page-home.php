@@ -16,21 +16,24 @@
 
 get_header();
 ?>
-<div class="container-fluid" id="main-header">
-    <div class="row">
-        <div class="col">
+<div class="container-fluid px-sm-5" id="main-header">
+    <div class="row gx-sm-5 pt-sm-5">
+        <div class="col-sm py-2">
             <img id="home-logo">
         </div>
-        <div class="col card ms-auto me-5" id="tune-in-box">
+        <div class="col-sm card mx-auto ms-lg-5 ms-sm-auto p-0" id="tune-in-box">
             <div class="row">
-                <div class="col"><h5 class="card-title mx-auto" id="tune-in">tune in now:</h5> 
+                <div class="col">
+                    <h1 class="card-title d-none d-lg-block mx-auto text-center" id="tune-in">tune in now:</h5>
+                    <h1 class="card-title fs-1 d-none d-sm-block d-lg-none mx-auto text-center" id="tune-in">tune in now:</h5>  
+                    
                 </div>
             </div>
-            <div class="row">
-                <div class="play-btn col-6 pt-4">
-                    <input id="radio-toggle" type="image" class="play-button" onclick="togglePlay()">
+            <div class="row h-100 mx-0">
+                <div class="play-btn col-5 h-100 py-sm-4">
+                    <img class="play-button h-100 pb-sm-5">
                 </div>
-                <div class="col pt-5" id="show-current">
+                <div class="col py-3" id="show-current">
                     <?php include(__DIR__ . '/spinitron/widgets/current-show.php') ?>
                 </div>
             </div> 

@@ -7,12 +7,11 @@ $spin = $client->search('spins', ['count' => 1])['items'][0];
 if($show['title'] ?? false){
     $start = (new DateTime($show['start']))->setTimezone(new DateTimeZone($show['timezone'] ?? 'America/Los_Angeles'))->format('g:ia');
     $end = (new DateTime($show['end']))->setTimezone(new DateTimeZone($show['timezone'] ?? 'America/Los_Angeles'))->format('g:ia');
-    echo htmlspecialchars($show['title'], ENT_NOQUOTES);
-    echo $start . ' - ' . $end;
-    echo htmlspecialchars($spin['song'], ENT_NOQUOTES);
-    echo 'by' . htmlspecialchars($spin['artist'], ENT_NOQUOTES);
+    echo '<span id="show">' . htmlspecialchars($show['title'], ENT_NOQUOTES) . '<br></span>';
+    echo '<span id="time">' . $start . ' - ' . $end . '<br></span>';
+    echo '<span id="song">' . htmlspecialchars($spin['song'], ENT_NOQUOTES) . ' by ' . htmlspecialchars($spin['artist'], ENT_NOQUOTES) . '<br></span>';
 }
 else{
-    echo 'OFF THE AIR';
+    echo '<span id="show">OFF THE AIR<br></span>';
 }
 ?>

@@ -892,82 +892,59 @@ textarea {
 	width: 47px;
 }
 
+#contact{
+	height: 0px;
+	color:white; 	
+	width: 360px;
+	font-size: 36px;
+	font-family: 'Europa Grotesk SH';
+	font-style: normal;
+	font-weight: 400;
+	line-height: 39px;
+	text-align: right;
+	padding-bottom: 225px;
+}
+#contact a {
+	color:var(--lpink); 	
+	font-size: 36px;
+	font-family: 'Europa Grotesk SH';
+	font-style: normal;
+	font-weight: 400;
+	line-height: 39px;
+}
+#views{
+	height:0px;
+	width: 485px;
+	color:white;
+	font-family: 'Europa Grotesk SH';
+	font-style: normal;
+	font-weight: 400;
+}
 @media (min-width: 869px){
 	#views{
-		height:0px;
-		width: 485px;
-		color:white;
-		font-family: 'Europa Grotesk SH';
-		font-style: normal;
-		font-weight: 400;
 		font-size: 23px;
 		padding-bottom: 69px;
 		padding-left: 38px;
 		
-	}
-
-	#contact{
-		height: 0px;
-		color:white; 	
-		width: 360px;
-		font-family: 'Europa Grotesk SH';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 36px;
-		line-height: 39px;
-		text-align: right;
-		padding-bottom: 140px;
-	}
-	
+	}	
 }
 @media (min-width: 484px) and (max-width: 868px){
 	#views{
-		height:0px;
 		width: 100px;
-		color:white;
-		font-family: 'Europa Grotesk SH';
-		font-style: normal;
-		font-weight: 400;
 		font-size: 10px;
 		padding-bottom: 150px;
 		padding-left: 10px;
 	}
-	#contact{
-		height: 0px;
-		color:white; 	
-		width: 360px;
-		font-family: 'Europa Grotesk SH';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 36px;
-		line-height: 39px;
-		text-align: right;
-		padding-bottom: 140px;
-	}	
 }
 @media (min-width: 434px) and (max-width:483px){
 	#views{
-		height:0px;
 		width: 50px;
-		color:white;
-		font-family: 'Europa Grotesk SH';
-		font-style: normal;
-		font-weight: 400;
 		font-size: 10px;
 		padding-bottom: 150px;
 		padding-left: 0px;
 	}
 	#contact{
-		height: 0px;
-		color:white; 	
-		width: 360px;
-		font-family: 'Europa Grotesk SH';
-		font-style: normal;
-		font-weight: 400;
 		font-size: 28px;
-		line-height: 39px;
-		text-align: right;
-		padding-bottom: 140px;
 	}
 }
 @media (max-width: 433px){
@@ -978,16 +955,7 @@ textarea {
 		padding-bottom:0px;
 	}
 	#contact{
-		height: 0px;
-		color:white; 	
-		width: 360px;
-		font-family: 'Europa Grotesk SH';
-		font-style: normal;
-		font-weight: 400;
 		font-size: 28px;
-		line-height: 39px;
-		text-align: right;
-		padding-bottom: 140px;
 	}
 }
 
@@ -1064,14 +1032,12 @@ textarea {
 	color:var(--black);
 	display:flex;
 }
-/* Need to support 322px lowest width. This ensures no text overlap*/
+/* Need to support 322px lowest width. This @media section ensures no text overlap*/
 @media(min-width:338px){ 
 	.spinitron{
 		padding-bottom:30px;
 	}
 }
-
-
 @media (min-width:768px){
 	#show{
 		font-size:225%;

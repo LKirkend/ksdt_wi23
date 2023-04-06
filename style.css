@@ -832,10 +832,10 @@ textarea {
     display: block;
 }
 #nav-item-padding{
-	padding-left: 40px;
+	padding-left: 30px;
 	padding-bottom:5px;
 }
-@media (min-width:1100px){
+@media (min-width:1250px){
 	.d-onair-block{
 		display: block!important;
 	}
@@ -866,10 +866,9 @@ textarea {
 	}
 }
 
-
+/* Footer */
 .footer-cheight{
-	height:358px;
-	position: absolute;
+	height:300px;
 }
 .navbar-text a:visited{
 	color:var(--black);
@@ -899,89 +898,136 @@ textarea {
 	height: 0px;
 	color:white; 	
 	width: 360px;
+	font-size: 36px;
 	font-family: 'Europa Grotesk SH';
 	font-style: normal;
 	font-weight: 400;
-	font-size: 36px;
 	line-height: 39px;
 	text-align: right;
-	padding-bottom: 140px;
+	padding-bottom: 225px;
 }
-
+#contact a {
+	color:var(--hpink); 	
+	font-size: 36px;
+	font-family: 'Europa Grotesk SH';
+	font-style: normal;
+	font-weight: 400;
+	line-height: 39px;
+}
+#views{
+	height:0px;
+	width: 485px;
+	color:white;
+	font-family: 'Europa Grotesk SH';
+	font-style: normal;
+	font-weight: 400;
+}
 @media (min-width: 869px){
 	#views{
-		height:0px;
-		width: 485px;
-		color:white;
-		font-family: 'Europa Grotesk SH';
-		font-style: normal;
-		font-weight: 400;
 		font-size: 23px;
 		padding-bottom: 69px;
 		padding-left: 38px;
 		
-	}
-	
+	}	
 }
-@media (min-width: 484px) and (max-width: 868px){
+@media (min-width: 501px) and (max-width: 868px){
 	#views{
-		height:0px;
 		width: 100px;
-		color:white;
-		font-family: 'Europa Grotesk SH';
-		font-style: normal;
-		font-weight: 400;
 		font-size: 10px;
 		padding-bottom: 150px;
 		padding-left: 10px;
-	}	
+	}
 }
-@media (min-width: 434px) and (max-width:483px){
+@media (min-width: 451px) and (max-width:500px){
 	#views{
-		height:0px;
 		width: 50px;
-		color:white;
-		font-family: 'Europa Grotesk SH';
-		font-style: normal;
-		font-weight: 400;
 		font-size: 10px;
 		padding-bottom: 150px;
 		padding-left: 0px;
 	}
+	#contact{
+		font-size: 28px;
+	}
+	#contact a{
+		font-size: 28px;
+	}
 }
-@media (max-width: 433px){
+@media (max-width: 450px){
 	#views{
 		visibility: hidden;
 		font-size: 0px;
 		width:0px;
 		padding-bottom:0px;
 	}
+	#contact{
+		font-size: 28px;
+	}
+	#contact a{
+		font-size: 28px;
+	}
+	#insta-logo{
+		height: 35px;
+		width: 40px;
+	}
+	#twitter-logo{
+		height: 35px;
+		width: 40px;
+	}
+	#flickr-logo{
+		height: 35px;
+		width: 40px;
+	}
+	#fb-logo{
+		height: 35px;
+		width: 40px;
+	}
+}
+
+/* General Elements (Stickers etc)
+--------------------------------------------- */
+.orange-flower{
+	content:url("img/logos/sticker-orangeflower.svg");
+	height:122px;
+	width:122px;
+}
+.yellow-flower{
+	content:url("img/logos/sticker-yellowflower.svg");
+	width:126px;
+	height:126px;
+}
+.made-in-ucsd{
+	content:url("img/logos/sticker-made.svg");
+	width:104px;
+	height:106px;
+}
+.record{
+	content:url("img/logos/sticker-record.svg");
+	height:178px;
+	width:178px;
+}
+.triton{
+	content:url("img/logos/sticker-tritons.svg");
+	width:185px;
+	height:185px;
+}
+.ucsd-blue{
+	content:url("img/logos/sticker-ucsdblue.svg");
+	width:288px;
+	height:190px;
 }
 
 /* Home Page
 --------------------------------------------- */
 #home-logo{
 	content: url("img/logos/home-logo.svg");
-	width: 705px;
-	height: 375px;
-}
-
-#tune-in{
-	font-family: "Porkys";
-	width: 323px;
-	height: 73px;
-	font-style: normal;
-	font-weight: 700;
-	font-size: 58px;
-	line-height: 86px;
-	align-items: center;
-	color: #FFFFFF;
-	text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+	height: 100%;
+	max-height: 335px;
 }
 
 #tune-in-box{
 	box-sizing: border-box;
-	width: 450px;
+	max-width: 600px;
+	width: 90%;
 	height: 335px;
 	background: var(--transblack);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -992,12 +1038,55 @@ textarea {
 	border-image: var(--rainbowborder);
   	border-image-slice: 1;
 }
-
-#main-header{
-	margin-top:100px;
-	margin-bottom:200px;
+#tune-in{
+	font-family: "Porkys";
+	width: 80%;
+	height: 73px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 350%;
+	line-height: 86px;
+	align-items: center;
+	color: #FFFFFF;
+	text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+}
+.spinitron{
+	font-family: 'Europa Grotesk SH';
+	color:var(--black);
+	display:flex;
+}
+/* Need to support 322px lowest width. This @media section ensures no text overlap*/
+@media(min-width:338px){ 
+	.spinitron{
+		padding-bottom:30px;
+	}
+}
+@media (min-width:768px){
+	#show{
+		font-size:225%;
+	}
+	#time{
+		font-size:125%;
+	}
+	#song{
+		font-size:175%;
+	}
+}
+@media (max-width: 767.5px){
+	#show{
+		font-size:250%;
+	}
+	#time{
+		font-size:150%;
+	}
+	#song{
+		font-size:200%;
+	}
 }
 
+#main-header{
+	margin-bottom:200px;
+}
 .play-button{
 	content:url("img/logos/playbutton.svg");
 	height:186px;
@@ -1008,6 +1097,32 @@ textarea {
 	content:url("img/logos/pausebutton.svg");
 	height:186px;
 	width:186px;
+}
+#scroll{
+	content: url("img/logos/home-scrolllearn.svg");
+	padding-top: 100px;
+	height: 206px;
+	width: 100%;
+}
+
+#insta-box{
+	box-sizing: border-box;
+	background: rgba(26, 23, 23, 0.2);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	border: 3px solid transparent;
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	border-image: linear-gradient(to bottom, var(--orange), var(--yellow), white, var(--hpink));
+  	border-image-slice: 1;
+}
+#welcome{
+	content:url("img/logos/home-welcomeksdt.svg");
+	height:102px;
+	width:100%;
+}
+#botb{ /* PLACEHOLDER Todo: Insta integration */
+	content:url("img/logos/home-botb-ex.svg");
 }
 
 /* Blog Page

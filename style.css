@@ -83,6 +83,8 @@ html {
 	--black: #1a1717;
 	--hpink: #FD0C72;
 	--lpink: #fdd0e5;
+	--transblack: rgba(26, 23, 23, 0.4);
+	--rainbowborder: linear-gradient(to bottom, var(--orange), var(--yellow), white, var(--hpink));
 }
 /**
  * Remove the margin in all browsers.
@@ -978,17 +980,16 @@ textarea {
 }
 
 #tune-in-box{
-	/* Rectangle 14 */
 	box-sizing: border-box;
 	width: 450px;
 	height: 335px;
-	background: rgba(26, 23, 23, 0.2);
+	background: var(--transblack);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 10px;
 	border: 3px solid transparent;
 	background-origin: border-box;
 	background-clip: content-box, border-box;
-	border-image: linear-gradient(to bottom, var(--orange), var(--yellow), white, var(--hpink));
+	border-image: var(--rainbowborder);
   	border-image-slice: 1;
 }
 
@@ -1008,6 +1009,112 @@ textarea {
 	height:186px;
 	width:186px;
 }
+
+/* Blog Page
+--------------------------------------------- */
+#spotlight{
+	font-family:"Porkys";
+	font-size: 64px;
+	color: white;
+	padding-top:100px;
+}
+#article-box{
+	box-sizing: border-box;
+	background: var(--transblack);
+	border-radius: 10px;
+	border: 3px solid transparent;
+	border-image: var(--rainbowborder);
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	border-image-slice: 1;
+}
+.bdp-post-grid-content .bdp-post-categories a{
+	text-transform: uppercase;
+	color: var(--yellow);
+	font-size: 16px;
+}
+.bdp-post-grid-main.bdp-design-1 .bdp-post-grid-content{ 
+	text-align:left;
+}
+.bdp-post-content{
+	color: white;
+	font-family: "Europa Grotesk SH";
+	font-size: 24px;
+}
+.bdp-post-grid-main{
+	margin-right: auto!important;
+    margin-left: auto!important;
+}
+.bdp-post-grid img{
+	max-height:700px;
+}
+.bdp-post-categories{
+	margin-bottom: -7px;
+}
+.bdp-post-categories a{
+	border-bottom: none;
+}
+.bdp-post-title a {
+	color: white;
+	font-family:"Porkys";
+}
+.bdp-post-title a:visited, a:hover{
+	color: var(--lpink);
+}
+.bdp-post-meta span{
+	color: white;
+	font-family: "Europa Grotesk SH";
+	font-style:normal!important;
+}
+.bdp-post-meta span::before{
+	content:"By ";
+}
+.bdp-post-pagination a, .bdp-post-pagination a{
+	color: var(--hpink); 
+	background: transparent;
+	border: 1px solid #fff; 
+	border-radius: 12px;
+	font-family: 'Europa Grotesk SH'; 
+	font-size: 24px; 
+	padding-left: 12px; 
+	padding-right: 12px; 
+	padding-top:1px; 
+	padding-bottom: 1px;}
+.bdp-post-pagination a:hover, .bdp-post-pagination a:focus, .bdp-post-pagination a:hover, .bdp-post-pagination a:focus{
+	color: white !important;
+	background: var(--hpink);
+}
+.bdp-post-pagination .current{
+	color: #fff !important; 
+	background: var(--hpink);
+	border-radius: 12px;
+	font-size: 24px; 
+	border: 1px solid white; 
+	font-family: 'Europa Grotesk SH'; 
+	padding-left: 12px; 
+	padding-right: 12px; 
+	padding-top:1px; 
+	padding-bottom: 1px;
+}
+.prev.page-numbers, .next.page-numbers{
+	border: 0px solid white;
+}
+.prev.page-numbers, .next.page-numbers {
+	visibility:hidden; 
+	position: relative;}
+.next.page-numbers:before {
+	visibility: visible;
+	content: "»";
+	font-size: 32px;
+	font-family: 'Europa Grotesk SH';
+}
+.prev.page-numbers:after{
+	visibility: visible;
+	content: "«";
+	font-size: 32px;
+	font-family: 'Europa Grotesk SH';
+}
+
 
 /* Comments
 --------------------------------------------- */

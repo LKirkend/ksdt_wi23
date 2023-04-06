@@ -1252,7 +1252,8 @@ textarea {
 	font-family:"Porkys";
 	font-size:50px;
 	text-shadow: 2px 2px 2px var(--black);
-
+	display: block!important;
+	text-align: center!important;
 }
 #scheduler-box a{
 	color:white;
@@ -1281,6 +1282,12 @@ textarea {
 	line-height: 70px;
 	text-shadow: 2px 2px 2px white;
 }
+
+.slots span:not(.ahb_slot_availability){
+	display:block!important;
+	text-align:center
+}
+
 #fbuilder span.uh{
 	font-size:15px;
 	color:white;
@@ -1316,6 +1323,7 @@ textarea {
     margin-right: auto!important;
 	display:flex!important;
 	border-radius: 40px;
+	margin-top: 70px!important;
 }
 .cff-dialog-content a{
 	color:var(--hpink)!important;
@@ -1337,8 +1345,7 @@ textarea {
 	font-family:"Europa Grotesk SH";
 	text-shadow: 2px 2px 2px var(--black);
 	color:white;
-	padding-left: 33%;
-	padding-right: 33%;
+	display:inline;
 }
 .cpapp_no_wrap{
 	max-width: 800px;
@@ -1388,6 +1395,22 @@ textarea {
 .um-field-checkbox:hover i{
 	color:var(--lpink);
 }
+.admin-btn {
+    background-color: #D53B80; 
+    border: none;
+    color: white!important;
+    text-align: center;
+    display: inline-block;
+    font-size: 50px;
+    margin: auto;
+    cursor: pointer;
+    height: 175px;
+	width:500px;
+	border: 2px solid var(--black);
+    border-radius: 20px;
+	text-decoration: none;
+}
+
 /* Comments
 --------------------------------------------- */
 .comment-content a {

@@ -83,6 +83,8 @@ html {
 	--black: #1a1717;
 	--hpink: #FD0C72;
 	--lpink: #fdd0e5;
+	--transblack: rgba(26, 23, 23, 0.4);
+	--rainbowborder: linear-gradient(to bottom, var(--orange), var(--yellow), white, var(--hpink));
 }
 /**
  * Remove the margin in all browsers.
@@ -866,7 +868,8 @@ textarea {
 
 
 .footer-cheight{
-	height:286px;
+	height:358px;
+	position: absolute;
 }
 .navbar-text a:visited{
 	color:var(--black);
@@ -957,7 +960,160 @@ textarea {
 
 /* Home Page
 --------------------------------------------- */
+#home-logo{
+	content: url("img/logos/home-logo.svg");
+	width: 705px;
+	height: 375px;
+}
 
+#tune-in{
+	font-family: "Porkys";
+	width: 323px;
+	height: 73px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 58px;
+	line-height: 86px;
+	align-items: center;
+	color: #FFFFFF;
+	text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+#tune-in-box{
+	box-sizing: border-box;
+	width: 450px;
+	height: 335px;
+	background: var(--transblack);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	border: 3px solid transparent;
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	border-image: var(--rainbowborder);
+  	border-image-slice: 1;
+}
+
+#main-header{
+	margin-top:100px;
+	margin-bottom:200px;
+}
+
+.play-button{
+	content:url("img/logos/playbutton.svg");
+	height:186px;
+	width:186px;
+}
+
+.pause-button{
+	content:url("img/logos/pausebutton.svg");
+	height:186px;
+	width:186px;
+}
+
+/* Blog Page
+--------------------------------------------- */
+#spotlight{
+	font-family:"Porkys";
+	font-size: 64px;
+	color: white;
+	padding-top:100px;
+}
+#article-box{
+	box-sizing: border-box;
+	background: var(--transblack);
+	border-radius: 10px;
+	border: 3px solid transparent;
+	border-image: var(--rainbowborder);
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	border-image-slice: 1;
+}
+.bdp-post-grid-content .bdp-post-categories a{
+	text-transform: uppercase;
+	color: var(--yellow);
+	font-size: 16px;
+}
+.bdp-post-grid-main.bdp-design-1 .bdp-post-grid-content{ 
+	text-align:left;
+}
+.bdp-post-content{
+	color: white;
+	font-family: "Europa Grotesk SH";
+	font-size: 24px;
+}
+.bdp-post-grid-main{
+	margin-right: auto!important;
+    margin-left: auto!important;
+}
+.bdp-post-grid img{
+	max-height:700px;
+}
+.bdp-post-categories{
+	margin-bottom: -7px;
+}
+.bdp-post-categories a{
+	border-bottom: none;
+}
+.bdp-post-title a {
+	color: white;
+	font-family:"Porkys";
+}
+.bdp-post-title a:visited, a:hover{
+	color: var(--lpink);
+}
+.bdp-post-meta span{
+	color: white;
+	font-family: "Europa Grotesk SH";
+	font-style:normal!important;
+}
+.bdp-post-meta span::before{
+	content:"By ";
+}
+.bdp-post-pagination a, .bdp-post-pagination a{
+	color: var(--hpink); 
+	background: transparent;
+	border: 1px solid #fff; 
+	border-radius: 12px;
+	font-family: 'Europa Grotesk SH'; 
+	font-size: 24px; 
+	padding-left: 12px; 
+	padding-right: 12px; 
+	padding-top:1px; 
+	padding-bottom: 1px;}
+.bdp-post-pagination a:hover, .bdp-post-pagination a:focus, .bdp-post-pagination a:hover, .bdp-post-pagination a:focus{
+	color: white !important;
+	background: var(--hpink);
+}
+.bdp-post-pagination .current{
+	color: #fff !important; 
+	background: var(--hpink);
+	border-radius: 12px;
+	font-size: 24px; 
+	border: 1px solid white; 
+	font-family: 'Europa Grotesk SH'; 
+	padding-left: 12px; 
+	padding-right: 12px; 
+	padding-top:1px; 
+	padding-bottom: 1px;
+}
+.prev.page-numbers, .next.page-numbers{
+	border: 0px solid white;
+}
+.prev.page-numbers, .next.page-numbers {
+	visibility:hidden; 
+	position: relative;}
+.next.page-numbers:before {
+	visibility: visible;
+	content: "»";
+	font-size: 32px;
+	font-family: 'Europa Grotesk SH';
+}
+.prev.page-numbers:after{
+	visibility: visible;
+	content: "«";
+	font-size: 32px;
+	font-family: 'Europa Grotesk SH';
+}
 
 
 /* Comments

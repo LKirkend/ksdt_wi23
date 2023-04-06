@@ -25,5 +25,5 @@ node_modules/
 #ignore api key
 api-key.txt
 
-#ignore cache
-cache/
+#ignore gifs
+img/gif/

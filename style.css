@@ -864,7 +864,7 @@ textarea {
 	}
 }
 
-
+/* Footer */
 .footer-cheight{
 	height:300px;
 }
@@ -905,7 +905,7 @@ textarea {
 	padding-bottom: 225px;
 }
 #contact a {
-	color:var(--lpink); 	
+	color:var(--hpink); 	
 	font-size: 36px;
 	font-family: 'Europa Grotesk SH';
 	font-style: normal;
@@ -928,7 +928,7 @@ textarea {
 		
 	}	
 }
-@media (min-width: 484px) and (max-width: 868px){
+@media (min-width: 501px) and (max-width: 868px){
 	#views{
 		width: 100px;
 		font-size: 10px;
@@ -936,7 +936,7 @@ textarea {
 		padding-left: 10px;
 	}
 }
-@media (min-width: 434px) and (max-width:483px){
+@media (min-width: 451px) and (max-width:500px){
 	#views{
 		width: 50px;
 		font-size: 10px;
@@ -946,8 +946,11 @@ textarea {
 	#contact{
 		font-size: 28px;
 	}
+	#contact a{
+		font-size: 28px;
+	}
 }
-@media (max-width: 433px){
+@media (max-width: 450px){
 	#views{
 		visibility: hidden;
 		font-size: 0px;
@@ -956,6 +959,25 @@ textarea {
 	}
 	#contact{
 		font-size: 28px;
+	}
+	#contact a{
+		font-size: 28px;
+	}
+	#insta-logo{
+		height: 35px;
+		width: 40px;
+	}
+	#twitter-logo{
+		height: 35px;
+		width: 40px;
+	}
+	#flickr-logo{
+		height: 35px;
+		width: 40px;
+	}
+	#fb-logo{
+		height: 35px;
+		width: 40px;
 	}
 }
 
@@ -996,7 +1018,6 @@ textarea {
 --------------------------------------------- */
 #home-logo{
 	content: url("img/logos/home-logo.svg");
-	width: 100%;
 	height: 100%;
 	max-height: 335px;
 }

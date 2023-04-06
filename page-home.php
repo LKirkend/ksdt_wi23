@@ -13,7 +13,6 @@
  *
  * @package ksdt_wi23
  */
-
 get_header();
 ?>
 <div class="container-fluid px-sm-5" id="main-header">

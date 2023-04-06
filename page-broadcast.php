@@ -1,7 +1,10 @@
 <?php
 /**
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * The broadcast page
  *
+ * Designers: 
+ * Authors: Zach Lawrence
+ * 
  * @package ksdt_wi23
  */
 

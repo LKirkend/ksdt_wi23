@@ -83,7 +83,9 @@ html {
 	--black: #1a1717;
 	--hpink: #FD0C72;
 	--lpink: #fdd0e5;
-	--transblack: rgba(26, 23, 23, 0.4);
+	--transblack1: rgba(26, 23, 23, 0.2);
+	--transblack2: rgba(26, 23, 23, 0.4);
+	--shadow: rgba(0, 0, 0, 0.25);
 	--rainbowborder: linear-gradient(to bottom, var(--orange), var(--yellow), white, var(--hpink));
 }
 /**
@@ -832,7 +834,7 @@ textarea {
     display: block;
 }
 #nav-item-padding{
-	padding-left: 30px;
+	padding-left: 20px;
 	padding-bottom:5px;
 }
 @media (min-width:1250px){
@@ -1015,6 +1017,16 @@ textarea {
 	width:288px;
 	height:190px;
 }
+.rainbox{
+	box-sizing: border-box;
+	border-radius: 10px;
+	border: 3px solid transparent;
+	border-image: var(--rainbowborder);
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	border-image-slice: 1;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
 /* Home Page
 --------------------------------------------- */
@@ -1025,18 +1037,10 @@ textarea {
 }
 
 #tune-in-box{
-	box-sizing: border-box;
+	background: var(--transblack1);
 	max-width: 600px;
 	width: 90%;
 	height: 335px;
-	background: var(--transblack);
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	border-radius: 10px;
-	border: 3px solid transparent;
-	background-origin: border-box;
-	background-clip: content-box, border-box;
-	border-image: var(--rainbowborder);
-  	border-image-slice: 1;
 }
 #tune-in{
 	font-family: "Porkys";
@@ -1098,23 +1102,29 @@ textarea {
 	height:186px;
 	width:186px;
 }
-#scroll{
-	content: url("img/logos/home-scrolllearn.svg");
-	padding-top: 100px;
-	height: 206px;
+
+#scroll-sec{
+	padding-top:100px;
+}
+#scroll-text{
+	font-family: 'Porkys';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 36px;
 	width: 100%;
+	max-height: 43px;
+	color: var(--black);
+	text-shadow: 0px 4px 4px var(--shadow);
+}
+#scroll{
+	content: url("img/logos/home-scroll.svg");
+	max-height: 77px;
+	width: 100%;
+	
 }
 
 #insta-box{
-	box-sizing: border-box;
-	background: rgba(26, 23, 23, 0.2);
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	border-radius: 10px;
-	border: 3px solid transparent;
-	background-origin: border-box;
-	background-clip: content-box, border-box;
-	border-image: linear-gradient(to bottom, var(--orange), var(--yellow), white, var(--hpink));
-  	border-image-slice: 1;
+	background: var(--transblack1);
 }
 #welcome{
 	content:url("img/logos/home-welcomeksdt.svg");
@@ -1134,14 +1144,7 @@ textarea {
 	padding-top:100px;
 }
 #article-box{
-	box-sizing: border-box;
-	background: var(--transblack);
-	border-radius: 10px;
-	border: 3px solid transparent;
-	border-image: var(--rainbowborder);
-	background-origin: border-box;
-	background-clip: content-box, border-box;
-	border-image-slice: 1;
+	background: var(--transblack2);
 }
 .bdp-post-grid-content .bdp-post-categories a{
 	text-transform: uppercase;
@@ -1187,7 +1190,7 @@ textarea {
 .bdp-post-pagination a, .bdp-post-pagination a{
 	color: var(--hpink); 
 	background: transparent;
-	border: 1px solid #fff; 
+	border: 1px solid white; 
 	border-radius: 12px;
 	font-family: 'Europa Grotesk SH'; 
 	font-size: 24px; 
@@ -1200,7 +1203,7 @@ textarea {
 	background: var(--hpink);
 }
 .bdp-post-pagination .current{
-	color: #fff !important; 
+	color: white !important; 
 	background: var(--hpink);
 	border-radius: 12px;
 	font-size: 24px; 
@@ -1230,7 +1233,161 @@ textarea {
 	font-family: 'Europa Grotesk SH';
 }
 
+/* Login/Register/Scheduler/Admin
+--------------------------------------------- */
+#scheduler-box{
+	box-sizing: border-box;
+	background: var(--transblack2);
+	border-radius: 10px;
+	border: 3px solid transparent;
+	border-image: var(--rainbowborder);
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	border-image-slice: 1;
+	min-height:850px;
+	max-width: 75%;
+}
+#scheduler-box label{
+	color: white;
+	font-family:"Porkys";
+	font-size:50px;
+	text-shadow: 2px 2px 2px var(--black);
 
+}
+#scheduler-box a{
+	color:white;
+	text-shadow: 2px 2px 2px var(--black);
+}
+#scheduler-box tbody a{
+	color:white;
+	text-shadow: 2px 2px 2px var(--black);
+	font-size:30px;
+	line-height:70px;
+
+}
+.ahb_m #fbuilder .ui-datepicker-calendar .ui-state-active {
+    box-shadow: none;
+	text-shadow: 2px 2px 2px var(--shadow)!important;
+    color: var(--hpink)!important;
+    border: 0px solid;
+}
+#scheduler-box a:hover{
+	color:var(--lpink);
+}
+.fieldCalendar span, .slotsCalendar span{
+	color: var(--orange);
+	font-family:"Porkys";
+	font-size:40px;
+	line-height: 70px;
+	text-shadow: 2px 2px 2px white;
+}
+#fbuilder span.uh{
+	font-size:15px;
+	color:white;
+	text-shadow: 2px 2px 2px var(--black);
+	padding-top:20px;
+}
+#scheduler-box tbody span{
+	color: var(--orange);
+	font-family:"Europa Grotesk SH";
+	font-size:30px;
+	line-height: 70px;
+}
+.slotsCalendar a{
+	background: var(--black)!important;
+	font-family:"Europa Grotesk SH";
+	font-size:30px;
+	line-height: 40px;
+}
+.usedSlots span{
+	font-size:30px;
+	color:white;
+	text-shadow: 2px 2px 2px var(--black);
+}
+#fbuilder .pbSubmit{
+	background: var(--lpink)!important;
+	color: var(--hpink)!important;
+	border: solid 2px var(--hpink)!important;
+    width: 300px!important;
+    text-align: center!important;
+    font-size: 80px!important;
+    height: 100px!important;
+	margin-left: auto!important;
+    margin-right: auto!important;
+	display:flex!important;
+	border-radius: 40px;
+}
+.cff-dialog-content a{
+	color:var(--hpink)!important;
+	text-shadow: none!important;
+}
+#fieldname4_1
+{
+	width: 50px;
+	height: 30px;
+}
+#fieldname4_1:checked{
+	color:var(--hpink);
+}
+#fbuilder .one_column{
+	text-align: center;
+}
+#appts{
+	font-size:30px;
+	font-family:"Europa Grotesk SH";
+	text-shadow: 2px 2px 2px var(--black);
+	color:white;
+	padding-left: 33%;
+	padding-right: 33%;
+}
+.cpapp_no_wrap{
+	max-width: 800px;
+	width:auto;
+}
+
+/* login and register */
+
+.um label{
+	font-size:30px;
+	font-family:"Europa Grotesk SH";
+	text-shadow: 2px 2px 2px var(--black);
+	color:white;
+}
+.um span{
+	font-family:"Europa Grotesk SH";
+	text-shadow: 2px 2px 2px var(--black);
+	color:var(--lpink)!important;
+	font-size:20px;
+}
+.um-right a{
+	font-family:"Europa Grotesk SH";
+	color:var(--hpink)!important;
+	font-size:20px;
+}
+.um-col-alt-b a{
+	font-family:"Europa Grotesk SH";
+	text-shadow: 2px 2px 2px var(--black);
+	font-size:20px;
+}
+#um-submit-btn{
+	background:var(--hpink)
+}
+#um-submit-btn:hover{
+	background:var(--orange)
+}
+.um-form-field{
+	color:var(--black)!important;
+	background:whitesmoke!important;
+}
+.um .um-field-checkbox.active:not(.um-field-radio-state-disabled) i{
+	color:var(--hpink)!important;
+}
+.um-field-checkbox-state i{
+	color:white!important;
+}
+.um-field-checkbox:hover i{
+	color:var(--lpink);
+}
 /* Comments
 --------------------------------------------- */
 .comment-content a {

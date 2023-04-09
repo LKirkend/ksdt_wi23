@@ -87,6 +87,7 @@ html {
 	--transblack2: rgba(26, 23, 23, 0.4);
 	--shadow: rgba(0, 0, 0, 0.25);
 	--rainbowborder: linear-gradient(to bottom, var(--orange), var(--yellow), white, var(--hpink));
+	--logos: url("img/logos/");
 }
 /**
  * Remove the margin in all browsers.
@@ -105,12 +106,14 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-	font-family: "Europa Grotesk SH";
-	font-size: 2.25em; /* 36px */
+	font-family: "Porkys";
+	font-size: 48px;
 	font-weight: normal;
 	line-height: normal;
 	letter-spacing: 0%;
 	text-decoration: none;
+	margin: 2em 2em 2em 2em;
+	color: white;
 }
 
 h2{
@@ -120,6 +123,8 @@ h2{
 	line-height: normal;
 	letter-spacing: 0%;
 	text-decoration: none;
+	margin: 1em 0 1em;
+	color:white;
 }
 
 /* Grouping content
@@ -455,7 +460,14 @@ h6 {
 
 p {
 	margin-bottom: 1.5em;
+	color:white;
+	font-family: "Europa Grotesk SH";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 35px;
 }
+
 
 dfn,
 cite,
@@ -464,9 +476,6 @@ i {
 	font-style: italic;
 }
 
-blockquote {
-	margin: 0 1.5em;
-}
 
 address {
 	margin: 0 0 1.5em;
@@ -521,6 +530,10 @@ hr {
 ul,
 ol {
 	margin: 0 0 1.5em 3em;
+	color:white;
+	font-family: 'Europa Grotesk SH';
+	font-style: normal;
+	font-weight: 400;
 }
 
 ul {
@@ -569,7 +582,8 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: var(--blue);
+	color: var(--lpink);
+	font-family: 'Europa Grotesk SH';
 }
 
 a:visited {
@@ -795,12 +809,15 @@ textarea {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 1.5em 2em 2em;
 }
 
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+.page-title{
+
 }
 
 /* Background, Navbar, Footer 
@@ -985,7 +1002,7 @@ textarea {
 	}
 }
 
-/* General Elements (Stickers etc)
+/* General Elements (Stickers etc) and classes
 --------------------------------------------- */
 .orange-flower{
 	content:url("img/logos/sticker-orangeflower.svg");
@@ -1026,6 +1043,9 @@ textarea {
 	background-clip: content-box, border-box;
 	border-image-slice: 1;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.mw-fit{
+	max-width: fit-content;
 }
 
 /* Home Page
@@ -1233,17 +1253,136 @@ textarea {
 	font-family: 'Europa Grotesk SH';
 }
 
+/* Blog posts */
+
+#featured{
+	font-family: "Porkys";
+	color:white;
+}
+#blog-cat a{
+	text-decoration: none;
+	text-transform: uppercase;
+	color:var(--yellow);
+}
+#blog-cat ul{
+	list-style: none;
+	margin: 0;
+}
+#blog-date{
+	color:white;
+	text-transform: uppercase;
+
+}
+#blog-title{
+	font-family: "Porkys";
+	color:white;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 64px;
+	line-height: 86px;
+}
+#blog-author::before{
+	content:"By ";
+}
+#blog-author{
+	font-family: 'Europa Grotesk SH';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 26px;
+	color:white;
+}
+#blog-block{
+	background-color: var(--black);
+}
+#blog-txt-container{
+	max-width: fit-content;
+}
+#blog-content blockquote p{
+	font-size:24px;
+	margin-bottom: 10px;
+	margin-top: 50px;
+}
+
+#blog-content a{
+	color:var(--lpink);
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+#share-links a{
+	width: auto;
+	
+}
+#share-logo{
+	content:url("img/logos/share.svg");
+	height:47px;
+	width:47px;
+	cursor: pointer;
+}
+#copiedPlaceholder{
+	width: 300px;
+}
+#read-more-section{
+	background: var(--transblack2);
+}
+#read-more-title{
+	font-family: "Porkys";
+	color:white;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 64px;
+	line-height: 86px;
+}
+
+.bdp-load-more-btn{
+	background: var(--hpink)!important;
+
+}
+button.bdp-load-more-btn:hover, button.bdp-btn-active{
+	color:var(--lpink)!important;
+	border: 1px solid var(--hpink)!important;
+}
+
+@keyframes spinning {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}
+
+.bdp-load-more-btn i img{
+	content:url("img/logos/sticker-record.svg")!important;
+	animation-name: spinning;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	/* linear | ease | ease-in | ease-out | ease-in-out */
+	animation-timing-function: linear;
+}
+
+.spinning-record{
+	content:url("img/logos/sticker-record.svg")!important;
+	animation-name: spinning;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	/* linear | ease | ease-in | ease-out | ease-in-out */
+	animation-timing-function: linear;
+}
+
+/* Categories */
+
+.post-categories{
+	list-style: none;
+	color: var(--lpink);
+	font-family: "Porkys";
+	margin-left: auto!important;
+	margin-right: auto!important;
+}
+.post-categories a{
+	text-decoration: none;
+}
+
 /* Login/Register/Scheduler/Admin
 --------------------------------------------- */
 #scheduler-box{
-	box-sizing: border-box;
 	background: var(--transblack2);
-	border-radius: 10px;
-	border: 3px solid transparent;
-	border-image: var(--rainbowborder);
-	background-origin: border-box;
-	background-clip: content-box, border-box;
-	border-image-slice: 1;
 	min-height:850px;
 	max-width: 75%;
 }
@@ -1396,7 +1535,7 @@ textarea {
 	color:var(--lpink);
 }
 .admin-btn {
-    background-color: #D53B80; 
+    background-color: var(--hpink); 
     border: none;
     color: white!important;
     text-align: center;
@@ -1440,6 +1579,7 @@ textarea {
 	margin-bottom: 0;
 	margin-top: 0;
 	padding: 0;
+
 }
 
 /* Make sure logo link wraps around logo image. */

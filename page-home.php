@@ -19,8 +19,8 @@ get_header();
         <div class="col-md card mx-auto ms-lg-5 ms-sm-auto p-0 rainbox" id="tune-in-box">
             <div class="row">
                 <div class="col">
-                    <h1 class="card-title d-none d-lg-block mx-auto text-center" id="tune-in">tune in now:</h5>
-                    <h1 class="card-title fs-1 d-none d-md-block d-lg-none mx-auto text-center" id="tune-in">tune in now:</h5>  
+                    <h1 class="card-title d-none d-lg-block mx-auto text-center mt-3" id="tune-in">tune in now:</h1>
+                    <h1 class="card-title fs-1 d-none d-md-block d-lg-none mx-auto text-center" id="tune-in">tune in now:</h1>  
                 </div>
             </div>
             <div class="row h-100 mx-0">

@@ -1379,6 +1379,40 @@ button.bdp-load-more-btn:hover, button.bdp-btn-active{
 	text-decoration: none;
 }
 
+
+/* Contact Page
+--------------------------------------------- */
+#contact-header{
+	background-color: var(--black);
+}
+#contact-page h1{
+	font-size: 64px;
+	font-family: "Porkys";
+	text-shadow: 0px 4px 4px var(--shadow);
+}
+#contact-page h2{
+	font-size: 40px;
+	font-family: "Porkys";
+	text-shadow: 0px 4px 4px var(--shadow);
+}
+#contact-page h3{
+	font-size: 32px;
+	font-family: "Porkys";
+	color:white;
+	text-shadow: 0px 4px 4px var(--shadow);
+}
+#contact-page p{
+	font-family:"Europa Grotesk SH";
+	font-size: 32px;
+}
+#contact-page span{
+	font-family:"Europa Grotesk SH";
+	font-size: 24px;
+	color:white;
+}
+#staff-box{
+	background-color: var(--transblack2);
+}
 /* Login/Register/Scheduler/Admin
 --------------------------------------------- */
 #scheduler-box{
@@ -1451,9 +1485,9 @@ button.bdp-load-more-btn:hover, button.bdp-btn-active{
 	text-shadow: 2px 2px 2px var(--black);
 }
 #fbuilder .pbSubmit{
-	background: var(--lpink)!important;
-	color: var(--hpink)!important;
-	border: solid 2px var(--hpink)!important;
+	background: var(--transblack2)!important;
+	color: var(--orange)!important;
+	border: solid 2px var(--orange)!important;
     width: 300px!important;
     text-align: center!important;
     font-size: 80px!important;

@@ -19,17 +19,17 @@ get_header();
         <div class="col-md card mx-auto ms-lg-5 ms-sm-auto p-0 rainbox" id="tune-in-box">
             <div class="row">
                 <div class="col">
-                    <h1 class="card-title d-none d-lg-block mx-auto text-center" id="tune-in">tune in now:</h5>
-                    <h1 class="card-title fs-1 d-none d-md-block d-lg-none mx-auto text-center" id="tune-in">tune in now:</h5>  
+                    <h1 class="card-title my-0 d-none d-lg-block mx-auto text-center mt-3" id="tune-in">tune in now:</h1>
+                    <h1 class="card-title my-0 fs-1 d-none d-md-block d-lg-none mx-auto text-center" id="tune-in">tune in now:</h1>  
                 </div>
             </div>
             <div class="row h-100 mx-0">
                 <div class="play-btn col-5 h-100 py-sm-4">
                     <img class="play-button h-100 pb-sm-5">
                 </div>
-                <div class="col py-3" id="show-current">
+                <div class="col py-0 py-sm-3" id="show-current">
                     <!-- <?php include(__DIR__ . '/spinitron/widgets/current-show.php') ?> -->
-                    <span class="spinitron pt-sm-5 pt-md-0" id="show">show name<br></span>
+                    <span class="spinitron pt-sm-3 pt-md-0" id="show">show name<br></span>
                     <span class="spinitron" id="time">12:00pm-1:30pm<br></span>
                     <span class="spinitron" id="song">song name + artist name</span>
                 </div>
@@ -50,7 +50,7 @@ get_header();
     <!-- instagram imbed -->
     <div class="row mx-auto rainbox" id="insta-box">
         <div class="row p-0 pt-3 mx-auto">
-            <div class="col">
+            <div class="col mb-5">
                 <img id="welcome">
             </div>
         </div>

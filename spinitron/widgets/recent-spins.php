@@ -10,5 +10,4 @@ $result = $client->search('spins', ['count' => 3]);
             ->format('g:ia') ?>
         <b><?= htmlspecialchars($spin['artist'], ENT_NOQUOTES) ?></b>
         <em>“<?= htmlspecialchars($spin['song'], ENT_NOQUOTES) ?>”</em>
-        from <?= htmlspecialchars($spin['release'], ENT_NOQUOTES) ?></p>
 <?php endforeach ?>

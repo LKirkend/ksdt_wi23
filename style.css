@@ -83,6 +83,12 @@ html {
 	--black: #1a1717;
 	--hpink: #FD0C72;
 	--lpink: #fdd0e5;
+	--transblack1: rgba(26, 23, 23, 0.2);
+	--transblack2: rgba(26, 23, 23, 0.4);
+	--shadow: rgba(0, 0, 0, 0.25);
+	--rainbowborder: linear-gradient(to bottom, var(--orange), var(--yellow), white, var(--hpink));
+	--logos: url("img/logos/");
+	--cont-transition: all 0.5s ease 0s;
 }
 /**
  * Remove the margin in all browsers.
@@ -101,12 +107,13 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-	font-family: "Europa Grotesk SH";
-	font-size: 2.25em; /* 36px */
+	font-family: "Porkys";
+	font-size: 48px;
 	font-weight: normal;
 	line-height: normal;
 	letter-spacing: 0%;
 	text-decoration: none;
+	color: white;
 }
 
 h2{
@@ -116,6 +123,7 @@ h2{
 	line-height: normal;
 	letter-spacing: 0%;
 	text-decoration: none;
+	color:white;
 }
 
 /* Grouping content
@@ -450,8 +458,14 @@ h6 {
 }
 
 p {
-	margin-bottom: 1.5em;
+	color:white;
+	font-family: "Europa Grotesk SH";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 35px;
 }
+
 
 dfn,
 cite,
@@ -460,9 +474,6 @@ i {
 	font-style: italic;
 }
 
-blockquote {
-	margin: 0 1.5em;
-}
 
 address {
 	margin: 0 0 1.5em;
@@ -517,6 +528,10 @@ hr {
 ul,
 ol {
 	margin: 0 0 1.5em 3em;
+	color:white;
+	font-family: 'Europa Grotesk SH';
+	font-style: normal;
+	font-weight: 400;
 }
 
 ul {
@@ -565,7 +580,8 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: var(--blue);
+	color: var(--lpink);
+	font-family: 'Europa Grotesk SH';
 }
 
 a:visited {
@@ -791,12 +807,61 @@ textarea {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 1.5em 2em 2em;
 }
 
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+.page-title{
+
+}
+
+/* General Elements (Stickers etc) and classes
+--------------------------------------------- */
+.orange-flower{
+	content:url("img/logos/sticker-orangeflower.svg");
+	height:122px;
+	width:122px;
+}
+.yellow-flower{
+	content:url("img/logos/sticker-yellowflower.svg");
+	width:126px;
+	height:126px;
+}
+.made-in-ucsd{
+	content:url("img/logos/sticker-made.svg");
+	width:104px;
+	height:106px;
+}
+.record{
+	content:url("img/logos/sticker-record.svg");
+	height:178px;
+	width:178px;
+}
+.triton{
+	content:url("img/logos/sticker-tritons.svg");
+	width:185px;
+	height:185px;
+}
+.ucsd-blue{
+	content:url("img/logos/sticker-ucsdblue.svg");
+	width:288px;
+	height:190px;
+}
+.rainbox{
+	box-sizing: border-box;
+	border-radius: 10px;
+	border: 3px solid transparent;
+	border-image: var(--rainbowborder);
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	border-image-slice: 1;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.mw-fit{
+	max-width: fit-content;
 }
 
 /* Background, Navbar, Footer 
@@ -833,6 +898,17 @@ textarea {
 	padding-left: 30px;
 	padding-bottom:5px;
 }
+@media(max-width: 1330px){
+	#nav-item-padding{
+		padding-left:20px;
+	}
+}
+@media(max-width: 1100px){
+	#nav-item-padding{
+		padding-left: 13px;
+	}
+}
+
 @media (min-width:1250px){
 	.d-onair-block{
 		display: block!important;
@@ -864,7 +940,7 @@ textarea {
 	}
 }
 
-
+/* Footer */
 .footer-cheight{
 	height:300px;
 }
@@ -892,85 +968,65 @@ textarea {
 	width: 47px;
 }
 
+#contact{
+	height: 0px;
+	color:white; 	
+	width: 360px;
+	font-size: 36px;
+	font-family: 'Europa Grotesk SH';
+	font-style: normal;
+	font-weight: 400;
+	line-height: 39px;
+	text-align: right;
+	padding-bottom: 225px;
+}
+#contact a {
+	color:var(--hpink); 	
+	font-size: 36px;
+	font-family: 'Europa Grotesk SH';
+	font-style: normal;
+	font-weight: 400;
+	line-height: 39px;
+}
+#views{
+	height:0px;
+	width: 485px;
+	color:white;
+	font-family: 'Europa Grotesk SH';
+	font-style: normal;
+	font-weight: 400;
+}
 @media (min-width: 869px){
 	#views{
-		height:0px;
-		width: 485px;
-		color:white;
-		font-family: 'Europa Grotesk SH';
-		font-style: normal;
-		font-weight: 400;
 		font-size: 23px;
 		padding-bottom: 69px;
 		padding-left: 38px;
 		
-	}
-
-	#contact{
-		height: 0px;
-		color:white; 	
-		width: 360px;
-		font-family: 'Europa Grotesk SH';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 36px;
-		line-height: 39px;
-		text-align: right;
-		padding-bottom: 140px;
-	}
-	
+	}	
 }
-@media (min-width: 484px) and (max-width: 868px){
+@media (min-width: 501px) and (max-width: 868px){
 	#views{
-		height:0px;
 		width: 100px;
-		color:white;
-		font-family: 'Europa Grotesk SH';
-		font-style: normal;
-		font-weight: 400;
 		font-size: 10px;
 		padding-bottom: 150px;
 		padding-left: 10px;
 	}
-	#contact{
-		height: 0px;
-		color:white; 	
-		width: 360px;
-		font-family: 'Europa Grotesk SH';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 36px;
-		line-height: 39px;
-		text-align: right;
-		padding-bottom: 140px;
-	}	
 }
-@media (min-width: 434px) and (max-width:483px){
+@media (min-width: 451px) and (max-width:500px){
 	#views{
-		height:0px;
 		width: 50px;
-		color:white;
-		font-family: 'Europa Grotesk SH';
-		font-style: normal;
-		font-weight: 400;
 		font-size: 10px;
 		padding-bottom: 150px;
 		padding-left: 0px;
 	}
 	#contact{
-		height: 0px;
-		color:white; 	
-		width: 360px;
-		font-family: 'Europa Grotesk SH';
-		font-style: normal;
-		font-weight: 400;
 		font-size: 28px;
-		line-height: 39px;
-		text-align: right;
-		padding-bottom: 140px;
+	}
+	#contact a{
+		font-size: 28px;
 	}
 }
-@media (max-width: 433px){
+@media (max-width: 450px){
 	#views{
 		visibility: hidden;
 		font-size: 0px;
@@ -978,16 +1034,26 @@ textarea {
 		padding-bottom:0px;
 	}
 	#contact{
-		height: 0px;
-		color:white; 	
-		width: 360px;
-		font-family: 'Europa Grotesk SH';
-		font-style: normal;
-		font-weight: 400;
 		font-size: 28px;
-		line-height: 39px;
-		text-align: right;
-		padding-bottom: 140px;
+	}
+	#contact a{
+		font-size: 28px;
+	}
+	#insta-logo{
+		height: 35px;
+		width: 40px;
+	}
+	#twitter-logo{
+		height: 35px;
+		width: 40px;
+	}
+	#flickr-logo{
+		height: 35px;
+		width: 40px;
+	}
+	#fb-logo{
+		height: 35px;
+		width: 40px;
 	}
 }
 
@@ -995,24 +1061,15 @@ textarea {
 --------------------------------------------- */
 #home-logo{
 	content: url("img/logos/home-logo.svg");
-	width: 100%;
 	height: 100%;
 	max-height: 335px;
 }
 
 #tune-in-box{
-	box-sizing: border-box;
+	background: var(--transblack1);
 	max-width: 600px;
 	width: 90%;
 	height: 335px;
-	background: rgba(26, 23, 23, 0.2);
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	border-radius: 10px;
-	border: 3px solid transparent;
-	background-origin: border-box;
-	background-clip: content-box, border-box;
-	border-image: linear-gradient(to bottom, var(--orange), var(--yellow), white, var(--hpink));
-  	border-image-slice: 1;
 }
 #tune-in{
 	font-family: "Porkys";
@@ -1024,9 +1081,38 @@ textarea {
 	line-height: 86px;
 	align-items: center;
 	color: #FFFFFF;
-	text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+	text-shadow: 5px 5px 4px var(--shadow);
 }
-@media (min-width:736px){
+.spinitron{
+	font-family: 'Europa Grotesk SH';
+	color: white;
+	display:flex;
+	padding-bottom:40px;
+    text-shadow: 3px 3px 1px var(--shadow);
+	cursor:default;
+}
+#time{
+	padding-top:0px;
+}
+#show{
+	color:var(--lpink);
+	font-family: "Porkys";
+	text-shadow: 3px 3px 2px rgba(253,12,114, 0.5);
+	transition: 0.3s;
+	cursor:pointer;
+}
+#show:hover{
+	transform: scale(1.2, 1.2) translate(10px, 0px);
+}
+	/* Need to support 322px lowest width. This @media section ensures no text overlap*/
+@media (min-width:394px){
+	.spinitron{
+		padding-top:18px;
+		padding-bottom:0px;
+	}
+}
+
+@media (min-width:768px){
 	#show{
 		font-size:225%;
 	}
@@ -1037,18 +1123,7 @@ textarea {
 		font-size:175%;
 	}
 }
-@media (min-width: 576px) and (max-width:735px){
-	#show{
-		font-size:150%;
-	}
-	#time{
-		font-size:75%;
-	}
-	#song{
-		font-size:125%;
-	}
-}
-@media (max-width: 575px){
+@media (max-width: 767.5px){
 	#show{
 		font-size:250%;
 	}
@@ -1059,6 +1134,17 @@ textarea {
 		font-size:200%;
 	}
 }
+@media(max-width:394px){
+	#show{
+		font-size:200%;
+	}
+	#time{
+		font-size:100%;
+	}
+	#song{
+		font-size:150%;
+	}
+}
 
 #main-header{
 	margin-bottom:200px;
@@ -1067,12 +1153,621 @@ textarea {
 	content:url("img/logos/playbutton.svg");
 	height:186px;
 	width:186px;
+	cursor:pointer;
 }
 
 .pause-button{
 	content:url("img/logos/pausebutton.svg");
 	height:186px;
 	width:186px;
+}
+
+#scroll-sec{
+	padding-top:100px;
+}
+#scroll-text{
+	font-family: 'Porkys';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 36px;
+	width: 100%;
+	max-height: 43px;
+	color: var(--transblack2);
+	text-shadow: 0px 4px 4px var(--shadow);
+	cursor:default;
+	transition: 0.3s;
+}
+#scroll{
+	content: url("img/logos/home-scroll.svg");
+	max-height: 77px;
+	width: 100%;
+	transition: 0.3s;
+}
+#scroll-text:hover{
+	font-size:40px;
+}
+#insta-box{
+	background: var(--transblack1);
+}
+#welcome{
+	content:url("img/logos/home-welcomeksdt.svg");
+	height:102px;
+	width:100%;
+}
+insta-container .row{
+	margin-left: auto!important;
+	margin-right: auto!important;
+	padding-bottom:2rem;
+}
+.insta-img-thumbnail{
+	transition: 0.3s;
+	cursor: pointer;
+	background-color: rgba(0,0,0,0)!important;
+}
+.row div .insta-gallery-div {
+	padding:30px!important;
+}
+.insta-img-thumbnail:hover{
+	transform: scale(1.05, 1.05);
+	opacity: 1!important;
+}
+.insta_svg_icon{
+	display: none!important;
+}
+@media (max-width: 991px){
+	.row div .insta-gallery-div {
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		max-width: 100%;
+		flex: none;
+	}
+	.row div .insta-gallery-div {
+		padding:40px!important;
+	}
+}
+.instagram-video{
+	display:none!important;
+}
+
+/* Broadcast
+--------------------------------------------- */
+.my-7{
+	margin-top: 6em;
+	margin-bottom: 6em;
+}
+#playing-now{
+	background-color: var(--transblack1);
+}
+#playing-next{
+	background-color: var(--transblack1);
+}
+
+/* Blog Page
+--------------------------------------------- */
+#spotlight{
+	font-family:"Porkys";
+	font-size: 64px;
+	color: white;
+	padding-top:100px;
+	text-shadow: 0px 4px 4px var(--shadow);
+}
+#article-box{
+	background: var(--transblack2);
+}
+.bdp-post-grid-content .bdp-post-categories a{
+	text-transform: uppercase;
+	color: var(--yellow);
+	font-size: 16px;
+}
+.bdp-post-grid-main.bdp-design-1 .bdp-post-grid-content{ 
+	text-align:left;
+}
+.bdp-post-content{
+	color: white;
+	font-family: "Europa Grotesk SH";
+	font-size: 24px;
+}
+.bdp-post-grid-main{
+	margin-right: auto!important;
+    margin-left: auto!important;
+}
+.bdp-post-grid img{
+	max-height:700px;
+}
+.bdp-post-categories{
+	margin-bottom: -7px;
+}
+.bdp-post-categories a{
+	border-bottom: none;
+}
+.bdp-post-title a {
+	color: white;
+	font-family:"Porkys";
+	text-shadow: 0px 2px 2px var(--shadow);
+
+}
+.bdp-post-title a:visited, a:hover{
+	color: var(--lpink);
+}
+.bdp-post-meta span{
+	color: white;
+	font-family: "Europa Grotesk SH";
+	font-style:normal!important;
+}
+.bdp-post-meta span::before{
+	content:"By ";
+}
+.bdp-post-pagination a, .bdp-post-pagination a{
+	color: var(--hpink); 
+	background: transparent;
+	border: 1px solid white; 
+	border-radius: 12px;
+	font-family: 'Europa Grotesk SH'; 
+	font-size: 24px; 
+	padding-left: 12px; 
+	padding-right: 12px; 
+	padding-top:1px; 
+	padding-bottom: 1px;}
+.bdp-post-pagination a:hover, .bdp-post-pagination a:focus, .bdp-post-pagination a:hover, .bdp-post-pagination a:focus{
+	color: white !important;
+	background: var(--hpink);
+}
+.bdp-post-pagination .current{
+	color: white !important; 
+	background: var(--hpink);
+	border-radius: 12px;
+	font-size: 24px; 
+	border: 1px solid white; 
+	font-family: 'Europa Grotesk SH'; 
+	padding-left: 12px; 
+	padding-right: 12px; 
+	padding-top:1px; 
+	padding-bottom: 1px;
+}
+.prev.page-numbers, .next.page-numbers{
+	border: 0px solid white;
+}
+.prev.page-numbers, .next.page-numbers {
+	visibility:hidden; 
+	position: relative;}
+.next.page-numbers:before {
+	visibility: visible;
+	content: "»";
+	font-size: 32px;
+	font-family: 'Europa Grotesk SH';
+}
+.prev.page-numbers:after{
+	visibility: visible;
+	content: "«";
+	font-size: 32px;
+	font-family: 'Europa Grotesk SH';
+}
+
+/* Blog posts */
+
+#featured{
+	font-family: "Porkys";
+	color:white;
+}
+#blog-cat a{
+	text-decoration: none;
+	text-transform: uppercase;
+	color:var(--yellow);
+}
+#blog-cat ul{
+	list-style: none;
+	margin: 0;
+}
+#blog-date{
+	color:white;
+	text-transform: uppercase;
+
+}
+#blog-title{
+	font-family: "Porkys";
+	color:white;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 64px;
+	line-height: 86px;
+	text-shadow: 0px 4px 4px var(--shadow);
+}
+#blog-author::before{
+	content:"By ";
+}
+#blog-author{
+	font-family: 'Europa Grotesk SH';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 26px;
+	color:white;
+	text-shadow: 0px 2px 2px var(--shadow);
+}
+#blog-block{
+	background-color: var(--black);
+}
+#blog-txt-container{
+	max-width: fit-content;
+}
+#blog-content blockquote p{
+	font-size:24px;
+	margin-bottom: 10px;
+	margin-top: 50px;
+}
+
+#blog-content a{
+	color:var(--lpink);
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+#share-links a{
+	width: auto;
+	
+}
+#share-logo{
+	content:url("img/logos/share.svg");
+	height:47px;
+	width:47px;
+	cursor: pointer;
+}
+#copiedPlaceholder{
+	width: 300px;
+}
+#read-more-section{
+	background: var(--transblack2);
+}
+#read-more-title{
+	font-family: "Porkys";
+	color:white;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 64px;
+	line-height: 86px;
+	text-shadow: 0px 4px 4px var(--shadow);
+}
+
+.bdp-load-more-btn{
+	background: var(--hpink)!important;
+
+}
+button.bdp-load-more-btn:hover, button.bdp-btn-active{
+	color:var(--lpink)!important;
+	border: 1px solid var(--hpink)!important;
+}
+
+@keyframes spinning {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}
+
+.bdp-load-more-btn i img{
+	content:url("img/logos/sticker-record.svg")!important;
+	animation-name: spinning;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	/* linear | ease | ease-in | ease-out | ease-in-out */
+	animation-timing-function: linear;
+}
+
+.spinning-record{
+	content:url("img/logos/sticker-record.svg")!important;
+	animation-name: spinning;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	/* linear | ease | ease-in | ease-out | ease-in-out */
+	animation-timing-function: linear;
+}
+
+/* Categories */
+
+.post-categories{
+	list-style: none;
+	color: var(--lpink);
+	font-family: "Porkys";
+	margin-left: auto!important;
+	margin-right: auto!important;
+}
+.post-categories a{
+	text-decoration: none;
+}
+
+figcaption{
+	color: white;
+    font-family: "Europa Grotesk SH";
+    font-size: 24px;
+}
+
+/* Contact Page
+--------------------------------------------- */
+#contact-header{
+	background-color: var(--black);
+}
+#contact-info{
+	margin-top:4rem;
+	margin-left: 2rem;
+	margin-bottom: 5rem;
+}
+@media(min-width: 992px){
+	#contact-info{
+		margin-left:5rem;
+	}	
+}
+@media(max-width: 365px){
+	#contact-info{
+		margin-left:0;
+	}
+}
+#contact-page h1{
+	font-size: 64px;
+	font-family: "Porkys";
+	color: white;
+	text-shadow: 0px 4px 4px var(--shadow);
+}
+#contact-page h2{
+	padding-top:25px;
+	font-size: 40px;
+	font-family: "Porkys";
+	text-shadow: 0px 4px 4px var(--shadow);
+}
+#contact-page h3{
+	font-size: 28px;
+	font-family: "Porkys";
+	color:white;
+	text-shadow: 0px 4px 4px var(--shadow);
+}
+#contact-page h4{
+	font-size: 24px;
+	font-family: "Porkys";
+	color:white;
+	text-shadow: 0px 4px 4px var(--shadow);
+}
+#contact-page p{
+	font-family:"Europa Grotesk SH";
+	font-size: 32px;
+}
+#contact-page span{
+	font-family:"Europa Grotesk SH";
+	font-size: 24px;
+	color:white;
+}
+#contact-pics{
+	margin-top:4rem;
+}
+#cont-img1{
+	max-height: 414px;
+}
+#cont-img2{
+	max-width: 414px;
+	translate: 200px 278px;
+}
+#staff-info{
+	margin-top:150px;
+}
+#staff-box{
+	background-color: var(--transblack2);
+}
+.staff-thumb img{
+	opacity: 1.0;
+	transition: var(--cont-transition);
+	max-width:280px;
+	max-height:340px;
+}
+.staff-thumb {
+	max-width:280px;
+}
+.staff-type{
+	transition: var(--cont-transition);
+	opacity: 1.0;	
+}
+.staff-email{
+	transition: var(--cont-transition);
+	opacity: 1.0;
+}
+.staff-cont:hover .staff-thumb img{
+	opacity: 0;
+}
+.staff-cont:hover .staff-type{
+	opacity: 0;
+}
+.staff-cont:hover .staff-email{
+	opacity: 0;
+}
+
+.overlay{
+	transition: var(--cont-transition);
+	opacity:0;
+	position:absolute;
+	max-width:280px;
+	max-height:340px;
+}
+@media(max-width: 400px){
+	.overlay{
+		max-width: 250px;
+	}
+}
+@media(max-width: 340px){
+	.overlay{
+		max-width:208px;
+	}
+}
+.staff-cont:hover .overlay{
+	opacity:1.0;
+	background-image: url("img/logos/contact-minibio.svg");
+	transform: translate(0px, -20%)
+}
+
+
+/* Login/Register/Scheduler/Admin
+--------------------------------------------- */
+#scheduler-box{
+	background: var(--transblack2);
+	min-height:850px;
+	max-width: 75%;
+}
+#scheduler-box label{
+	color: white;
+	font-family:"Porkys";
+	font-size:50px;
+	text-shadow: 2px 2px 2px var(--black);
+	display: block!important;
+	text-align: center!important;
+}
+#scheduler-box a{
+	color:white;
+	text-shadow: 2px 2px 2px var(--black);
+}
+#scheduler-box tbody a{
+	color:white;
+	text-shadow: 2px 2px 2px var(--black);
+	font-size:30px;
+	line-height:70px;
+
+}
+.ahb_m #fbuilder .ui-datepicker-calendar .ui-state-active {
+    box-shadow: none;
+	text-shadow: 2px 2px 2px var(--shadow)!important;
+    color: var(--hpink)!important;
+    border: 0px solid;
+}
+#scheduler-box a:hover{
+	color:var(--lpink);
+}
+.fieldCalendar span, .slotsCalendar span{
+	color: var(--orange);
+	font-family:"Porkys";
+	font-size:40px;
+	line-height: 70px;
+	text-shadow: 2px 2px 2px white;
+}
+
+.slots span:not(.ahb_slot_availability){
+	display:block!important;
+	text-align:center
+}
+
+#fbuilder span.uh{
+	font-size:15px;
+	color:white;
+	text-shadow: 2px 2px 2px var(--black);
+	padding-top:20px;
+}
+#scheduler-box tbody span{
+	color: var(--orange);
+	font-family:"Europa Grotesk SH";
+	font-size:30px;
+	line-height: 70px;
+}
+.slotsCalendar a{
+	background: var(--black)!important;
+	font-family:"Europa Grotesk SH";
+	font-size:30px;
+	line-height: 40px;
+}
+.usedSlots span{
+	font-size:30px;
+	color:white;
+	text-shadow: 2px 2px 2px var(--black);
+}
+#fbuilder .pbSubmit{
+	background: var(--transblack2)!important;
+	color: var(--orange)!important;
+	border: solid 2px var(--orange)!important;
+    width: 300px!important;
+    text-align: center!important;
+    font-size: 80px!important;
+    height: 100px!important;
+	margin-left: auto!important;
+    margin-right: auto!important;
+	display:flex!important;
+	border-radius: 40px;
+	margin-top: 70px!important;
+}
+.cff-dialog-content a{
+	color:var(--hpink)!important;
+	text-shadow: none!important;
+}
+#fieldname4_1
+{
+	width: 50px;
+	height: 30px;
+}
+#fieldname4_1:checked{
+	color:var(--hpink);
+}
+#fbuilder .one_column{
+	text-align: center;
+}
+#appts{
+	font-size:30px;
+	font-family:"Europa Grotesk SH";
+	text-shadow: 2px 2px 2px var(--black);
+	color:white;
+	display:inline;
+}
+.cpapp_no_wrap{
+	max-width: 800px;
+	width:auto;
+}
+
+/* login and register */
+
+.um label{
+	font-size:30px;
+	font-family:"Europa Grotesk SH";
+	text-shadow: 2px 2px 2px var(--black);
+	color:white;
+}
+.um span{
+	font-family:"Europa Grotesk SH";
+	text-shadow: 2px 2px 2px var(--black);
+	color:var(--lpink)!important;
+	font-size:20px;
+}
+.um-right a{
+	font-family:"Europa Grotesk SH";
+	color:var(--hpink)!important;
+	font-size:20px;
+}
+.um-col-alt-b a{
+	font-family:"Europa Grotesk SH";
+	text-shadow: 2px 2px 2px var(--black);
+	font-size:20px;
+}
+#um-submit-btn{
+	background:var(--hpink)
+}
+#um-submit-btn:hover{
+	background:var(--orange)
+}
+.um-form-field{
+	color:var(--black)!important;
+	background:whitesmoke!important;
+}
+.um .um-field-checkbox.active:not(.um-field-radio-state-disabled) i{
+	color:var(--hpink)!important;
+}
+.um-field-checkbox-state i{
+	color:white!important;
+}
+.um-field-checkbox:hover i{
+	color:var(--lpink);
+}
+.admin-btn {
+    background-color: var(--hpink); 
+    border: none;
+    color: white!important;
+    text-align: center;
+    display: inline-block;
+    font-size: 50px;
+    margin: auto;
+    cursor: pointer;
+    height: 175px;
+	width:500px;
+	border: 2px solid var(--black);
+    border-radius: 20px;
+	text-decoration: none;
 }
 
 /* Comments
@@ -1104,6 +1799,7 @@ textarea {
 	margin-bottom: 0;
 	margin-top: 0;
 	padding: 0;
+
 }
 
 /* Make sure logo link wraps around logo image. */

@@ -11,7 +11,6 @@
  *
  * @package KSDT_WI23
  */
-
 get_header();
 ?>
 

@@ -10,42 +10,24 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<div class="container-flex">
+    <div class="row pb-5 w-100">
+        <div class="col text-center" id="spotlight">
+            <span>Category:<?php $current_category = get_category( get_query_var( 'cat' ), false ); the_category();?> </span>
+        </div>
+    </div>
+    <!-- articles -->
+    <div class="row p-lg-5 mx-auto px-3 pb-5 w-100">
+        <div class="col px-0 rainbox" id="article-box">
+            <div class="row w-100 pt-5 mx-auto pb-3">
 
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-	</main><!-- #main -->
+                <?php $category = get_category( get_query_var( 'cat' ) );
+					$cat_id = $category->cat_ID;
+					echo do_shortcode("[bdp_post grid='3' category='$cat_id' design='design1' limit='10' show_tags='false' pagination=”true” show_read_more='false' show_date='false' show_content='false']");?>
+            </div>
+        </div>
+    </div>
+</div>
 
 <?php
-get_sidebar();
-get_footer();
+get_footer(); ?>

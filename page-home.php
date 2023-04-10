@@ -53,7 +53,7 @@ get_header();
         </div>
         
         <!-- the imbed, using https://wordpress.org/plugins/wp-instagram-feed-awplife/ -->
-        <div class="row p-0 px-md-2 px-lg-4 mx-auto" id="insta-container"> 
+        <div class="row h-100 p-0 px-md-2 px-lg-4 mx-auto" id="insta-container"> 
             <?php $insta = file_get_contents(get_stylesheet_directory_uri()."/insta-key.txt");
                 echo do_shortcode("[IFG instagram_acces_token='$insta' insta_layout='insta_layout_grid' insta_grid_columns_l='4' insta_image_limit='9' insta_image_spacing='3' insta_icon_image='yes' insta_link_redirection='_new' insta_lightbox_color='#ffffff' ]");     
             ?>

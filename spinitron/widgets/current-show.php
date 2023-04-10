@@ -8,8 +8,7 @@ $start = (new DateTime($show['start']))->setTimezone(new DateTimeZone($show['tim
 $end = (new DateTime($show['end']))->setTimezone(new DateTimeZone($show['timezone'] ?? 'America/Los_Angeles'))->format('g:ia');
 ?>
 
-<b><?= htmlspecialchars($show['title'], ENT_NOQUOTES) ?></b>
-<?= $start . ' - ' . $end?>
-<br></br>
-<em><?= htmlspecialchars($spin['song'], ENT_NOQUOTES) ?></em>
-by <?= htmlspecialchars($spin['artist'], ENT_NOQUOTES) ?></p>
+<span class="spinitron pt-sm-4 pt-md-0 mw-fit" id="show"><?= htmlspecialchars($show['title'], ENT_NOQUOTES) ?><br></span>
+<span class="spinitron" id="time"><?= $start . ' - ' . $end?><br></span>
+<span class="spinitron" id="song"><?= htmlspecialchars($spin['song'], ENT_NOQUOTES) ?>
+ by <?= htmlspecialchars($spin['artist'], ENT_NOQUOTES) ?></span>

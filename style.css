@@ -818,6 +818,52 @@ textarea {
 
 }
 
+/* General Elements (Stickers etc) and classes
+--------------------------------------------- */
+.orange-flower{
+	content:url("img/logos/sticker-orangeflower.svg");
+	height:122px;
+	width:122px;
+}
+.yellow-flower{
+	content:url("img/logos/sticker-yellowflower.svg");
+	width:126px;
+	height:126px;
+}
+.made-in-ucsd{
+	content:url("img/logos/sticker-made.svg");
+	width:104px;
+	height:106px;
+}
+.record{
+	content:url("img/logos/sticker-record.svg");
+	height:178px;
+	width:178px;
+}
+.triton{
+	content:url("img/logos/sticker-tritons.svg");
+	width:185px;
+	height:185px;
+}
+.ucsd-blue{
+	content:url("img/logos/sticker-ucsdblue.svg");
+	width:288px;
+	height:190px;
+}
+.rainbox{
+	box-sizing: border-box;
+	border-radius: 10px;
+	border: 3px solid transparent;
+	border-image: var(--rainbowborder);
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	border-image-slice: 1;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.mw-fit{
+	max-width: fit-content;
+}
+
 /* Background, Navbar, Footer 
 -------------------------------------------- */
 .gifbg{
@@ -1011,52 +1057,6 @@ textarea {
 	}
 }
 
-/* General Elements (Stickers etc) and classes
---------------------------------------------- */
-.orange-flower{
-	content:url("img/logos/sticker-orangeflower.svg");
-	height:122px;
-	width:122px;
-}
-.yellow-flower{
-	content:url("img/logos/sticker-yellowflower.svg");
-	width:126px;
-	height:126px;
-}
-.made-in-ucsd{
-	content:url("img/logos/sticker-made.svg");
-	width:104px;
-	height:106px;
-}
-.record{
-	content:url("img/logos/sticker-record.svg");
-	height:178px;
-	width:178px;
-}
-.triton{
-	content:url("img/logos/sticker-tritons.svg");
-	width:185px;
-	height:185px;
-}
-.ucsd-blue{
-	content:url("img/logos/sticker-ucsdblue.svg");
-	width:288px;
-	height:190px;
-}
-.rainbox{
-	box-sizing: border-box;
-	border-radius: 10px;
-	border: 3px solid transparent;
-	border-image: var(--rainbowborder);
-	background-origin: border-box;
-	background-clip: content-box, border-box;
-	border-image-slice: 1;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.mw-fit{
-	max-width: fit-content;
-}
-
 /* Home Page
 --------------------------------------------- */
 #home-logo{
@@ -1081,25 +1081,37 @@ textarea {
 	line-height: 86px;
 	align-items: center;
 	color: #FFFFFF;
-	text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+	text-shadow: 5px 5px 4px var(--shadow);
 }
 .spinitron{
 	font-family: 'Europa Grotesk SH';
-	color:var(--black);
+	color: white;
 	display:flex;
+	padding-bottom:40px;
+    text-shadow: 3px 3px 1px var(--shadow);
+	cursor:default;
 }
-/* Need to support 322px lowest width. This @media section ensures no text overlap*/
-@media(min-width:338px){ 
-	.spinitron{
-		padding-bottom:15px;
-	}
+#time{
+	padding-top:0px;
 }
+#show{
+	color:var(--lpink);
+	font-family: "Porkys";
+	text-shadow: 3px 3px 2px rgba(253,12,114, 0.5);
+	transition: 0.3s;
+	cursor:pointer;
+}
+#show:hover{
+	transform: scale(1.2, 1.2) translate(10px, 0px);
+}
+	/* Need to support 322px lowest width. This @media section ensures no text overlap*/
 @media (min-width:394px){
 	.spinitron{
-		padding-top:30px;
+		padding-top:18px;
 		padding-bottom:0px;
 	}
 }
+
 @media (min-width:768px){
 	#show{
 		font-size:225%;
@@ -1122,6 +1134,17 @@ textarea {
 		font-size:200%;
 	}
 }
+@media(max-width:394px){
+	#show{
+		font-size:200%;
+	}
+	#time{
+		font-size:100%;
+	}
+	#song{
+		font-size:150%;
+	}
+}
 
 #main-header{
 	margin-bottom:200px;
@@ -1130,6 +1153,7 @@ textarea {
 	content:url("img/logos/playbutton.svg");
 	height:186px;
 	width:186px;
+	cursor:pointer;
 }
 
 .pause-button{
@@ -1148,15 +1172,21 @@ textarea {
 	font-size: 36px;
 	width: 100%;
 	max-height: 43px;
-	color: var(--black);
+	color: var(--transblack2);
 	text-shadow: 0px 4px 4px var(--shadow);
+	cursor:default;
+	transition: 0.3s;
 }
 #scroll{
 	content: url("img/logos/home-scroll.svg");
 	max-height: 77px;
 	width: 100%;
-	
+	transition: 0.3s;
 }
+#scroll-text:hover{
+	font-size:40px;
+}
+
 
 #insta-box{
 	background: var(--transblack1);

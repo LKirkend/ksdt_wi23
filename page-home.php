@@ -28,10 +28,7 @@ get_header();
                     <img class="play-button h-100 pb-sm-5">
                 </div>
                 <div class="col py-0 py-sm-3" id="show-current">
-                    <!-- <?php include(__DIR__ . '/spinitron/widgets/current-show.php') ?> -->
-                    <span class="spinitron pt-sm-3 pt-md-0" id="show">show name<br></span>
-                    <span class="spinitron" id="time">12:00pm-1:30pm<br></span>
-                    <span class="spinitron" id="song">song name + artist name</span>
+                    <?php include(__DIR__ . '/spinitron/widgets/current-show.php') ?>
                 </div>
             </div> 
         </div>

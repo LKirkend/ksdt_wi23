@@ -1186,8 +1186,6 @@ textarea {
 #scroll-text:hover{
 	font-size:40px;
 }
-
-
 #insta-box{
 	background: var(--transblack1);
 }
@@ -1196,8 +1194,40 @@ textarea {
 	height:102px;
 	width:100%;
 }
-#botb{ /* PLACEHOLDER Todo: Insta integration */
-	content:url("img/logos/home-botb-ex.svg");
+#insta-container .row{
+	margin-left: auto!important;
+	margin-right: auto!important;
+	padding-bottom:2rem;
+}
+.insta-img-thumbnail{
+	transition: 0.3s;
+	cursor: pointer;
+	background-color: rgba(0,0,0,0)!important;
+}
+.row div .insta-gallery-div {
+	padding:30px!important;
+}
+.insta-img-thumbnail:hover{
+	transform: scale(1.05, 1.05);
+	opacity: 1!important;
+}
+.insta_svg_icon{
+	display: none!important;
+}
+@media (max-width: 991px){
+	.row div .insta-gallery-div {
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		max-width: 100%;
+		flex: none;
+	}
+	.row div .insta-gallery-div {
+		padding:40px!important;
+	}
+}
+.instagram-video{
+	display:none!important;
 }
 
 /* Blog Page

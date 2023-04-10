@@ -88,6 +88,7 @@ html {
 	--shadow: rgba(0, 0, 0, 0.25);
 	--rainbowborder: linear-gradient(to bottom, var(--orange), var(--yellow), white, var(--hpink));
 	--logos: url("img/logos/");
+	--cont-transition: all 0.5s ease 0s;
 }
 /**
  * Remove the margin in all browsers.
@@ -112,7 +113,6 @@ h1 {
 	line-height: normal;
 	letter-spacing: 0%;
 	text-decoration: none;
-	margin: 2em 2em 2em 2em;
 	color: white;
 }
 
@@ -123,7 +123,6 @@ h2{
 	line-height: normal;
 	letter-spacing: 0%;
 	text-decoration: none;
-	margin: 1em 0 1em;
 	color:white;
 }
 
@@ -459,7 +458,6 @@ h6 {
 }
 
 p {
-	margin-bottom: 1.5em;
 	color:white;
 	font-family: "Europa Grotesk SH";
 	font-style: normal;
@@ -851,9 +849,20 @@ textarea {
     display: block;
 }
 #nav-item-padding{
-	padding-left: 20px;
+	padding-left: 30px;
 	padding-bottom:5px;
 }
+@media(max-width: 1330px){
+	#nav-item-padding{
+		padding-left:20px;
+	}
+}
+@media(max-width: 1100px){
+	#nav-item-padding{
+		padding-left: 13px;
+	}
+}
+
 @media (min-width:1250px){
 	.d-onair-block{
 		display: block!important;
@@ -1082,7 +1091,13 @@ textarea {
 /* Need to support 322px lowest width. This @media section ensures no text overlap*/
 @media(min-width:338px){ 
 	.spinitron{
-		padding-bottom:30px;
+		padding-bottom:15px;
+	}
+}
+@media (min-width:394px){
+	.spinitron{
+		padding-top:30px;
+		padding-bottom:0px;
 	}
 }
 @media (min-width:768px){
@@ -1162,6 +1177,7 @@ textarea {
 	font-size: 64px;
 	color: white;
 	padding-top:100px;
+	text-shadow: 0px 4px 4px var(--shadow);
 }
 #article-box{
 	background: var(--transblack2);
@@ -1195,6 +1211,8 @@ textarea {
 .bdp-post-title a {
 	color: white;
 	font-family:"Porkys";
+	text-shadow: 0px 2px 2px var(--shadow);
+
 }
 .bdp-post-title a:visited, a:hover{
 	color: var(--lpink);
@@ -1280,6 +1298,7 @@ textarea {
 	font-weight: 700;
 	font-size: 64px;
 	line-height: 86px;
+	text-shadow: 0px 4px 4px var(--shadow);
 }
 #blog-author::before{
 	content:"By ";
@@ -1291,6 +1310,7 @@ textarea {
 	font-size: 24px;
 	line-height: 26px;
 	color:white;
+	text-shadow: 0px 2px 2px var(--shadow);
 }
 #blog-block{
 	background-color: var(--black);
@@ -1332,6 +1352,7 @@ textarea {
 	font-weight: 700;
 	font-size: 64px;
 	line-height: 86px;
+	text-shadow: 0px 4px 4px var(--shadow);
 }
 
 .bdp-load-more-btn{
@@ -1385,18 +1406,41 @@ button.bdp-load-more-btn:hover, button.bdp-btn-active{
 #contact-header{
 	background-color: var(--black);
 }
+#contact-info{
+	margin-top:4rem;
+	margin-left: 2rem;
+	margin-bottom: 5rem;
+}
+@media(min-width: 992px){
+	#contact-info{
+		margin-left:5rem;
+	}	
+}
+@media(max-width: 365px){
+	#contact-info{
+		margin-left:0;
+	}
+}
 #contact-page h1{
 	font-size: 64px;
 	font-family: "Porkys";
+	color: white;
 	text-shadow: 0px 4px 4px var(--shadow);
 }
 #contact-page h2{
+	padding-top:25px;
 	font-size: 40px;
 	font-family: "Porkys";
 	text-shadow: 0px 4px 4px var(--shadow);
 }
 #contact-page h3{
-	font-size: 32px;
+	font-size: 28px;
+	font-family: "Porkys";
+	color:white;
+	text-shadow: 0px 4px 4px var(--shadow);
+}
+#contact-page h4{
+	font-size: 24px;
 	font-family: "Porkys";
 	color:white;
 	text-shadow: 0px 4px 4px var(--shadow);
@@ -1410,9 +1454,73 @@ button.bdp-load-more-btn:hover, button.bdp-btn-active{
 	font-size: 24px;
 	color:white;
 }
+#contact-pics{
+	margin-top:4rem;
+}
+#cont-img1{
+	max-height: 414px;
+}
+#cont-img2{
+	max-width: 414px;
+	translate: 200px 278px;
+}
+#staff-info{
+	margin-top:150px;
+}
 #staff-box{
 	background-color: var(--transblack2);
 }
+.staff-thumb img{
+	opacity: 1.0;
+	transition: var(--cont-transition);
+	max-width:280px;
+	max-height:340px;
+}
+.staff-thumb {
+	max-width:280px;
+}
+.staff-type{
+	transition: var(--cont-transition);
+	opacity: 1.0;	
+}
+.staff-email{
+	transition: var(--cont-transition);
+	opacity: 1.0;
+}
+.staff-cont:hover .staff-thumb img{
+	opacity: 0;
+}
+.staff-cont:hover .staff-type{
+	opacity: 0;
+}
+.staff-cont:hover .staff-email{
+	opacity: 0;
+}
+
+.overlay{
+	transition: var(--cont-transition);
+	opacity:0;
+	position:absolute;
+	max-width:280px;
+	max-height:340px;
+}
+@media(max-width: 400px){
+	.overlay{
+		max-width: 250px;
+	}
+}
+@media(max-width: 340px){
+	.overlay{
+		max-width:208px;
+	}
+}
+.staff-cont:hover .overlay{
+	opacity:1.0;
+	background-image: url("img/logos/contact-minibio.svg");
+	transform: translate(0px, -20%)
+}
+
+
 /* Login/Register/Scheduler/Admin
 --------------------------------------------- */
 #scheduler-box{

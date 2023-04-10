@@ -17,7 +17,14 @@ else{
 }
 ?>
 
-<span class="spinitron pt-sm-4 pt-md-0 mw-fit" id="show" href="https://spinitron.com/KSDT/show/<?=$show['id']?>"><?= htmlspecialchars($show['title'], ENT_NOQUOTES) ?><br></span>
+<span class="spinitron pt-sm-4 pt-md-0 mw-fit" id="show" onclick="redirectClick(this)" href="https://spinitron.com/KSDT/show/<?=$show['id']?>"><?= htmlspecialchars($show['title'], ENT_NOQUOTES) ?><br></span>
 <span class="spinitron" id="time"><?= $start . ' - ' . $end?><br></span>
 <span class="spinitron" id="song"><?= htmlspecialchars($spin['song'], ENT_NOQUOTES) ?>
  by <?= htmlspecialchars($spin['artist'], ENT_NOQUOTES) ?></span>
+
+ <script>
+     function redirectClick(obj){
+         var href = obj.getAttribute('href');
+         window.location.href = href;
+     }
+ </script>

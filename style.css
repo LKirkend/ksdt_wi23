@@ -1186,8 +1186,6 @@ textarea {
 #scroll-text:hover{
 	font-size:40px;
 }
-
-
 #insta-box{
 	background: var(--transblack1);
 }
@@ -1195,6 +1193,13 @@ textarea {
 	content:url("img/logos/home-welcomeksdt.svg");
 	height:102px;
 	width:100%;
+}
+.insta-embed{
+	transition: 0.3s;
+	cursor: pointer;
+}
+.insta-embed:hover{
+	transform: scale(1.1, 1.1)
 }
 #botb{ /* PLACEHOLDER Todo: Insta integration */
 	content:url("img/logos/home-botb-ex.svg");

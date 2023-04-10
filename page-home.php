@@ -54,37 +54,37 @@ get_header();
         <!-- row 1 -->
         <div class="row p-0 px-md-2 px-lg-4 py-md-2 py-lg-4 mx-auto">
             <div class="col-sm px-0 py-0 pe-md-2 pe-lg-5">
-                <img id="botb" class="w-100 px-2 px-md-0 py-1 py-md-0">
+                <img id="botb" class="insta-embed w-100 px-2 px-md-0 py-1 py-md-0">
             </div>
             <div class="col-sm px-0 py-0 px-md-2 px-lg-5">
-                <img id="botb" class="w-100 px-2 px-md-0 py-1 py-md-0">
+                <img id="botb" class="insta-embed w-100 px-2 px-md-0 py-1 py-md-0">
             </div>
             <div class="col-sm px-0 py-0 ps-md-2 ps-lg-5">
-                <img id="botb" class="w-100 px-2 px-md-0 py-1 py-md-0">
+                <img id="botb" class="insta-embed w-100 px-2 px-md-0 py-1 py-md-0">
             </div>
         </div>
         <!-- row 2 -->
         <div class="row p-0 px-md-2 px-lg-4 py-md-2 py-lg-4 mx-auto">
             <div class="col-sm px-0 py-0 pe-md-2 pe-lg-5">
-                <img id="botb" class="w-100 px-2 px-md-0 py-1 py-md-0">
+                <img id="botb" class="insta-embed w-100 px-2 px-md-0 py-1 py-md-0">
             </div>
             <div class="col-sm px-0 py-0 px-md-2 px-lg-5">
-                <img id="botb" class="w-100 px-2 px-md-0 py-1 py-md-0">
+                <img id="botb" class="insta-embed w-100 px-2 px-md-0 py-1 py-md-0">
             </div>
             <div class="col-sm px-0 py-0 ps-md-2 ps-lg-5">
-                <img id="botb" class="w-100 px-2 px-md-0 py-1 py-md-0">
+                <img id="botb" class="insta-embed w-100 px-2 px-md-0 py-1 py-md-0">
             </div>
         </div>
         <!-- row 3 -->
-        <div class="row p-0 px-md-2 px-lg-4 pt-md-2 pt-lg-4 pb-md-2 pb-lg-3 mx-auto">
+        <div class="row p-0 mb-2 px-md-2 px-lg-4 pt-md-2 pt-lg-4 pb-md-2 pb-lg-3 mx-auto">
             <div class="col-sm px-0 py-0 pe-md-2 pe-lg-5">
-                <img id="botb" class="w-100 px-2 px-md-0 py-1 py-md-0">
+                <img id="botb" class="insta-embed w-100 px-2 px-md-0 py-1 py-md-0">
             </div>
             <div class="col-sm px-0 py-0 px-md-2 px-lg-5">
-                <img id="botb" class="w-100 px-2 px-md-0 py-1 py-md-0">
+                <img id="botb" class="insta-embed w-100 px-2 px-md-0 py-1 py-md-0">
             </div>
             <div class="col-sm px-0 py-0 ps-md-2 ps-lg-5">
-                <img id="botb" class="w-100 px-2 px-md-0 pt-1 pb-2 py-md-0">
+                <img id="botb" class="insta-embed w-100 px-2 px-md-0 pt-1 pb-2 py-md-0">
             </div>
         </div>
     </div>

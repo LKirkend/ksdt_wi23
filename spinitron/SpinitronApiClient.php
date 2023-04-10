@@ -93,7 +93,7 @@ class SpinitronApiClient
         if (!file_exists(dirname($cacheFile))) {
             mkdir(dirname($cacheFile), 0755, true);
         }
-        file_put_contents($cacheFile, $response);
+        /*file_put_contents($cacheFile, $response);*/
 
         return $response;
     }

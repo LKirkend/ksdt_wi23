@@ -1194,7 +1194,7 @@ textarea {
 	height:102px;
 	width:100%;
 }
-#insta-container .row{
+insta-container .row{
 	margin-left: auto!important;
 	margin-right: auto!important;
 	padding-bottom:2rem;
@@ -1228,6 +1228,19 @@ textarea {
 }
 .instagram-video{
 	display:none!important;
+}
+
+/* Broadcast
+--------------------------------------------- */
+.my-7{
+	margin-top: 6em;
+	margin-bottom: 6em;
+}
+#playing-now{
+	background-color: var(--transblack1);
+}
+#playing-next{
+	background-color: var(--transblack1);
 }
 
 /* Blog Page

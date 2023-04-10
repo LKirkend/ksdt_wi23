@@ -26,7 +26,6 @@ get_header();
                 <div class="col">
                     <h1 class="card-title d-none d-lg-block mx-auto text-center" id="tune-in">tune in now:</h5>
                     <h1 class="card-title fs-1 d-none d-sm-block d-lg-none mx-auto text-center" id="tune-in">tune in now:</h5>  
-                    
                 </div>
             </div>
             <div class="row h-100 mx-0">

@@ -46,7 +46,7 @@ class SpinitronApiClient
             $url .= '?' . http_build_query($params);
         }
 
-        return json_decode($this->queryCached($endpoint, $url), true);
+        return json_decode($this->queryApi($url), true);
     }
 
     public function getPersonaFromShow($show){
@@ -65,7 +65,7 @@ class SpinitronApiClient
     {
         $url = '/' . $endpoint . '/' . $id;
 
-        return json_decode($this->queryCached($endpoint, $url), true);
+        return json_decode($this->queryApi($url), true);
     }
 
     /**

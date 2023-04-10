@@ -23,10 +23,10 @@ class SpinitronApiClient
         if (!is_dir($fileCachePath)) {
             throw new \Exception('$fileCachePath is not a directory');
         }
-        if (!is_writable($fileCachePath)) {
+        /*if (!is_writable($fileCachePath)) {
             throw new \Exception('$fileCachePath is not writable');
         }
-        $this->fileCachePath = $fileCachePath;
+        $this->fileCachePath = $fileCachePath;  */
     }
 
     /**

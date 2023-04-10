@@ -25,15 +25,21 @@ if($grid == '2') {
 }
 ?>
 <div class="bdp-post-grid  bdp-medium-<?php echo esc_attr( $bdpgrid ); ?> bdp-columns <?php echo esc_attr( $css_class ); ?>">
-	<div class="bdp-post-grid-content <?php if ( ! has_post_thumbnail() ) { echo 'bdp-no-thumb-image'; } ?>">
+	<div class="bdp-post-grid-content">
 		<?php if ( has_post_thumbnail() ) { ?>
 		<div class="bdp-post-image-bg">
 			<a href="<?php echo esc_url( $post_link ); ?>">
 				<img src="<?php echo esc_url( $post_featured_image ); ?>" alt="<?php the_title_attribute(); ?>" onerror="this.classList.add('spinning-record')"/>
 			</a>
 		</div>
+		
+		<?php } else{ ?> 
+		<div class="bdp-post-image-bg">
+			<a href="<?php echo esc_url( $post_link ); ?>">
+				<img class="spinning-record" alt="<?php the_title_attribute(); ?>" />
+			</a>
+		</div>
 		<?php }
-
 		if( $showCategory == "true" && $cate_name != '' ) { ?>
 		<div class="bdp-post-categories">
 			<?php echo wp_kses_post( $cate_name ); ?>

@@ -1473,6 +1473,11 @@ button.bdp-load-more-btn:hover, button.bdp-btn-active{
 	text-decoration: none;
 }
 
+figcaption{
+	color: white;
+    font-family: "Europa Grotesk SH";
+    font-size: 24px;
+}
 
 /* Contact Page
 --------------------------------------------- */

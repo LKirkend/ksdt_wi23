@@ -25,11 +25,17 @@ if($grid == '2') {
 }
 ?>
 <div class="bdp-post-grid bdp-medium-<?php echo esc_attr( $bdpgrid ); ?> bdp-columns">
-	<div class="bdp-post-grid-content <?php if ( ! has_post_thumbnail() ) { echo 'bdp-no-thumb-image'; } ?>">
+	<div class="bdp-post-grid-content">
 		<?php if ( has_post_thumbnail() ) { ?>
 		<div class="bdp-post-image-bg">
 			<a href="<?php echo esc_url( $post_link ); ?>">
 				<img src="<?php echo esc_url( $post_featured_image ); ?>" alt="<?php the_title_attribute(); ?>" onerror="this.classList.add('spinning-record')"/>
+			</a>
+		</div>
+		<?php } else{ ?>
+		<div class="bdp-post-image-bg">
+			<a href="<?php echo esc_url( $post_link ); ?>">
+				<img src="" class="spinning-record" alt="<?php the_title_attribute(); ?>" />
 			</a>
 		</div>
 		<?php }

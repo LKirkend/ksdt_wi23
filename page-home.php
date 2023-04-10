@@ -51,41 +51,12 @@ get_header();
                 <img id="welcome">
             </div>
         </div>
-        <!-- row 1 -->
-        <div class="row p-0 px-md-2 px-lg-4 py-md-2 py-lg-4 mx-auto">
-            <div class="col-sm px-0 py-0 pe-md-2 pe-lg-5">
-                <img id="botb" class="insta-embed w-100 px-2 px-md-0 py-1 py-md-0">
-            </div>
-            <div class="col-sm px-0 py-0 px-md-2 px-lg-5">
-                <img id="botb" class="insta-embed w-100 px-2 px-md-0 py-1 py-md-0">
-            </div>
-            <div class="col-sm px-0 py-0 ps-md-2 ps-lg-5">
-                <img id="botb" class="insta-embed w-100 px-2 px-md-0 py-1 py-md-0">
-            </div>
-        </div>
-        <!-- row 2 -->
-        <div class="row p-0 px-md-2 px-lg-4 py-md-2 py-lg-4 mx-auto">
-            <div class="col-sm px-0 py-0 pe-md-2 pe-lg-5">
-                <img id="botb" class="insta-embed w-100 px-2 px-md-0 py-1 py-md-0">
-            </div>
-            <div class="col-sm px-0 py-0 px-md-2 px-lg-5">
-                <img id="botb" class="insta-embed w-100 px-2 px-md-0 py-1 py-md-0">
-            </div>
-            <div class="col-sm px-0 py-0 ps-md-2 ps-lg-5">
-                <img id="botb" class="insta-embed w-100 px-2 px-md-0 py-1 py-md-0">
-            </div>
-        </div>
-        <!-- row 3 -->
-        <div class="row p-0 mb-2 px-md-2 px-lg-4 pt-md-2 pt-lg-4 pb-md-2 pb-lg-3 mx-auto">
-            <div class="col-sm px-0 py-0 pe-md-2 pe-lg-5">
-                <img id="botb" class="insta-embed w-100 px-2 px-md-0 py-1 py-md-0">
-            </div>
-            <div class="col-sm px-0 py-0 px-md-2 px-lg-5">
-                <img id="botb" class="insta-embed w-100 px-2 px-md-0 py-1 py-md-0">
-            </div>
-            <div class="col-sm px-0 py-0 ps-md-2 ps-lg-5">
-                <img id="botb" class="insta-embed w-100 px-2 px-md-0 pt-1 pb-2 py-md-0">
-            </div>
+        
+        <!-- the imbed, using https://wordpress.org/plugins/wp-instagram-feed-awplife/ -->
+        <div class="row p-0 px-md-2 px-lg-4 mx-auto" id="insta-container"> 
+            <?php $insta = file_get_contents(get_stylesheet_directory_uri()."/insta-key.txt");
+                echo do_shortcode("[IFG instagram_acces_token='$insta' insta_layout='insta_layout_grid' insta_grid_columns_l='4' insta_image_limit='9' insta_image_spacing='3' insta_icon_image='yes' insta_link_redirection='_new' insta_lightbox_color='#ffffff' ]");     
+            ?>
         </div>
     </div>
 </div>

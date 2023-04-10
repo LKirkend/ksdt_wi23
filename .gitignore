@@ -22,8 +22,9 @@ node_modules/
 *.sql
 *.sqlite
 
-#ignore api key
+#ignore api keys
 api-key.txt
+insta-key.txt
 
 #ignore gifs
 img/gif/

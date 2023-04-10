@@ -1186,8 +1186,6 @@ textarea {
 #scroll-text:hover{
 	font-size:40px;
 }
-
-
 #insta-box{
 	background: var(--transblack1);
 }
@@ -1196,8 +1194,28 @@ textarea {
 	height:102px;
 	width:100%;
 }
+.insta-embed{
+	transition: 0.3s;
+	cursor: pointer;
+}
+.insta-embed:hover{
+	transform: scale(1.1, 1.1)
+}
 #botb{ /* PLACEHOLDER Todo: Insta integration */
 	content:url("img/logos/home-botb-ex.svg");
+}
+
+/* Broadcast
+--------------------------------------------- */
+.my-7{
+	margin-top: 6em;
+	margin-bottom: 6em;
+}
+#playing-now{
+	background-color: var(--transblack1);
+}
+#playing-next{
+	background-color: var(--transblack1);
 }
 
 /* Blog Page

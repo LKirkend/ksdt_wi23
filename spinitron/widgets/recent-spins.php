@@ -6,7 +6,7 @@ $result = $client->search('spins', ['count' => 3]);
 foreach ($result['items'] as $spin): ?>
     <div class="row">
         <div class="col-sm-5">
-            <img class="spinning-record">
+            <img src="<?=$spin['image']?>">
             <!-- Todo: get picture of album art / artist photo -->
         </div>
         <div class="col-sm pt-5">

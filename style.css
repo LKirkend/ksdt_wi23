@@ -1897,6 +1897,13 @@ figcaption{
 	text-decoration: none;
 }
 
+.um-field-block{
+	color:white!important;
+	font-family:"Europa Grotesk SH";
+	font-size:30px;
+	text-shadow: 2px 2px 2px var(--black);
+}
+
 /* Comments
 --------------------------------------------- */
 .comment-content a {

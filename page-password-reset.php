@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-<div class="container-flex" style="height:866px;">
-  <div class="row center rainbox mx-auto w-25 my-5" style="background-color: var(--transblack2)">
+<div class="container-flex mx-5" style="height:866px;">
+  <div class="row center rainbox mx-auto w-100 my-5" style="background-color: var(--transblack2); max-width: 98%;">
     <div class="col mx-auto py-5">
         <?php echo do_shortcode('[ultimatemember_password]')?>
     </div>

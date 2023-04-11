@@ -48,6 +48,7 @@ Daniel Hernandez
 ` define('WP_HOME', 'http://localhost/wordpress/');`
 
 ` define('WP_SITEURL', 'http://localhost/wordpress/');`
+
 9. Restart Apache2 and phpmyadmin via xampp. Whenever you change wp-config.php, you need to restart the site. 
 10. Create your user account.
 11. Login, navigate to [localhost/wordpress/wp-admin/plugin-install.php?s=migration&tab=search&type=term](localhost/wordpress/wp-admin/plugin-install.php?s=migration&tab=search&type=term) and install the All-in-One WP Migration plugin. **Click activate after it’s done installing**

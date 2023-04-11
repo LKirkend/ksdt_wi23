@@ -25,7 +25,9 @@ get_header();
             </div>
             <div class="row h-100 mx-0">
                 <div class="play-btn col-5 h-100 py-sm-4">
-                    <img class="play-button h-100 pb-sm-5">
+                    <div class="radioplayer" data-src="https://s4.radio.co/s2c33c7adb/listen" data-autoplay="false" data-playbutton="false" data-volumeslider="false" data-elapsedtime="false" data-nowplaying="false" data-showplayer="false" data-volume="50" data-showartwork="false">
+                        <input id="radio-toggle" type="image" onclick="togglePlay()" class="play-button h-100 pb-sm-5">
+                    </div>
                 </div>
                 <div class="col py-0 py-sm-3" id="show-current">
                     <?php include(__DIR__ . '/spinitron/widgets/current-show.php') ?>
@@ -60,7 +62,5 @@ get_header();
         </div>
     </div>
 </div>
-
-<div class="radioplayer" data-src="https://s4.radio.co/s2c33c7adb/listen" data-autoplay="false" data-playbutton="false" data-volumeslider="false" data-elapsedtime="false" data-nowplaying="false" data-showplayer="false" data-volume="50" data-showartwork="false"></div>
 
 <?php get_footer(); ?>

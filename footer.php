@@ -17,16 +17,7 @@
 <script src="https://public.radio.co/playerapi/jquery.radiocoplayer.min.js"></script>
 <script type="text/javascript">
 	var player = $('.radioplayer').radiocoPlayer();
-		console.log('invalid stream');
-	});
-	player.event('streamInfoError', function(event){
-		console.log('no stream info');
-	});
 	
-	if(!player.hasLoaded()){
-			player.load(function(event){
-		});
-	}
 	var toggleButton = document.getElementById('radio-toggle');
 	var onAir = document.getElementById('nav-onair');
 
@@ -40,6 +31,8 @@
 			});
 	}
 </script>
+
+<div class="radioplayer" data-src="https://s4.radio.co/s2c33c7adb/listen" data-autoplay="false" data-playbutton="false" data-volumeslider="false" data-elapsedtime="false" data-nowplaying="false" data-showplayer="false" data-volume="50" data-showartwork="false"></div>
 
 <nav class="navbar footer-cheight w-100" style="background-color: var(--black)">
 	<div class="container-fluid">

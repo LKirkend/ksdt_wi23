@@ -1106,6 +1106,10 @@ textarea {
 	align-items: center;
 	color: #FFFFFF;
 	text-shadow: 5px 5px 4px var(--shadow);
+	cursor:pointer;
+}
+#tune-in-box a{
+	text-decoration: none;
 }
 @media (min-width: 992px){
 	.h-lg-100{

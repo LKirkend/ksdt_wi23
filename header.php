@@ -25,9 +25,9 @@
 
 
 <body class="gifbg">
-    <div id="loader"></div>
+    <!-- <div id="loader"></div> -->
     <!-- Using https://getbootstrap.com/docs/5.3/components/navbar/ as a reference -->
-    <nav class="navbar navbar-expand-lg navbar-cheight sticky-top" style="background-color: var(--black); visibility:hidden;" role="navigation" id="nav-header">
+    <nav class="navbar navbar-expand-lg navbar-cheight sticky-top" style="background-color: var(--black)" role="navigation" id="nav-header">
         <div class="container-fluid">
             <!-- Logo -->
             <a class="navbar-brand" id="navbar-adjLogo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img id="nav-ksdt"></a>
@@ -56,23 +56,24 @@
             </div>
         </div>
     </nav>
-    <section role="main" id="main-sec" style="visibility:hidden;">
+    <section role="main" id="main-sec">
     <script> 
-        const imageUrl = "<?php echo get_stylesheet_directory_uri(); ?>" + "/img/gif/backgroundflip.gif";
-        const bgElement = document.querySelector("body");
-        console.log(bgElement);
+        // Loading 
+        // const imageUrl = "<?php echo get_stylesheet_directory_uri(); ?>" + "/img/gif/backgroundflip.gif";
+        // const bgElement = document.querySelector("body");
+        // console.log(bgElement);
 
-        let preloaderImg = document.createElement("img");
-        preloaderImg.src = imageUrl;
+        // let preloaderImg = document.createElement("img");
+        // preloaderImg.src = imageUrl;
 
-        preloaderImg.addEventListener('load', (event) => {
-            bgElement.classList.add("thegif");
-            console.log(imageUrl);
-            console.log(bgElement.style.backgroundImage);
-            preloaderImg = null;
-            document.getElementById("loader").style.visibility = "hidden";
-            document.getElementById("nav-header").style.visibility = "visible";
-            document.getElementById("footer-bottom").style.visibility = "visible";
-            document.getElementById("main-sec").style.visibility = "visible";
-        });
+        // preloaderImg.addEventListener('load', (event) => {
+        //     bgElement.classList.add("thegif");
+        //     console.log(imageUrl);
+        //     console.log(bgElement.style.backgroundImage);
+        //     preloaderImg = null;
+        //     document.getElementById("loader").style.visibility = "hidden";
+        //     document.getElementById("nav-header").style.visibility = "visible";
+        //     document.getElementById("footer-bottom").style.visibility = "visible";
+        //     document.getElementById("main-sec").style.visibility = "visible";
+        // });
     </script>

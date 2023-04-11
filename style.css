@@ -883,15 +883,16 @@ textarea {
 	animation-timing-function: linear;
 }
 .gifbg{
+	background-image:url('img/gif/backgroundflip.gif');
 	background-repeat:repeat-y;
 	background-size: cover;
+	height: 100vh;
 	padding:0;
 	margin:0;
  }
- .thegif{
+ /* .thegif{
 	background-image:url('img/gif/backgroundflip.gif');
-	height: 100vh;
- }
+ } */
 .navbar-cheight{
 	height: 83px;
 }

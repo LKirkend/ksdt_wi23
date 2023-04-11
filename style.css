@@ -1117,7 +1117,9 @@ textarea {
 		height:50%!important;
 	}
 }
-
+#current-bottom::-webkit-scrollbar {
+	display: none;
+  }
 .spinitron{
 	font-family: 'Europa Grotesk SH';
 	color: white;

@@ -23,9 +23,9 @@ get_header();
                     <h1 class="card-title my-0 fs-1 d-none d-md-block d-lg-none mx-auto text-center" id="tune-in">tune in now:</h1>  
                 </div>
             </div>
-            <div class="row h-100 mx-0">
+            <div class="row h-100 mx-0 overflow-y-scroll overflow-x-hidden" id="current-bottom">
                 <div class="play-btn col-5 px-0 px-lg-3 h-lg-100 my-auto mh-100 py-sm-4">
-                    <img id="radio-toggle" src='url("img/logos/playbutton.svg")' onclick="togglePlay()" class="play-button mx-0 h-100 pe-lg-0 h-lg-100 mh-100 pb-sm-5 my-5 my-md-0" onerror="this.classList.add('play-button2');">
+                    <img id="radio-toggle" src='<?php echo get_stylesheet_directory_uri(); ?> . /img/logos/playbutton.svg' onclick="togglePlay()" class="play-button mx-0 h-100 pe-lg-0 h-lg-100 mh-100 pb-sm-5 my-5 my-md-0" onerror="this.classList.add('play-button2');">
                 </div>
                 <div class="col py-0 py-sm-3 px-0 h-auto my-auto mt-lg-3 mb-lg-0" id="show-current">
                     <?php include(__DIR__ . '/spinitron/widgets/current-show.php') ?>

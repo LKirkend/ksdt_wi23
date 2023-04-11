@@ -1818,7 +1818,7 @@ figcaption{
 #scheduler-box{
 	background: var(--transblack2);
 	min-height:850px;
-	max-width: 75%;
+	max-width: 98%;
 }
 #scheduler-box label{
 	color: white;
@@ -1851,9 +1851,9 @@ figcaption{
 .fieldCalendar span, .slotsCalendar span{
 	color: var(--orange);
 	font-family:"Porkys";
-	font-size:40px;
+	font-size:32px;
 	line-height: 70px;
-	text-shadow: 2px 2px 2px white;
+	text-shadow: 0px 1px 4px white;
 }
 
 .slots span:not(.ahb_slot_availability){

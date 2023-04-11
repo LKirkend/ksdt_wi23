@@ -10,11 +10,11 @@
 
 get_header();
 ?>
-<div class="container-fluid px-sm-5" id="main-header">
+<div class="container-fluid px-sm-5 p-2" id="main-header">
     <!-- logo and play button -->
     <div class="row gx-md-5 pt-sm-5">
         <div class="col-md py-2">
-            <img id="home-logo">
+            <img class="d-flex mx-auto mx-lg-0" id="home-logo">
         </div>
         <div class="col-md card mx-auto ms-lg-5 ms-sm-auto p-0 rainbox" id="tune-in-box">
             <div class="row">

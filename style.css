@@ -1281,8 +1281,13 @@ textarea {
 	cursor: pointer;
 	background-color: rgba(0,0,0,0)!important;
 }
-.row div .insta-gallery-div {
-	padding:30px!important;
+.row div .insta-gallery-div{
+	padding:25px!important;
+}
+@media(max-width:1600px){
+	.row div .insta-gallery-div {
+		padding:15px!important;
+	}
 }
 .insta-img-thumbnail:hover{
 	transform: scale(1.05, 1.05);
@@ -1300,7 +1305,7 @@ textarea {
 		flex: none;
 	}
 	.row div .insta-gallery-div {
-		padding:40px!important;
+		padding:20px!important;
 	}
 }
 .instagram-video{
@@ -1316,6 +1321,39 @@ textarea {
 
 #played-recent{
 	background-color: var(--transblack1);
+	max-height: 936px;
+    
+}
+#spin-recent{
+	overflow-y: scroll;
+	overflow-x: hidden;
+	max-height: 680px;
+}
+#spin-recent::-webkit-scrollbar {
+	visibility: hidden;
+}
+@media (max-width: 575.9px){
+	#spin-recent::-webkit-scrollbar {
+		visibility: visible;
+	}
+	#spin-recent::-webkit-scrollbar{
+		width:8px;
+	}
+	#spin-recent::-webkit-scrollbar-track-piece{
+		background-color:#BCB9AC;
+		border-radius:10px;
+		-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.5); 
+	}
+	#spin-recent::-webkit-scrollbar-button{
+		visibility:hidden;
+		height:30px;
+	}
+	#spin-recent::-webkit-scrollbar-thumb{
+		background-color:var(--yellow);
+		width:8px;
+		-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.5); 
+		border-radius:10px;
+	}
 }
 .recent-date{
 	font-family: 'Europa Grotesk SH';
@@ -1367,7 +1405,17 @@ textarea {
 }
 #spin-upcoming{
 	padding-right: 100px;
-	padding-left: 70px;
+	padding-left: 50px;
+}
+@media (max-width: 850px){
+	#spin-upcoming{
+		padding-left:15px;
+	}
+}
+@media (max-width: 783px){
+	#spin-upcoming{
+		padding-right: 60px;
+	}
 }
 .next-time{
 	font-family: 'Europa Grotesk SH';

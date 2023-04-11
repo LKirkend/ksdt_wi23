@@ -5,7 +5,7 @@ $result = $client->search('spins', ['count' => 3]);
 
 foreach ($result['items'] as $spin): ?>
     <div class="row">
-        <div class="col-sm-5">
+        <div class="col-sm-5 text-center">
             <?php $img = $spin['image'];
             if($img == null){
             ?>  <img class="spinning-record" style="width:170px; height:170px;"> <?php

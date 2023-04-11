@@ -14,7 +14,7 @@
 </body>
 
 
-<nav class="navbar footer-cheight w-100" style="background-color: var(--black)">
+<nav class="navbar footer-cheight w-100" style="background-color: var(--black); visibility:hidden;" id="footer-bottom">
 	<div class="container-fluid">
 		<span class="navbar-text align-text-bottom me-auto" id="views"> The views presented on this website are not necessarily those of The University of California Regents, The University of California San Diego, or KSDT Radio. </span>
 		<span class="navbar-text align-text-bottom ms-auto pe-5" id="contact"> CONTACT <br /> 
@@ -43,10 +43,12 @@
 			function togglePlay(){
 				player.playToggle(
 					function(event){
-						toggleButton.className = "pause-button";
+						toggleButton.classList.toggle("pause-button");
+						toggleButton.classList.toggle("play-button");
 					}, 
 					function(event){
-						toggleButton.className = "play-button";
+						toggleButton.classList.toggle("pause-button");
+						toggleButton.classList.toggle("play-button");
 					});
 			}
 	</script>

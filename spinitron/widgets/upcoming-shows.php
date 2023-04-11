@@ -15,7 +15,7 @@ foreach ($result['items'] as $show): ?>
         <div class="col-sm">
             <div class="row">
                 <span class="next-show">
-                    <b><a href="https://spinitron.com/KSDT/show/<?=$show['id']?>">
+                    <b><a href="https://spinitron.com/KSDT/show/<?=$show['id']?>" target="_blank" rel="noreferrer noopener">
                         <?= htmlspecialchars($show['title'], ENT_NOQUOTES) ?>
                     </a></b> 
                     <span class="next-with">with</span>

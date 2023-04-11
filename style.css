@@ -870,13 +870,27 @@ textarea {
 
 /* Background, Navbar, Footer 
 -------------------------------------------- */
+#loader {
+	position: absolute;
+	left: calc(50% - 125px);
+	top: calc(50% - 127px);
+	z-index: 1;
+	content:url("img/logos/sticker-record.svg")!important;
+	animation-name: spinning;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	/* linear | ease | ease-in | ease-out | ease-in-out */
+	animation-timing-function: linear;
+}
 .gifbg{
-	background-image:url('img/gif/backgroundflip.gif'); /* TODO: Change to MP4 for optimization */
 	background-repeat:repeat-y;
 	background-size: cover;
-	height: 100vh;
 	padding:0;
 	margin:0;
+ }
+ .thegif{
+	background-image:url('img/gif/backgroundflip.gif');
+	height: 100vh;
  }
 .navbar-cheight{
 	height: 83px;
@@ -1111,6 +1125,9 @@ textarea {
     text-shadow: 3px 3px 1px var(--shadow);
 	cursor:default;
 }
+#show-current a{
+	text-decoration: none;
+}
 #time{
 	padding-top:0px;
 }
@@ -1185,11 +1202,27 @@ textarea {
 #main-header{
 	margin-bottom:200px;
 }
-.play-button{
-	content:url("img/logos/playbutton.svg");
-	height:186px;
-	width:186px;
+#radio-toggle{
+	max-height:186px;
+	height:100%;
+	display:flex;
 	cursor:pointer;
+	margin-top:3em;
+}
+
+@media (min-width: 768px){
+	#radio-toggle{
+		margin-top:0;
+	}
+}
+.play-button{
+	width: 186px;
+    height: 186px;
+}
+.play-button2{
+	content:url("img/logos/playbutton.png");
+	width: 186px;
+    height: 186px;
 }
 
 .pause-button{

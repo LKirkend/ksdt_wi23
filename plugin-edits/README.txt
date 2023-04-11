@@ -1,1 +1,0 @@
-For each of these folders, drag them into /../../../plugins/ and overwrite the files.

@@ -15,6 +15,7 @@ get_header();
     <div class="row gx-md-5 pt-sm-5">
         <div class="col-md py-2">
             <img id="home-logo">
+            <img class="made-in-ucsd" style="position:absolute; top:350px; left:0px;">
         </div>
         <div class="col-md card mx-auto ms-lg-5 ms-sm-auto p-0 rainbox" id="tune-in-box">
             <div class="row">
@@ -31,6 +32,7 @@ get_header();
                     <?php include(__DIR__ . '/spinitron/widgets/current-show.php') ?>
                 </div>
             </div> 
+            <img class="orange-flower" style="position:absolute; top:290px; right:-50px;">
         </div>
     </div>
     <!-- scroll to learn more -->

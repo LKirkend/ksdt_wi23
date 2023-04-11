@@ -9,7 +9,7 @@ foreach ($result['items'] as $spin): ?>
             <img src="<?=$spin['image']?>">
             <!-- Todo: get picture of album art / artist photo -->
         </div>
-        <div class="col-sm pt-5">
+        <div class="col-sm pb-5">
             <span class="recent-date">
             <?= (new DateTime($spin['start']))
                 ->setTimezone(new DateTimeZone($spin['timezone'] ?? 'America/Los_Angeles'))

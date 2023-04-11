@@ -1375,12 +1375,18 @@ textarea {
 	font-size:32px;
 	font-weight: 500;
 }
+#broadcast-wave{
+	content:url("img/logos/broadcast-wave.svg");
+	width: 126px;
+    height: 39px;
+}
 .next-show{
 	font-family: 'Europa Grotesk SH';
 	color: white;
 	font-size:32px;
 	font-weight: 600;
 	font-style: italic;
+	white-space: nowrap;
 }
 .next-show a{
 	text-decoration: none;

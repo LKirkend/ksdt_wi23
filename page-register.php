@@ -10,6 +10,14 @@
 <?php get_footer(); ?>
 
 
+<!-- For whatever reason, the plugin won't load without manually resizing the page. -->
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
+    setTimeout(function() {
+      jQuery(window).trigger("resize");
+    }, 10);
+  });
+</script>
   
   
 

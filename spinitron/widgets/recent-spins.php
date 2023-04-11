@@ -1,7 +1,7 @@
 <?php
 include __DIR__ . '/../getClient.php';
 /** @var SpinitronApiClient $client */
-$result = $client->search('spins', ['count' => 3]);
+$result = $client->search('spins', ['count' => 12]);
 
 foreach ($result['items'] as $spin): ?>
     <div class="row">

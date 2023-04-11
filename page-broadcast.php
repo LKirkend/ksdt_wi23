@@ -14,7 +14,7 @@ get_header();
 <div class="container-flex">
 	<div class="row w-100 mx-3 mx-md-5 w-auto my-7">
 		<div class="col-xl p-0 me-xl-5 mb-5 rainbox" id="played-recent">
-			<div class="container-flex mx-3 mx-sm-5 my-5">
+			<div class="container-flex mx-3 mx-md-5 my-5">
 				<div class="row text-center pb-5">
 					<h1 style="text-shadow: 0px 4px 4px var(--shadow);">Played Last</h1>
 				</div>

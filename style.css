@@ -1282,7 +1282,7 @@ textarea {
 	background-color: rgba(0,0,0,0)!important;
 }
 .row div .insta-gallery-div{
-	padding:25px!important;
+	padding:30px!important;
 }
 @media(max-width:1600px){
 	.row div .insta-gallery-div {
@@ -1329,32 +1329,25 @@ textarea {
 	overflow-x: hidden;
 	max-height: 680px;
 }
-#spin-recent::-webkit-scrollbar {
-	visibility: hidden;
+#spin-recent::-webkit-scrollbar{
+	width:8px;
 }
-@media (max-width: 575.9px){
-	#spin-recent::-webkit-scrollbar {
-		visibility: visible;
-	}
-	#spin-recent::-webkit-scrollbar{
-		width:8px;
-	}
-	#spin-recent::-webkit-scrollbar-track-piece{
-		background-color:#BCB9AC;
-		border-radius:10px;
-		-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.5); 
-	}
-	#spin-recent::-webkit-scrollbar-button{
-		visibility:hidden;
-		height:30px;
-	}
-	#spin-recent::-webkit-scrollbar-thumb{
-		background-color:var(--yellow);
-		width:8px;
-		-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.5); 
-		border-radius:10px;
-	}
+#spin-recent::-webkit-scrollbar-track-piece{
+	background-color:#BCB9AC;
+	border-radius:10px;
+	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.5); 
 }
+#spin-recent::-webkit-scrollbar-button{
+	visibility:hidden;
+	height:30px;
+}
+#spin-recent::-webkit-scrollbar-thumb{
+	background-color:var(--yellow);
+	width:8px;
+	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.5); 
+	border-radius:10px;
+}
+
 .recent-date{
 	font-family: 'Europa Grotesk SH';
 	color: white;

@@ -1,70 +1,76 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
+# KSDT Website
 
-_s
-===
+[https://ksdt.ucsd.edu/](https://ksdt.ucsd.edu/)
 
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Welcome to the new, improved KSDT Website theme, brought to fruition with the collaboration of the KSDT Design and Computer Engineering Teams! In this theme, you'll find countless cool features, such as: 
 
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
+ - A radio player that streams the coolest DJ picks
+ - An embed that takes you straight to the KSDT Instagram
+ - Functions that work great on mobile and web browsers, such as a toggled down menu!
+ - A cascading CSS Style Guide filled with gradients of pink and purples.
+ - A navigation bar with pages: contact, scheduler, about, and more!
+ 
+# Contributors
 
-* A modern workflow with a pre-made command-line interface to turn your project into a more pleasant experience.
-* A just right amount of lean, well-commented, modern, HTML5 templates.
-* A custom header implementation in `inc/custom-header.php`. Just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
-* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-* Some small tweaks in `inc/template-functions.php` that can improve your theming experience.
-* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-* 2 sample layouts in `sass/layouts/` made using CSS Grid for a sidebar on either side of your content. Just uncomment the layout of your choice in `sass/style.scss`.
-Note: `.no-sidebar` styles are automatically loaded.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-* Full support for `WooCommerce plugin` integration with hooks in `inc/woocommerce.php`, styling override woocommerce.css with product gallery features (zoom, swipe, lightbox) enabled.
-* Licensed under GPLv2 or later. :) Use it to make something cool.
+**A huge thank you to the contributors who have created the best college radio website around!**
 
-Installation
----------------
+## Computer Engineering Team
 
-### Requirements
+Logan Kirkendall
 
-`_s` requires the following dependencies:
+Steven Schaeffer
 
-- [Node.js](https://nodejs.org/)
-- [Composer](https://getcomposer.org/)
+Zach Lawrence
 
-### Quick Start
+Chloe Keggen
 
-Clone or download this repository, change its name to something else (like, say, `megatherium-is-awesome`), and then you'll need to do a six-step find and replace on the name in all the templates.
+Catherine Zhang
 
-1. Search for `'_s'` (inside single quotations) to capture the text domain and replace with: `'megatherium-is-awesome'`.
-2. Search for `ksdt_wi23_` to capture all the functions names and replace with: `megatherium_is_awesome_`.
-3. Search for `Text Domain: KSDT_WI23` in `style.css` and replace with: `Text Domain: megatherium-is-awesome`.
-4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks and replace with: <code>&nbsp;Megatherium_is_Awesome</code>.
-5. Search for `ksdt_wi23-` to capture prefixed handles and replace with: `megatherium-is-awesome-`.
-6. Search for `ksdt_wi23_` (in uppercase) to capture constants and replace with: `MEGATHERIUM_IS_AWESOME_`.
+Christine Nguyen
 
-Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
+Daniel Hernandez
 
-### Setup
+# Design Team
 
-To start using all the tools that come with `_s`  you need to install the necessary Node.js and Composer dependencies :
+# Installation
 
-```sh
-$ composer install
-$ npm install
-```
+1. If you have XAMPP installed, uninstall it. Delete XAMPP folder (C:/XAMPP) because it doesn’t actually fully remove it…
+2. Download the 3 files in this [directory](https://drive.google.com/drive/folders/1UwMW-5j_vDPD0s5OPQjZo6MgRRpqO24K)
+3. Run the XAMPP installer. Unselect all components except for MySQL and phpMyAdmin
+4. Unzip the wordpress zip file. Place the wordpress folder within C:/xampp/htdocs
+5. Open the XAMPP installer program, start Apache and MySQL
+6. Navigate to [localhost/phpMyAdmin](localhost/phpMyAdmin). Create a new database with name ‘wordpress’ and collation `*utf8mb4_unicode_520_ci*`
+7. Navigate to [localhost/wordpress](localhost/wordpress). Go through the installation, change the username to “root” and leave the password field empty. Ensure that the database name is ‘wordpress’ and the prefix is ‘wp_’ 
+- If it says “*Error establishing a database connection*”, **make sure that there is a wp-config.php file** within your C:/xampp/htdocs/wordpress/ folder
+  - If needed, use the wp-config-sample file and rename it to wp-config.php, change DB_NAME to “wordpress”, DB_USER to “root”, and DB_PASSWORD to “”
+8. In your wp-config.php file (C:/xampp/htdocs/wordpress), add the following:
 
-### Available CLI commands
+` define('WP_HOME', 'http://localhost/wordpress/');`
 
-`_s` comes packed with CLI commands tailored for WordPress theme development :
+` define('WP_SITEURL', 'http://localhost/wordpress/');`
+9. Restart Apache2 and phpmyadmin via xampp. Whenever you change wp-config.php, you need to restart the site. 
+10. Create your user account.
+11. Login, navigate to [localhost/wordpress/wp-admin/plugin-install.php?s=migration&tab=search&type=term](localhost/wordpress/wp-admin/plugin-install.php?s=migration&tab=search&type=term) and install the All-in-One WP Migration plugin. **Click activate after it’s done installing**
+  - If it asks for ftp client credentials, ensure permissions are correct. The unix command “chmod -R 777 [directory]” recursively changes it. 
+    - Navigate to C:/xampp/htdocs/wordpress/ and run 
+    
+  ` “find . -type d -exec chmod 777 {} + ”` , and
 
-- `composer lint:wpcs` : checks all PHP files against [PHP Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/).
-- `composer lint:php` : checks all PHP files for syntax errors.
-- `composer make-pot` : generates a .pot file in the `languages/` directory.
-- `npm run compile:css` : compiles SASS files to css.
-- `npm run compile:rtl` : generates an RTL stylesheet.
-- `npm run watch` : watches all SASS files and recompiles them to css when they change.
-- `npm run lint:scss` : checks all SASS files against [CSS Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/css/).
-- `npm run lint:js` : checks all JavaScript files against [JavaScript Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/javascript/).
-- `npm run bundle` : generates a .zip archive for distribution, excluding development and system files.
+  ` “find . -type f -exec chmod 777 {} +”`
+- If that still doesn’t work, add ` define ( 'FS_METHOD', 'direct');` to your wp-config.php
+12. Navigate to C:\XAMPP\php\ and open php.ini (increase import file size)
+  - Change ”upload_max_filesize=40G”
+  - Change “post_max_size=40G”
+  - Note: On MacOS, your php.ini is located /xampp/etc/ *for whatever reason*
+13. Navigate to [localhost/wordpress/wp-admin/admin.php?page=ai1wm_import](localhost/wordpress/wp-admin/admin.php?page=ai1wm_import) and import the ksdt.*.wordpress file contained within this [directory](https://drive.google.com/drive/folders/1UwMW-5j_vDPD0s5OPQjZo6MgRRpqO24K)
+14. Let it fully install, click confirm when told that it will replace the site. Once it’s done, it may give you 403 Forbidden when navigating to any page. If this is the case:
+15. Navigate to the wp_options table in the database [localhost/phpmyadmin/sql.php?server=1&db=wordpress&table=wp_options&pos=0](localhost/phpmyadmin/sql.php?server=1&db=wordpress&table=wp_options&pos=0) and edit the active_plugins option. Delete all active plugins except for migration. Should look like ` ‘a:19:{i:5;s:51:"all-in-one-wp-migration/all-in-one-wp-migration.php";}’` but not exactly. 
+16. Navigate to C:\xampp\htdocs\wordpress\ and delete the .htaccess file
+  - For Mac users paste this command into the terminal to see the hidden file:
+“defaults write com.apple.finder AppleShowAllFiles True; killall Finder”
+17. Login with **Username:** “user” **password:** “Password123!” .If this doesn’t work:
+  - Go to [localhost/phpmyadmin](localhost/phpmyadmin) and navigate to wp_users in the wordpress database. Go to the user “logan”, change the user_pass to anything you desire, and select md5 for the function.
 
-Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
 
-Good luck!
+Great! You have set up your local environment! 
+

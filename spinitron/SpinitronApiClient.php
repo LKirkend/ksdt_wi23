@@ -20,13 +20,15 @@ class SpinitronApiClient
     public function __construct($apiKey, $fileCachePath)
     {
         $this->apiKey = $apiKey;
-        if (!is_dir($fileCachePath)) {
-            throw new \Exception('$fileCachePath is not a directory');
-        }
-        /*if (!is_writable($fileCachePath)) {
-            throw new \Exception('$fileCachePath is not writable');
-        }
-        $this->fileCachePath = $fileCachePath;  */
+        // if (!is_dir($fileCachePath)) {
+        //     throw new \Exception('$fileCachePath is not a directory');
+        // }
+        // if (!is_writable($fileCachePath)) {
+        //     throw new \Exception('$fileCachePath is not writable');
+        // }
+        // $this->fileCachePath = $fileCachePath;
+
+        //TEMPORARILY DISABLING MANUAL CACHING...
     }
 
     /**
@@ -46,7 +48,7 @@ class SpinitronApiClient
             $url .= '?' . http_build_query($params);
         }
 
-        return json_decode($this->queryCached($endpoint, $url), true);
+        return json_decode($this->queryApi($url), true);
     }
 
     public function getPersonaFromShow($show){
@@ -65,7 +67,7 @@ class SpinitronApiClient
     {
         $url = '/' . $endpoint . '/' . $id;
 
-        return json_decode($this->queryCached($endpoint, $url), true);
+        return json_decode($this->queryApi($url), true);
     }
 
     /**
@@ -93,7 +95,7 @@ class SpinitronApiClient
         if (!file_exists(dirname($cacheFile))) {
             mkdir(dirname($cacheFile), 0755, true);
         }
-        /*file_put_contents($cacheFile, $response);*/
+        file_put_contents($cacheFile, $response);
 
         return $response;
     }

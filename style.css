@@ -1101,8 +1101,30 @@ textarea {
 	transition: 0.3s;
 	cursor:pointer;
 }
+#show-off-air{
+	color:var(--lpink);
+	font-family: "Porkys";
+	font-size:225%;
+	text-shadow: 3px 3px 2px rgba(253,12,114, 0.5);
+}
+#show-upcoming{
+	font-family: 'Europa Grotesk SH';
+	color: white;
+	display:flex;
+	padding-bottom:40px;
+    text-shadow: 3px 3px 1px var(--shadow);
+	font-size:175%;
+	transition: 0.3s;
+	cursor:pointer;
+}
 #show:hover{
 	transform: scale(1.2, 1.2) translate(10px, 0px);
+}
+
+#show-upcoming:hover{
+	transform: scale(1.1, 1.1) translate(0px, 0px);
+}
+
 }
 	/* Need to support 322px lowest width. This @media section ensures no text overlap*/
 @media (min-width:394px){

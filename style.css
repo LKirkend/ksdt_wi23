@@ -818,6 +818,9 @@ textarea {
 .page-title{
 
 }
+.wp-block-jetpack-tiled-gallery {
+    margin: 1.5em 1em 1.5em!important;
+}
 
 /* General Elements (Stickers etc) and classes
 --------------------------------------------- */

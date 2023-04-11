@@ -68,8 +68,8 @@ get_header();
         </div>
     <?php } ?>
     <!-- Read more -->
-    <div class="row rainbox py-3 px-5" id="read-more-section">
-        <div class="row py-5 mx-auto mx-md-none d-inline text-lg-start text-center" id="read-more-title">
+    <div class="row rainbox pt-3 pb-5 px-5" id="read-more-section">
+        <div class="row pb-5 pt-4 mx-auto mx-md-none d-inline text-lg-start text-center" id="read-more-title">
             read more
         </div>
         <div class="row read-more-container">           

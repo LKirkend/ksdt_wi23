@@ -24,10 +24,10 @@ get_header();
                 </div>
             </div>
             <div class="row h-100 mx-0">
-                <div class="play-btn col-5 h-100 py-sm-4">
-                    <input id="radio-toggle" type="image" onclick="togglePlay()" class="play-button h-100 pb-sm-5">
+                <div class="play-btn col-5 px-0 px-lg-3 h-lg-100 mh-100 py-sm-4">
+                    <input id="radio-toggle" type="image" onclick="togglePlay()" class="play-button mx-0 h-100 pe-lg-0 pe-5 h-lg-100 mh-100 pb-sm-5">
                 </div>
-                <div class="col py-0 py-sm-3" id="show-current">
+                <div class="col py-0 py-sm-3 px-0 " id="show-current">
                     <?php include(__DIR__ . '/spinitron/widgets/current-show.php') ?>
                 </div>
             </div> 

@@ -47,7 +47,6 @@
 						toggleButton.className = "play-button";
 					});
 			}
-		}
 	</script>
 <?php } ?>
 

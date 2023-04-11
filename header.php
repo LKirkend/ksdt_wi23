@@ -56,4 +56,3 @@
         </div>
     </nav>
     <section role="main">
-        <a id="main-content">

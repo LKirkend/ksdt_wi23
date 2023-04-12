@@ -10,6 +10,8 @@ Welcome to the new, improved KSDT Website theme, brought to fruition with the co
  - A cascading CSS Style Guide filled with gradients of pink and purples.
  - A navigation bar with pages: contact, scheduler, about, and more!
  
+ The KSDT theme is maintained by the KSDT Computer Engineering team.
+ 
 # Contributors
 
 **A huge thank you to the contributors who have created the best college radio website around!**
@@ -32,7 +34,23 @@ Daniel Hernandez
 
 # Design Team
 
-# Installation
+Jasmine Robinson 
+
+Karina Kirsch
+
+Kellie Huang
+
+Megan Hirao 
+
+Neda Emdad
+
+Ashley Ko
+
+Isabelle Chyun
+
+Cindy Nguyen
+
+# Local Environment Setup
 
 1. If you have XAMPP installed, uninstall it. Delete XAMPP folder (C:/XAMPP) because it doesn’t actually fully remove it…
 2. Download the 3 files in this [directory](https://drive.google.com/drive/folders/1UwMW-5j_vDPD0s5OPQjZo6MgRRpqO24K)
@@ -74,4 +92,6 @@ Daniel Hernandez
 
 
 Great! You have set up your local environment! 
+
+You can now download this repository and access our wonderful theme! 
 

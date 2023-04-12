@@ -1397,8 +1397,7 @@ textarea {
 	border-radius:10px;
 }
 #spin-upcoming{
-	padding-right: 100px;
-	padding-left: 50px;
+	padding-left: 20px;
 }
 @media (max-width: 850px){
 	#spin-upcoming{
@@ -1448,6 +1447,10 @@ textarea {
 	font-weight: 600;
 	font-style:normal;
 }
+#spin-upcoming hr{
+	width:80%!important;
+	margin-left:30px;
+}
 hr {
 	border: 2.5px dashed var(--cream);
 	background-color: rgba(0,0,0,0);
@@ -1456,6 +1459,7 @@ hr {
 	height:0;
 	opacity:1;
 }
+
 
 /* Blog Page
 --------------------------------------------- */

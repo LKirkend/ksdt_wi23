@@ -8,7 +8,7 @@ foreach ($result['items'] as $show): ?>
     <div class="row">
         <div class="col-sm-5 w-auto">
             <div class="row">
-                <span class="next-time me-3">
+                <span class="next-time">
                     <?= (new DateTime($show['start']))
                     ->setTimezone(new DateTimeZone($show['timezone'] ?? 'America/Los_Angeles'))
                     ->format('h:ia') ?>

@@ -29,7 +29,7 @@ get_header();
 			<div class="row my-5 text-center">
 				<h1 style="text-shadow: 0px 4px 4px var(--shadow);">Playing Next</h1>
 			</div>
-			<div class="container-flex mx-auto mx-sm-2 mx-md-5 mb-5" id="playing-next">
+			<div class="container-flex mx-auto mx-sm-4 mb-5" id="playing-next">
 				<div class="row">
 					<div id="spin-upcoming">
 						<?php include(__DIR__ . '/spinitron/widgets/upcoming-shows.php') ?>

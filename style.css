@@ -870,14 +870,29 @@ textarea {
 
 /* Background, Navbar, Footer 
 -------------------------------------------- */
+#loader {
+	position: absolute;
+	left: calc(50% - 125px);
+	top: calc(50% - 127px);
+	z-index: 1;
+	content:url("img/logos/sticker-record.svg")!important;
+	animation-name: spinning;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	/* linear | ease | ease-in | ease-out | ease-in-out */
+	animation-timing-function: linear;
+}
 .gifbg{
-	background-image:url('img/gif/backgroundflip.gif'); /* TODO: Change to MP4 for optimization */
+	background-image:url('img/gif/backgroundflip.gif');
 	background-repeat:repeat-y;
 	background-size: cover;
 	height: 100vh;
 	padding:0;
 	margin:0;
  }
+ /* .thegif{
+	background-image:url('img/gif/backgroundflip.gif');
+ } */
 .navbar-cheight{
 	height: 83px;
 }
@@ -1091,6 +1106,10 @@ textarea {
 	align-items: center;
 	color: #FFFFFF;
 	text-shadow: 5px 5px 4px var(--shadow);
+	cursor:pointer;
+}
+#tune-in-box a{
+	text-decoration: none;
 }
 @media (min-width: 992px){
 	.h-lg-100{
@@ -1102,7 +1121,9 @@ textarea {
 		height:50%!important;
 	}
 }
-
+#current-bottom::-webkit-scrollbar {
+	display: none;
+  }
 .spinitron{
 	font-family: 'Europa Grotesk SH';
 	color: white;
@@ -1110,6 +1131,9 @@ textarea {
 	padding-bottom:40px;
     text-shadow: 3px 3px 1px var(--shadow);
 	cursor:default;
+}
+#show-current a{
+	text-decoration: none;
 }
 #time{
 	padding-top:0px;
@@ -1185,11 +1209,27 @@ textarea {
 #main-header{
 	margin-bottom:200px;
 }
-.play-button{
-	content:url("img/logos/playbutton.svg");
-	height:186px;
-	width:186px;
+#radio-toggle{
+	max-height:186px;
+	height:100%;
+	display:flex;
 	cursor:pointer;
+	margin-top:3em;
+}
+
+@media (min-width: 768px){
+	#radio-toggle{
+		margin-top:0;
+	}
+}
+.play-button{
+	width: 186px;
+    height: 186px;
+}
+.play-button2{
+	content:url("img/logos/playbutton.png");
+	width: 186px;
+    height: 186px;
 }
 
 .pause-button{
@@ -1241,8 +1281,13 @@ textarea {
 	cursor: pointer;
 	background-color: rgba(0,0,0,0)!important;
 }
-.row div .insta-gallery-div {
+.row div .insta-gallery-div{
 	padding:30px!important;
+}
+@media(max-width:1600px){
+	.row div .insta-gallery-div {
+		padding:15px!important;
+	}
 }
 .insta-img-thumbnail:hover{
 	transform: scale(1.05, 1.05);
@@ -1260,7 +1305,7 @@ textarea {
 		flex: none;
 	}
 	.row div .insta-gallery-div {
-		padding:40px!important;
+		padding:20px!important;
 	}
 }
 .instagram-video{
@@ -1274,9 +1319,41 @@ textarea {
 	margin-bottom: 6em;
 }
 
+@media (min-width: 576px){
+	.w-sm-auto{
+		width:auto!important;
+	}
+}
+
 #played-recent{
 	background-color: var(--transblack1);
+	max-height: 936px;
+    
 }
+#spin-recent{
+	overflow-y: scroll;
+	overflow-x: hidden;
+	max-height: 680px;
+}
+#spin-recent::-webkit-scrollbar{
+	width:8px;
+}
+#spin-recent::-webkit-scrollbar-track-piece{
+	background-color:#BCB9AC;
+	border-radius:10px;
+	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.5); 
+}
+#spin-recent::-webkit-scrollbar-button{
+	visibility:hidden;
+	height:30px;
+}
+#spin-recent::-webkit-scrollbar-thumb{
+	background-color:var(--yellow);
+	width:8px;
+	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.5); 
+	border-radius:10px;
+}
+
 .recent-date{
 	font-family: 'Europa Grotesk SH';
 	color: white;
@@ -1326,14 +1403,19 @@ textarea {
 	border-radius:10px;
 }
 #spin-upcoming{
-	padding-right: 100px;
-	padding-left: 70px;
+	padding-left: 10px;
 }
+
 .next-time{
 	font-family: 'Europa Grotesk SH';
 	color: white;
 	font-size:32px;
 	font-weight: 500;
+}
+#broadcast-wave{
+	content:url("img/logos/broadcast-wave.svg");
+	width: 103px;
+    height: 39px;
 }
 .next-show{
 	font-family: 'Europa Grotesk SH';
@@ -1341,6 +1423,9 @@ textarea {
 	font-size:32px;
 	font-weight: 600;
 	font-style: italic;
+}
+@media (min-width: 576px){
+	.next-show{ white-space: nowrap; }
 }
 .next-show a{
 	text-decoration: none;
@@ -1361,6 +1446,10 @@ textarea {
 	font-weight: 600;
 	font-style:normal;
 }
+#spin-upcoming hr{
+	width:80%!important;
+	margin-left:30px;
+}
 hr {
 	border: 2.5px dashed var(--cream);
 	background-color: rgba(0,0,0,0);
@@ -1369,6 +1458,7 @@ hr {
 	height:0;
 	opacity:1;
 }
+
 
 /* Blog Page
 --------------------------------------------- */
@@ -1731,7 +1821,7 @@ figcaption{
 #scheduler-box{
 	background: var(--transblack2);
 	min-height:850px;
-	max-width: 75%;
+	max-width: 98%;
 }
 #scheduler-box label{
 	color: white;
@@ -1764,9 +1854,9 @@ figcaption{
 .fieldCalendar span, .slotsCalendar span{
 	color: var(--orange);
 	font-family:"Porkys";
-	font-size:40px;
+	font-size:32px;
 	line-height: 70px;
-	text-shadow: 2px 2px 2px white;
+	text-shadow: 0px 1px 4px white;
 }
 
 .slots span:not(.ahb_slot_availability){

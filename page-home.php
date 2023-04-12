@@ -10,24 +10,26 @@
 
 get_header();
 ?>
-<div class="container-fluid px-sm-5" id="main-header">
+<div class="container-fluid px-sm-5 p-2" id="main-header">
     <!-- logo and play button -->
-    <div class="row gx-md-5 pt-sm-5">
+    <div class="row gx-md-5 pt-sm-5 px-xxl-5 mx-xxl-5">
         <div class="col-md py-2">
-            <img id="home-logo">
+            <img class="d-flex mx-auto mx-lg-0" id="home-logo">
         </div>
         <div class="col-md card mx-auto ms-lg-5 ms-sm-auto p-0 rainbox" id="tune-in-box">
             <div class="row">
                 <div class="col">
-                    <h1 class="card-title my-0 d-none d-lg-block mx-auto text-center mt-3" id="tune-in">tune in now:</h1>
-                    <h1 class="card-title my-0 fs-1 d-none d-md-block d-lg-none mx-auto text-center" id="tune-in">tune in now:</h1>  
+                    <a href="https://s4.radio.co/s2c33c7adb/listen">
+                        <h1 class="card-title my-0 d-none d-lg-block mx-auto text-center mt-3" id="tune-in">tune in now:</h1></a>
+                        <h1 class="card-title my-0 fs-1 d-lg-none mx-auto text-center" id="tune-in">tune in now:</h1>  
+                    </a>
                 </div>
             </div>
-            <div class="row h-100 mx-0">
-                <div class="play-btn col-5 px-0 px-lg-3 h-lg-100 mh-100 py-sm-4">
-                    <input id="radio-toggle" type="image" onclick="togglePlay()" class="play-button mx-0 h-100 pe-lg-0 pe-5 h-lg-100 mh-100 pb-sm-5">
+            <div class="row h-100 mx-0 overflow-y-scroll overflow-x-hidden" id="current-bottom">
+                <div class="play-btn col-5 px-0 px-lg-3 h-lg-100 my-auto mh-100 py-sm-4">
+                    <img id="radio-toggle" src='<?php echo get_stylesheet_directory_uri() . "/img/logos/playbutton.svg"?>' onclick="togglePlay()" class="play-button pt-0 mx-0 h-100 pe-lg-0 h-lg-100 mh-100 mt-0 pb-sm-5 my-lg-auto my-md-0 pb-lg-0" onerror="this.classList.add('play-button2');">
                 </div>
-                <div class="col py-0 py-sm-3 px-0 " id="show-current">
+                <div class="col py-0 px-0 h-auto mb-auto my-auto mt-sm-0 mt-md-4 mb-lg-auto mt-lg-4" id="show-current">
                     <?php include(__DIR__ . '/spinitron/widgets/current-show.php') ?>
                 </div>
             </div> 

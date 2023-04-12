@@ -1,15 +1,19 @@
 <?php
 include __DIR__ . '/../getClient.php';
 /** @var SpinitronApiClient $client */
-$result = $client->search('spins', ['count' => 3]);
+$result = $client->search('spins', ['count' => 12]);
 
 foreach ($result['items'] as $spin): ?>
     <div class="row">
-        <div class="col-sm-5">
-            <img src="<?=$spin['image']?>">
-            <!-- Todo: get picture of album art / artist photo -->
+        <div class="col-sm-5 text-center">
+            <?php $img = $spin['image'];
+            if($img == null){
+            ?>  <img class="spinning-record" style="width:170px; height:170px;"> <?php
+            } else{ ?>
+                <img src="<?=$img?>">
+            <?php }?>
         </div>
-        <div class="col-sm pt-5">
+        <div class="col-sm pb-5">
             <span class="recent-date">
             <?= (new DateTime($spin['start']))
                 ->setTimezone(new DateTimeZone($spin['timezone'] ?? 'America/Los_Angeles'))

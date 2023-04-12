@@ -1319,6 +1319,12 @@ textarea {
 	margin-bottom: 6em;
 }
 
+@media (min-width: 576px){
+	.w-sm-auto{
+		width:auto!important;
+	}
+}
+
 #played-recent{
 	background-color: var(--transblack1);
 	max-height: 936px;
@@ -1397,18 +1403,9 @@ textarea {
 	border-radius:10px;
 }
 #spin-upcoming{
-	padding-left: 20px;
+	padding-left: 10px;
 }
-@media (max-width: 850px){
-	#spin-upcoming{
-		padding-left:15px;
-	}
-}
-@media (max-width: 783px){
-	#spin-upcoming{
-		padding-right: 60px;
-	}
-}
+
 .next-time{
 	font-family: 'Europa Grotesk SH';
 	color: white;
@@ -1417,7 +1414,7 @@ textarea {
 }
 #broadcast-wave{
 	content:url("img/logos/broadcast-wave.svg");
-	width: 126px;
+	width: 103px;
     height: 39px;
 }
 .next-show{
@@ -1426,7 +1423,9 @@ textarea {
 	font-size:32px;
 	font-weight: 600;
 	font-style: italic;
-	white-space: nowrap;
+}
+@media (min-width: 576px){
+	.next-show{ white-space: nowrap; }
 }
 .next-show a{
 	text-decoration: none;

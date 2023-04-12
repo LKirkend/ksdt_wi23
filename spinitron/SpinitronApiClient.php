@@ -52,8 +52,19 @@ class SpinitronApiClient
     }
 
     public function getPersonaFromShow($show){
-        $personaId = explode('/', $show['_links']['personas'][0]['href'])[5];
-        return $this->search('personas/' . $personaId,'');
+        $nPersonas = count($show['_links']['personas']);
+        $result = "";
+        for($i = 0; $i < $nPersonas; $i++){
+            $personaId = explode('/', $show['_links']['personas'][$i]['href'])[5];
+            if($i == $nPersonas - 1 && $i != 0){
+                $result .= ' and ';
+            }
+            else if($i > 0){
+                $result .= ', ';
+            }
+            $result .= $this->search('personas/' . $personaId,'')['name'];
+        }
+        return $result;
     }
     /**
      * Request a resource from an endpoint using its ID

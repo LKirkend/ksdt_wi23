@@ -4,6 +4,9 @@ include __DIR__ . '/../getClient.php';
 $result = $client->search('shows', ['count' => 12]);
 
 foreach ($result['items'] as $show): ?>
+<?php
+    //print_r($client->getPersonaFromShow($show));
+?>
     <div class="row">
         <div class="col-sm-5">
             <span class="next-time">
@@ -23,7 +26,7 @@ foreach ($result['items'] as $show): ?>
             </div>
             <div class="row">
                 <span class="next-dj">
-                    <?= htmlspecialchars($client->getPersonaFromShow($show)['name'], ENT_NOQUOTES) ?>
+                    <?= htmlspecialchars($client->getPersonaFromShow($show), ENT_NOQUOTES) ?>
                 </span>
             </div>
         </div>

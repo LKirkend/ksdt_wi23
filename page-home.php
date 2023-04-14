@@ -12,7 +12,7 @@ get_header();
 ?>
 <div class="container-fluid px-sm-5 p-2" id="main-header">
     <!-- logo and play button -->
-    <div class="row gx-md-5 pt-sm-5 px-xxl-5 mx-xxl-5">
+    <div class="row gx-md-5 mx-auto mw-100 pt-sm-5 px-xxl-5 mx-xxl-5">
         <div class="col-md py-2">
             <img class="d-flex mx-auto mx-lg-0" id="home-logo">
         </div>
@@ -49,7 +49,7 @@ get_header();
     <!-- instagram imbed -->
     <div class="row mx-auto rainbox" id="insta-box">
         <div class="row p-0 pt-3 mx-auto">
-            <div class="col mb-5">
+            <div class="col mb-lg-3">
                 <img id="welcome">
             </div>
         </div>

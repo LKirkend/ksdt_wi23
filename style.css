@@ -1167,7 +1167,7 @@ textarea {
 	/* Need to support 322px lowest width. This @media section ensures no text overlap*/
 @media (min-width:940px){
 	.spinitron{
-		padding-top:18px;
+		padding-top:0px;
 		padding-bottom:0px;
 	}
 }
@@ -1858,7 +1858,11 @@ figcaption{
 	line-height: 70px;
 	text-shadow: 0px 1px 4px white;
 }
-
+@media (max-width: 500px){
+	.fieldCalendar span, .slotsCalendar span{
+		font-size:24px;
+	}
+}
 .slots span:not(.ahb_slot_availability){
 	display:block!important;
 	text-align:center

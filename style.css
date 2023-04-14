@@ -1944,6 +1944,7 @@ figcaption{
 .cpapp_no_wrap{
 	max-width: 800px;
 	width:auto;
+	flex-wrap: wrap;
 }
 
 /* login and register */

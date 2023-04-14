@@ -49,7 +49,7 @@ get_header();
     <!-- instagram imbed -->
     <div class="row mx-auto rainbox" id="insta-box">
         <div class="row p-0 pt-3 mx-auto">
-            <div class="col mb-5">
+            <div class="col mb-lg-3">
                 <img id="welcome">
             </div>
         </div>

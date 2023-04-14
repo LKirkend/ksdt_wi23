@@ -80,6 +80,7 @@ get_header();
 
 <!-- Scripts -->
 <script>
+    // Share button "Copied to clipboard!" inline alert
     const alertPlaceholder = document.getElementById('copiedPlaceholder')
     const appendAlert = (message, type) => {
         const wrapper = document.createElement('div')
@@ -99,11 +100,12 @@ get_header();
             appendAlert('Copied to the clipboard!', 'success')
         })
     }
-                </script>
-<script> 
+    
     // Force share-this before the jetpack photo gallery, implemented in wp-admin/posts.
     const share = document.getElementById('share-this');
-    const gallery = document.getElementsByClassName('wp-block-jetpack-tiled-gallery')[0];
+    // Get the last instance of the image gallery
+    const galleries = document.getElementsByClassName('wp-block-jetpack-tiled-gallery');
+    const gallery=galleries[galleries.length-1]
     const parent = gallery.parentNode;
     
     parent.insertBefore(share, gallery);

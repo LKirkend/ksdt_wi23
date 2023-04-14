@@ -473,6 +473,9 @@ cite,
 em,
 i {
 	font-style: italic;
+	color:white;
+	font-family: "Europa Grotesk SH";
+	font-weight: 400;
 }
 
 

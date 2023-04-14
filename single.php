@@ -28,11 +28,15 @@ get_header();
                 </div>
                 <!-- title -->
                 <div class="row d-block my-3" id="blog-title">
-                    <?php the_title(); ?>
+                    <div class="col">
+                        <?php the_title(); ?>
+                    </div>
                 </div>
                 <!-- author -->
                 <div class="row d-block" id="blog-author">
-                    <?php the_author(); ?>
+                    <div class="col">
+                        <?php the_author(); ?>
+                    </div>
                 </div>
             </div>
             
@@ -44,24 +48,29 @@ get_header();
         </div>
         <!-- Blog text -->
         <div class="row d-flex" id="blog-block">
-            <div class="mx-md-5 my-4 mw-fit" id="blog-txt-container">
+            <div class="col mx-md-5 my-4 mw-fit" id="blog-txt-container">
                 <div class="row mw-fit" id="blog-content">
-                    <?php the_content(); ?>
+                    <div class="col mw-fit w-100">
+                        <?php the_content(); ?>
+                    </div>
                 </div>
                 <!-- share this -->
                 
                 <div class="row" id="share-this">
-                    <p class="row mb-1 me-auto">
-                        -<br>share this 
-                    </p>                
+                    <div class="col">
+                        <p class="row mb-1 me-auto">
+                            -<br>share this 
+                        </p>             
+                    </div>   
                     <div class="my-1 d-flex" id="copiedPlaceholder"></div>
                         
                     <!-- share links -->
                     <div class="row me-auto" id="share-links">
-                        
-                        <a id="copiedBtn" onClick="navigator.clipboard.writeText('<?php the_permalink() ?>');"><img id="share-logo" class="mt-2"></a> 
-                        <a href="https://twitter.com/intent/tweet?text=Check out <?php  the_title();?>, by <?php the_author();?>, at <?= the_permalink() ?>"><img id="twitter-logo" class="ms-2 ms-sm-3 mt-2"></a> 
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink()  ?>"><img id="fb-logo" class="ms-2 ms-sm-3 mt-2"></a> 
+                        <div class="col">
+                            <a id="copiedBtn" onClick="navigator.clipboard.writeText('<?php the_permalink() ?>');"><img id="share-logo" class="mt-2"></a> 
+                            <a href="https://twitter.com/intent/tweet?text=Check out <?php  the_title();?>, by <?php the_author();?>, at <?= the_permalink() ?>"><img id="twitter-logo" class="ms-2 ms-sm-3 mt-2"></a> 
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink()  ?>"><img id="fb-logo" class="ms-2 ms-sm-3 mt-2"></a> 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -70,10 +79,14 @@ get_header();
     <!-- Read more -->
     <div class="row rainbox pt-3 pb-5 px-5" id="read-more-section">
         <div class="row pb-5 pt-4 mx-auto mx-md-none d-inline text-lg-start text-center" id="read-more-title">
-            read more
+            <div class="col">
+                read more
+            </div>
         </div>
-        <div class="row read-more-container">           
-            <?php echo do_shortcode('[bdp_masonry effect=”effect-2″ grid="3" design="design1" limit="3" show_tags="false" pagination=”false” show_read_more="false" show_date="false" show_content="false"]');?>
+        <div class="row read-more-container">     
+            <div class="col">      
+                <?php echo do_shortcode('[bdp_masonry effect=”effect-2″ grid="3" design="design1" limit="3" show_tags="false" pagination=”false” show_read_more="false" show_date="false" show_content="false"]');?>
+            </div>
         </div>
     </div>
 </div>

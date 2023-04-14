@@ -1715,10 +1715,12 @@ figcaption{
 }
 #contact-page h2{
 	padding-top:25px;
-	font-size: 40px;
+	font-size: 37px;
 	font-family: "Porkys";
 	text-shadow: 0px 4px 4px var(--shadow);
+	white-space: nowrap;
 }
+
 #contact-page h3{
 	font-size: 28px;
 	font-family: "Porkys";
@@ -1730,6 +1732,19 @@ figcaption{
 	font-family: "Porkys";
 	color:white;
 	text-shadow: 0px 4px 4px var(--shadow);
+}
+@media(max-width:991px){
+	#contact-page h2{
+		font-size: 30px;
+	}
+	#contact-page h3{
+		font-size: 24px;
+	}
+}
+@media(max-width:767px){
+	#contact-page h2{
+		white-space: unset;
+	}
 }
 #contact-page p{
 	font-family:"Europa Grotesk SH";
@@ -1881,6 +1896,14 @@ figcaption{
 	font-size:30px;
 	color:white;
 	text-shadow: 2px 2px 2px var(--black);
+}
+#fbuilder .slots div {
+    border: 2px solid var(--hpink)!important;
+    font-family: 'Europa Grotesk SH'!important;
+    width: 119px!important;
+}
+#fbuilder .slots div a{
+	width:100%!important;
 }
 #fbuilder .pbSubmit{
 	background: var(--transblack2)!important;

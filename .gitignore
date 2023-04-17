@@ -28,3 +28,7 @@ insta-key.txt
 
 #ignore gifs
 *.gif
+
+#ignore mac-specific file structure metadata
+.DS_Store
+img/.DS_Store

@@ -38,7 +38,7 @@ get_header();
     <!-- scroll to learn more -->
     <div class="row mx-auto" id="scroll-sec">
         <div class="col w-100 mx-auto text-center">
-            <span id="scroll-text">scoll to learn more</span>
+            <span id="scroll-text">scroll to learn more</span>
         </div>
     </div>
     <div class="row mx-auto pb-5">

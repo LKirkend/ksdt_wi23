@@ -29,34 +29,25 @@
 	</div>
 </nav>
 
-<div class="radioplayer" data-src="https://s4.radio.co/s2c33c7adb/listen" data-autoplay="false" data-playbutton="false" data-volumeslider="false" data-elapsedtime="false" data-nowplaying="false" data-showplayer="false" data-volume="50" data-showartwork="false"></div>
+<audio id="radioplayer" src="https://s4.radio.co/s2c33c7adb/listen" preload="auto" muted="true"></audio>
 
 <?php if(is_page('home') || is_page('broadcast')) { ?>
-	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="https://public.radio.co/playerapi/jquery.radiocoplayer.min.js"></script>
 	<script type="text/javascript">
-			var player = $('.radioplayer').radiocoPlayer();
+			var player = document.getElementById('radioplayer');
 			var toggleButton = document.getElementById('radio-toggle');
 			var onAir = document.getElementById('nav-onair');
-			
+			console.log(player);
 			function togglePlay(){
-				if(!player.isPlaying()){
-					player.play(function(event){
-						player.volume(50);
-						toggleButton.classList.toggle("pause-button");
-						toggleButton.classList.toggle("play-button");
-					});
+				if(player.muted == true){
+					player.play();
+					player.muted = false;
 				}
 				else{
-					if(player.volume() == 0){
-						player.volume(50);
-					}
-					else {
-						player.mute();
-					}
-					toggleButton.classList.toggle("pause-button");
-					toggleButton.classList.toggle("play-button");
+					player.pause();
+					player.muted = true;
 				}
+				toggleButton.classList.toggle("pause-button");
+				toggleButton.classList.toggle("play-button");
 			}
 	</script>
 <?php } ?>

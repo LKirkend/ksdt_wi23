@@ -36,20 +36,27 @@
 	<script src="https://public.radio.co/playerapi/jquery.radiocoplayer.min.js"></script>
 	<script type="text/javascript">
 			var player = $('.radioplayer').radiocoPlayer();
-		
 			var toggleButton = document.getElementById('radio-toggle');
 			var onAir = document.getElementById('nav-onair');
-
+			
 			function togglePlay(){
-				player.playToggle(
-					function(event){
-						toggleButton.classList.toggle("pause-button");
-						toggleButton.classList.toggle("play-button");
-					}, 
-					function(event){
+				if(!player.isPlaying()){
+					player.play(function(event){
+						player.volume(50);
 						toggleButton.classList.toggle("pause-button");
 						toggleButton.classList.toggle("play-button");
 					});
+				}
+				else{
+					if(player.volume() == 0){
+						player.volume(50);
+					}
+					else {
+						player.mute();
+					}
+					toggleButton.classList.toggle("pause-button");
+					toggleButton.classList.toggle("play-button");
+				}
 			}
 	</script>
 <?php } ?>

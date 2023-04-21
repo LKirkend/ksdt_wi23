@@ -66,7 +66,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-html {
+ html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 }
@@ -883,9 +883,21 @@ textarea {
 }
 .bgtemp{
 	background:#FF4A6B url('img/gif/tempbg.png');
+	background-repeat:repeat-y;
+	background-size: cover;
+
+	height: 100vh;
+	padding:0;
+	margin:0;
 }
 .thegif{
-	background-image:url('img/gif/backgroundflip.gif');
+	background:#FF4A6B url('img/gif/backgroundflip.gif');
+	background-repeat:repeat-y;
+	background-size: cover;
+
+	height: 100vh;
+	padding:0;
+	margin:0;
  }
 .navbar-cheight{
 	height: 83px;
@@ -1014,7 +1026,7 @@ textarea {
 	font-style: normal;
 	font-weight: 400;
 }
-@media (min-width: 869px){
+@media (min-width: 890.01px){
 	#views{
 		font-size: 23px;
 		padding-bottom: 69px;
@@ -1022,7 +1034,7 @@ textarea {
 		
 	}	
 }
-@media (min-width: 501px) and (max-width: 868px){
+@media (min-width: 505.01px) and (max-width: 890px){
 	#views{
 		width: 100px;
 		font-size: 10px;
@@ -1030,7 +1042,7 @@ textarea {
 		padding-left: 10px;
 	}
 }
-@media (min-width: 451px) and (max-width:500px){
+@media (min-width: 455.1px) and (max-width:505px){
 	#views{
 		width: 50px;
 		font-size: 10px;
@@ -1044,7 +1056,7 @@ textarea {
 		font-size: 28px;
 	}
 }
-@media (max-width: 450px){
+@media (max-width: 455px){
 	#views{
 		visibility: hidden;
 		font-size: 0px;

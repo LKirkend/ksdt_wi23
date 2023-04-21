@@ -857,6 +857,11 @@ textarea {
 	width:288px;
 	height:190px;
 }
+.right-arrow{
+	content:url("img/logos/right-arrow.svg");
+	width:77px;
+	height: 77px;
+}
 .rainbox{
 	box-sizing: border-box;
 	border-radius: 10px;
@@ -1245,7 +1250,7 @@ textarea {
 }
 
 #scroll-sec{
-	padding-top:100px;
+	padding-top:450px;
 }
 #scroll-text{
 	font-family: 'Porkys';

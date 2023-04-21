@@ -140,11 +140,14 @@ add_action( 'widgets_init', 'ksdt_wi23_widgets_init' );
 function ksdt_wi23_scripts() {
 	/* The rand makes it so the version always updates when styles.css updates. Prevents caching for easier development. */
 	wp_enqueue_style( 'ksdt_wi23-style', get_stylesheet_uri(), array(), rand(111,9999), 'all' );
-
 	wp_style_add_data( 'ksdt_wi23-style', 'rtl', 'replace' );
-
 	wp_enqueue_script( 'ksdt_wi23-navigation', get_template_directory_uri() . '/js/navigation.js', array(), ksdt_wi23_VERSION, true );
-
+	
+	/** Custom scripts moved from header */
+	wp_enqueue_script('popper', get_template_directory_uri() . '/js/popper.min.js');
+	wp_enqueue_script('bootstrap-bundle', get_template_directory_uri() . '/js/bootstrap.bundle.min.js');
+	wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css');
+	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

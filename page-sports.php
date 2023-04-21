@@ -1,34 +1,42 @@
-<?php get_header();?>
-    
-
-
-<script>
-    const date = /[A-S][a-z]+\s[0-9]+\s\([A-Za-z]+\)/mg;
-    const time = /[1-9]+:*[0-9]*\s[APM]+/mg;
-    const loc = /(Home|Away|Neutral)\s+\K([A-Za-z‘:,.']+\s)+/mg
-    const results = /((?<=\s)([WLT]\s[0-9]+-[0-9]+)|(Postponed|Cancelled)|((\s{4})(?=\n)))/mg;
-    const overall = /Overall\s*[0-9]+-[0-9]+/;
-    
-    const baseball = getTextData("https://ucsdtritons.com/services/schedule_txt.ashx?schedule=372");
-    console.log(results.exec(baseball));
-    async function getTextData(theUrl) {
-        const textData = await fetch(theUrl, 
-        { 
-            credentials: "omit",
-            method: 'GET',
-            mode: "no-cors",
-            headers: {
-                "Content-Type": "text/plain",
-            },
-        }).then(response => {
-            if (!response.ok) {
-                throw new Error("HTTP error " + response.status);
-            }
-            return response.text();
-        }).then(text => {
-            return text;
-        });
-        return textData;
-    }
-</script>
-<?php get_footer();?>
+<?php
+/**
+ * Sports Broadcasting Page
+ * 
+ */
+get_header();
+?>
+<div class="container-flex overflow-x-hidden">
+    <div class="row text-center">
+        <div class="col rainbox">
+            <h1>Sports Broadcasting</h1>
+            <div class="row text-center gy-5">
+                <div class="col"> 
+                    <p class="fs-6"> M Baseball</p>
+                </div>
+                <div class="col">
+                    <p class="fs-6">M Basketball</p>
+                </div>
+                <div class="col">
+                    <p class="fs-6">W Basketball</p>
+                </div>
+                <div class="col">
+                    <p class="fs-6">M Volleyball</p>
+                </div>
+                <div class="col">
+                    <p class="fs-6">W Volleyball</p>
+                </div>
+                <div class="col">
+                    <p class="fs-6">M Soccer</p>
+                </div>
+                <div class="col">
+                    <p class="fs-6">W Soccer</p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col"><p>Here is where we will input text for the sports broadcasting page.</div>
+            </div> 
+        </div>
+        <div class="col rainbox"><h1>Video</h1></div>
+    </div>
+</div>
+<?php get_footer(); ?>

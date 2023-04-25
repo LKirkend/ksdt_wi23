@@ -3,7 +3,7 @@
 <div class="container-flex mx-5" style="height:866px;">
   <div class="row center rainbox mx-auto w-100 my-5" style="background-color: var(--transblack2); max-width: 98%;">
     <div class="col mx-auto py-5">
-      <?php echo do_shortcode('[ultimatemember form_id="4161"]')?> 
+        <?php echo do_shortcode('[ultimatemember_password]')?>
     </div>
   </div>
 </div>
@@ -16,10 +16,4 @@
   });
 </script>
 
-<?php get_footer(); ?>
-
-
-
-  
-  
-
+<?php get_footer();?>

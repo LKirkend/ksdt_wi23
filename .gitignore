@@ -27,4 +27,8 @@ api-key.txt
 insta-key.txt
 
 #ignore gifs
-img/gif/*
+*.gif
+
+#ignore mac-specific file structure metadata
+.DS_Store
+img/.DS_Store

@@ -66,7 +66,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-html {
+ html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 }
@@ -78,6 +78,7 @@ html {
 :root{
 	/* Envoke any variable with 'var(--[var])', eg 'var(--yellow) */
 	--yellow: #FFDF50;
+	--cream: #ECB784;
 	--orange: #F67225;
 	--blue: #0B89E6;
 	--black: #1a1717;
@@ -472,6 +473,9 @@ cite,
 em,
 i {
 	font-style: italic;
+	color:white;
+	font-family: "Europa Grotesk SH";
+	font-weight: 400;
 }
 
 
@@ -817,6 +821,9 @@ textarea {
 .page-title{
 
 }
+.wp-block-jetpack-tiled-gallery {
+    margin: 1.5em 1em 1.5em!important;
+}
 
 /* General Elements (Stickers etc) and classes
 --------------------------------------------- */
@@ -850,14 +857,19 @@ textarea {
 	width:288px;
 	height:190px;
 }
+.right-arrow{
+	content:url("img/logos/right-arrow.svg");
+	width:77px;
+	height: 77px;
+}
 .rainbox{
 	box-sizing: border-box;
 	border-radius: 10px;
-	border: 3px solid transparent;
-	border-image: var(--rainbowborder);
-	background-origin: border-box;
-	background-clip: content-box, border-box;
-	border-image-slice: 1;
+	border: 3px solid transparent!important;
+	border-image: var(--rainbowborder)!important;
+	background-origin: border-box!important;
+	background-clip: content-box, border-box!important;
+	border-image-slice: 1!important;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .mw-fit{
@@ -867,9 +879,27 @@ textarea {
 /* Background, Navbar, Footer 
 -------------------------------------------- */
 .gifbg{
-	background-image:url('img/gif/backgroundflip.gif'); /* TODO: Change to MP4 for optimization */
 	background-repeat:repeat-y;
 	background-size: cover;
+
+	height: 100vh;
+	padding:0;
+	margin:0;
+}
+.bgtemp{
+	background:#FF4A6B url('img/gif/tempbg.png');
+	background-repeat:repeat-y;
+	background-size: cover;
+
+	height: 100vh;
+	padding:0;
+	margin:0;
+}
+.thegif{
+	background:#FF4A6B url('img/gif/backgroundflip.gif');
+	background-repeat:repeat-y;
+	background-size: cover;
+
 	height: 100vh;
 	padding:0;
 	margin:0;
@@ -939,6 +969,11 @@ textarea {
 		text-decoration: none;
 	}
 }
+.navbar-toggler
+{
+	color: var(--hpink)!important;
+    background-color: white!important;
+}
 
 /* Footer */
 .footer-cheight{
@@ -996,7 +1031,7 @@ textarea {
 	font-style: normal;
 	font-weight: 400;
 }
-@media (min-width: 869px){
+@media (min-width: 890.01px){
 	#views{
 		font-size: 23px;
 		padding-bottom: 69px;
@@ -1004,7 +1039,7 @@ textarea {
 		
 	}	
 }
-@media (min-width: 501px) and (max-width: 868px){
+@media (min-width: 505.01px) and (max-width: 890px){
 	#views{
 		width: 100px;
 		font-size: 10px;
@@ -1012,7 +1047,7 @@ textarea {
 		padding-left: 10px;
 	}
 }
-@media (min-width: 451px) and (max-width:500px){
+@media (min-width: 455.1px) and (max-width:505px){
 	#views{
 		width: 50px;
 		font-size: 10px;
@@ -1026,7 +1061,7 @@ textarea {
 		font-size: 28px;
 	}
 }
-@media (max-width: 450px){
+@media (max-width: 455px){
 	#views{
 		visibility: hidden;
 		font-size: 0px;
@@ -1082,7 +1117,24 @@ textarea {
 	align-items: center;
 	color: #FFFFFF;
 	text-shadow: 5px 5px 4px var(--shadow);
+	cursor:pointer;
 }
+#tune-in-box a{
+	text-decoration: none;
+}
+@media (min-width: 992px){
+	.h-lg-100{
+		height:100%!important;
+	}
+}
+@media (min-width: 768px){
+	.h-md-50{
+		height:50%!important;
+	}
+}
+#current-bottom::-webkit-scrollbar {
+	display: none;
+  }
 .spinitron{
 	font-family: 'Europa Grotesk SH';
 	color: white;
@@ -1090,6 +1142,9 @@ textarea {
 	padding-bottom:40px;
     text-shadow: 3px 3px 1px var(--shadow);
 	cursor:default;
+}
+#show-current a{
+	text-decoration: none;
 }
 #time{
 	padding-top:0px;
@@ -1101,13 +1156,29 @@ textarea {
 	transition: 0.3s;
 	cursor:pointer;
 }
+#show-off-air{
+	color:var(--lpink);
+	font-family: "Porkys";
+	font-size:225%;
+	text-shadow: 3px 3px 2px rgba(253,12,114, 0.5);
+}
+#show-upcoming{
+	font-size:175%;
+	transition: 0.3s;
+	cursor:pointer;
+}
 #show:hover{
 	transform: scale(1.2, 1.2) translate(10px, 0px);
 }
+
+#show-upcoming:hover{
+	transform: scale(1.1, 1.1) translate(0px, 0px);
+}
+
 	/* Need to support 322px lowest width. This @media section ensures no text overlap*/
-@media (min-width:394px){
+@media (min-width:940px){
 	.spinitron{
-		padding-top:18px;
+		padding-top:0px;
 		padding-bottom:0px;
 	}
 }
@@ -1149,11 +1220,27 @@ textarea {
 #main-header{
 	margin-bottom:200px;
 }
-.play-button{
-	content:url("img/logos/playbutton.svg");
-	height:186px;
-	width:186px;
+#radio-toggle{
+	max-height:186px;
+	height:100%;
+	display:flex;
 	cursor:pointer;
+	margin-top:3em;
+}
+
+@media (min-width: 768px){
+	#radio-toggle{
+		margin-top:0;
+	}
+}
+.play-button{
+	width: 186px;
+    height: 186px;
+}
+.play-button2{
+	content:url("img/logos/playbutton.png");
+	width: 186px;
+    height: 186px;
 }
 
 .pause-button{
@@ -1163,7 +1250,7 @@ textarea {
 }
 
 #scroll-sec{
-	padding-top:100px;
+	padding-top:450px;
 }
 #scroll-text{
 	font-family: 'Porkys';
@@ -1205,8 +1292,13 @@ textarea {
 	cursor: pointer;
 	background-color: rgba(0,0,0,0)!important;
 }
-.row div .insta-gallery-div {
+.row div .insta-gallery-div{
 	padding:30px!important;
+}
+@media(max-width:1600px){
+	.row div .insta-gallery-div {
+		padding:15px!important;
+	}
 }
 .insta-img-thumbnail:hover{
 	transform: scale(1.05, 1.05);
@@ -1224,7 +1316,7 @@ textarea {
 		flex: none;
 	}
 	.row div .insta-gallery-div {
-		padding:40px!important;
+		padding:20px!important;
 	}
 }
 .instagram-video{
@@ -1234,15 +1326,150 @@ textarea {
 /* Broadcast
 --------------------------------------------- */
 .my-7{
-	margin-top: 6em;
+	margin-top: 6em!important;
 	margin-bottom: 6em;
 }
-#playing-now{
+
+@media (min-width: 576px){
+	.w-sm-auto{
+		width:auto!important;
+	}
+}
+
+#played-recent{
 	background-color: var(--transblack1);
+	max-height: 936px;
+    
+}
+#spin-recent{
+	overflow-y: scroll;
+	overflow-x: hidden;
+	max-height: 680px;
+}
+#spin-recent::-webkit-scrollbar{
+	width:8px;
+}
+#spin-recent::-webkit-scrollbar-track-piece{
+	background-color:#BCB9AC;
+	border-radius:10px;
+	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.5); 
+}
+#spin-recent::-webkit-scrollbar-button{
+	visibility:hidden;
+	height:30px;
+}
+#spin-recent::-webkit-scrollbar-thumb{
+	background-color:var(--yellow);
+	width:8px;
+	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.5); 
+	border-radius:10px;
+}
+
+.recent-date{
+	font-family: 'Europa Grotesk SH';
+	color: white;
+	font-size:32px;
+	font-weight: 500;
+}
+.recent-artist{
+	font-family: 'Europa Grotesk SH';
+	color: white;
+	font-size:32px;
+	font-weight: 600;
+	font-style:normal;
+}
+.recent-song{
+	font-family: 'Europa Grotesk SH';
+	color: white;
+	font-size:32px;
+	font-weight: 600;
+	font-style: italic;
+}
+
+#playing-next-cont{
+	background-color: var(--transblack1);
+	max-height: 936px;
 }
 #playing-next{
-	background-color: var(--transblack1);
+	overflow-y: scroll;
+	max-height: 673px;
+    overflow-x: hidden;
 }
+#playing-next::-webkit-scrollbar{
+	width:8px;
+}
+#playing-next::-webkit-scrollbar-track-piece{
+	background-color:#BCB9AC;
+	border-radius:10px;
+	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.5); 
+}
+#playing-next::-webkit-scrollbar-button{
+	visibility:hidden;
+	height:30px;
+}
+#playing-next::-webkit-scrollbar-thumb{
+	background-color:var(--yellow);
+	width:8px;
+	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.5); 
+	border-radius:10px;
+}
+#spin-upcoming{
+	padding-left: 10px;
+}
+
+.next-time{
+	font-family: 'Europa Grotesk SH';
+	color: white;
+	font-size:32px;
+	font-weight: 500;
+}
+#broadcast-wave{
+	content:url("img/logos/broadcast-wave.svg");
+	width: 103px;
+    height: 39px;
+}
+.next-show{
+	font-family: 'Europa Grotesk SH';
+	color: white;
+	font-size:32px;
+	font-weight: 600;
+	font-style: italic;
+}
+@media (min-width: 576px){
+	.next-show{ white-space: nowrap; }
+}
+.next-show a{
+	text-decoration: none;
+
+}
+.next-with{
+	padding-left:5px;
+	font-family: 'Europa Grotesk SH';
+	color: white;
+	font-size:32px;
+	font-weight: 600;
+	font-style:normal;
+}
+.next-dj{
+	font-family: 'Europa Grotesk SH';
+	color: white;
+	font-size:32px;
+	font-weight: 600;
+	font-style:normal;
+}
+#spin-upcoming hr{
+	width:80%!important;
+	margin-left:30px;
+}
+hr {
+	border: 2.5px dashed var(--cream);
+	background-color: rgba(0,0,0,0);
+	width: 100%;
+	border-radius: 100px;
+	height:0;
+	opacity:1;
+}
+
 
 /* Blog Page
 --------------------------------------------- */
@@ -1508,10 +1735,13 @@ figcaption{
 }
 #contact-page h2{
 	padding-top:25px;
-	font-size: 40px;
+	font-size: 37px;
 	font-family: "Porkys";
 	text-shadow: 0px 4px 4px var(--shadow);
+	white-space: nowrap;
+	color: white;
 }
+
 #contact-page h3{
 	font-size: 28px;
 	font-family: "Porkys";
@@ -1523,6 +1753,19 @@ figcaption{
 	font-family: "Porkys";
 	color:white;
 	text-shadow: 0px 4px 4px var(--shadow);
+}
+@media(max-width:991px){
+	#contact-page h2{
+		font-size: 30px;
+	}
+	#contact-page h3{
+		font-size: 24px;
+	}
+}
+@media(max-width:767px){
+	#contact-page h2{
+		white-space: unset;
+	}
 }
 #contact-page p{
 	font-family:"Europa Grotesk SH";
@@ -1605,7 +1848,7 @@ figcaption{
 #scheduler-box{
 	background: var(--transblack2);
 	min-height:850px;
-	max-width: 75%;
+	max-width: 98%;
 }
 #scheduler-box label{
 	color: white;
@@ -1638,11 +1881,15 @@ figcaption{
 .fieldCalendar span, .slotsCalendar span{
 	color: var(--orange);
 	font-family:"Porkys";
-	font-size:40px;
+	font-size:32px;
 	line-height: 70px;
-	text-shadow: 2px 2px 2px white;
+	text-shadow: 0px 1px 4px white;
 }
-
+@media (max-width: 500px){
+	.fieldCalendar span, .slotsCalendar span{
+		font-size:24px;
+	}
+}
 .slots span:not(.ahb_slot_availability){
 	display:block!important;
 	text-align:center
@@ -1670,6 +1917,14 @@ figcaption{
 	font-size:30px;
 	color:white;
 	text-shadow: 2px 2px 2px var(--black);
+}
+#fbuilder .slots div {
+    border: 2px solid var(--hpink)!important;
+    font-family: 'Europa Grotesk SH'!important;
+    width: 119px!important;
+}
+#fbuilder .slots div a{
+	width:100%!important;
 }
 #fbuilder .pbSubmit{
 	background: var(--transblack2)!important;
@@ -1710,6 +1965,7 @@ figcaption{
 .cpapp_no_wrap{
 	max-width: 800px;
 	width:auto;
+	flex-wrap: wrap;
 }
 
 /* login and register */
@@ -1769,6 +2025,13 @@ figcaption{
 	border: 2px solid var(--black);
     border-radius: 20px;
 	text-decoration: none;
+}
+
+.um-field-block{
+	color:white!important;
+	font-family:"Europa Grotesk SH";
+	font-size:30px;
+	text-shadow: 2px 2px 2px var(--black);
 }
 
 /* Comments

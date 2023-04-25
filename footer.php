@@ -13,7 +13,8 @@
 </section> <!-- The declarations are within the header> -->
 </body>
 
-<nav class="navbar footer-cheight w-100" style="background-color: var(--black)">
+
+<nav class="navbar footer-cheight w-100" style="background-color: var(--black)" id="footer-bottom">
 	<div class="container-fluid">
 		<span class="navbar-text align-text-bottom me-auto" id="views"> The views presented on this website are not necessarily those of The University of California Regents, The University of California San Diego, or KSDT Radio. </span>
 		<span class="navbar-text align-text-bottom ms-auto pe-5" id="contact"> CONTACT <br /> 
@@ -28,6 +29,28 @@
 	</div>
 </nav>
 
+<audio id="radioplayer" src="https://s4.radio.co/s2c33c7adb/listen" preload="auto" muted="true"></audio>
+
+<?php if(is_page('home') || is_page('broadcast')) { ?>
+	<script type="text/javascript">
+			var player = document.getElementById('radioplayer');
+			var toggleButton = document.getElementById('radio-toggle');
+			var onAir = document.getElementById('nav-onair');
+			console.log(player);
+			function togglePlay(){
+				if(player.muted == true){
+					player.play();
+					player.muted = false;
+				}
+				else{
+					player.pause();
+					player.muted = true;
+				}
+				toggleButton.classList.toggle("pause-button");
+				toggleButton.classList.toggle("play-button");
+			}
+	</script>
+<?php } ?>
 
 <?php wp_footer(); ?>
 </html>

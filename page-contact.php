@@ -48,7 +48,7 @@
                         <h3><?php echo the_field('gm1-email');?></h3>
                     </div>
                     <div class="row staff-thumb mx-auto">
-                        <img src="<?php echo the_field('gm1_pic');?>" alt="Manager - <?php echo the_field('gm1');?>" class="staff-img mx-auto">
+                        <img src="<?php echo the_field('gm1_pic');?>" alt="<?php echo the_field('gm1');?>" class="staff-img mx-auto">
                         <div class="overlay mx-auto">   
                             <h2><?php echo the_field('gm1');?></h2>
                             <h3 class="mt-5 pt-3"><?php echo the_field('gm1-email');?></h3>
@@ -64,7 +64,7 @@
                         <h3><?php echo the_field('marketing-email');?></h3>
                     </div>
                     <div class="row staff-thumb mx-auto">
-                        <img src="<?php echo the_field('marketing_pic');?>" alt="Manager - <?php echo the_field('marketing');?>" class="staff-img mx-auto">
+                        <img src="<?php echo the_field('marketing_pic');?>" alt="<?php echo the_field('marketing');?>" class="staff-img mx-auto">
                         <div class="overlay mx-auto">   
                             <h2><?php echo the_field('marketing');?></h2>
                             <h3 class="mt-5 pt-3"><?php echo the_field('marketing-email');?></h3>
@@ -80,7 +80,7 @@
                         <h3><?php echo the_field('promotions-email');?></h3>
                     </div>
                     <div class="row staff-thumb mx-auto">
-                        <img src="<?php echo the_field('promotions_pic');?>" alt="Manager - <?php echo the_field('promotions');?>" class="staff-img mx-auto">
+                        <img src="<?php echo the_field('promotions_pic');?>" alt="<?php echo the_field('promotions');?>" class="staff-img mx-auto">
                         <div class="overlay mx-auto">   
                             <h2><?php echo the_field('promotions');?></h2>
                             <h3 class="mt-5 pt-3"><?php echo the_field('promotions-email');?></h3>
@@ -96,7 +96,7 @@
                         <h3><?php echo the_field('music_director-email');?></h3>
                     </div>
                     <div class="row staff-thumb mx-auto">
-                        <img src="<?php echo the_field('music_director_pic');?>" alt="Manager - <?php echo the_field('music_director');?>" class="staff-img mx-auto">
+                        <img src="<?php echo the_field('music_director_pic');?>" alt="<?php echo the_field('music_director');?>" class="staff-img mx-auto">
                         <div class="overlay mx-auto">   
                             <h2><?php echo the_field('music_director');?></h2>
                             <h3 class="mt-5 pt-3"><?php echo the_field('music_director-email');?></h3>
@@ -115,7 +115,7 @@
                         <h3><?php echo the_field('tech-email');?></h3>
                     </div>
                     <div class="row staff-thumb mx-auto">
-                        <img src="<?php echo the_field('tech_pic');?>" alt="Manager - <?php echo the_field('tech');?>" class="staff-img mx-auto">
+                        <img src="<?php echo the_field('tech_pic');?>" alt="<?php echo the_field('tech');?>" class="staff-img mx-auto">
                         <div class="overlay mx-auto">   
                             <h2><?php echo the_field('tech');?></h2>
                             <h3 class="mt-5 pt-3"><?php echo the_field('tech-email');?></h3>
@@ -131,7 +131,7 @@
                         <h3><?php echo the_field('engineer1-email');?></h3>
                     </div>
                     <div class="row staff-thumb mx-auto">
-                        <img src="<?php echo the_field('engineer1_pic');?>" alt="Manager - <?php echo the_field('engineer1');?>" class="staff-img mx-auto">
+                        <img src="<?php echo the_field('engineer1_pic');?>" alt="<?php echo the_field('engineer1');?>" class="staff-img mx-auto">
                         <div class="overlay mx-auto">   
                             <h2><?php echo the_field('engineer1');?></h2>
                             <h3 class="mt-5 pt-3"><?php echo the_field('engineer1-email');?></h3>
@@ -147,7 +147,7 @@
                         <h3><?php echo the_field('engineer2-email');?></h3>
                     </div>
                     <div class="row staff-thumb mx-auto">
-                        <img src="<?php echo the_field('engineer2_pic');?>" alt="Manager - <?php echo the_field('engineer2');?>" class="staff-img mx-auto">
+                        <img src="<?php echo the_field('engineer2_pic');?>" alt="<?php echo the_field('engineer2');?>" class="staff-img mx-auto">
                         <div class="overlay mx-auto">   
                             <h2><?php echo the_field('engineer2');?></h2>
                             <h3 class="mt-5 pt-3"><?php echo the_field('engineer2-email');?></h3>
@@ -163,7 +163,7 @@
                         <h3><?php echo the_field('graphics-email');?></h3>
                     </div>
                     <div class="row staff-thumb mx-auto">
-                        <img src="<?php echo the_field('graphics_pic');?>" alt="Manager - <?php echo the_field('graphics');?>" class="staff-img mx-auto">
+                        <img src="<?php echo the_field('graphics_pic');?>" alt="<?php echo the_field('graphics');?>" class="staff-img mx-auto">
                         <div class="overlay mx-auto">   
                             <h2><?php echo the_field('graphics');?></h2>
                             <h3 class="mt-5 pt-3"><?php echo the_field('graphics-email');?></h3>
@@ -182,7 +182,7 @@
                         <h3><?php echo the_field('secretary-email');?></h3>
                     </div>
                     <div class="row staff-thumb mx-auto">
-                        <img src="<?php echo the_field('secretary_pic');?>" alt="Manager - <?php echo the_field('secretary');?>" class="staff-img mx-auto">
+                        <img src="<?php echo the_field('secretary_pic');?>" alt="<?php echo the_field('secretary');?>" class="staff-img mx-auto">
                         <div class="overlay mx-auto">   
                             <h2><?php echo the_field('secretary');?></h2>
                             <h3 class="mt-5 pt-3"><?php echo the_field('secretary-email');?></h3>
@@ -198,7 +198,7 @@
                         <h3><?php echo the_field('programming-email');?></h3>
                     </div>
                     <div class="row staff-thumb mx-auto">
-                        <img src="<?php echo the_field('programming_pic');?>" alt="Manager - <?php echo the_field('programming');?>" class="staff-img mx-auto">
+                        <img src="<?php echo the_field('programming_pic');?>" alt="<?php echo the_field('programming');?>" class="staff-img mx-auto">
                         <div class="overlay mx-auto">   
                             <h2><?php echo the_field('programming');?></h2>
                             <h3 class="mt-5 pt-3"><?php echo the_field('programming-email');?></h3>
@@ -214,7 +214,7 @@
                         <h3><?php echo the_field('media-email');?></h3>
                     </div>
                     <div class="row staff-thumb mx-auto">
-                        <img src="<?php echo the_field('media_pic');?>" alt="Manager - <?php echo the_field('media');?>" class="staff-img mx-auto">
+                        <img src="<?php echo the_field('media_pic');?>" alt="<?php echo the_field('media');?>" class="staff-img mx-auto">
                         <div class="overlay mx-auto">   
                             <h2><?php echo the_field('media');?></h2>
                             <h3 class="mt-5 pt-3"><?php echo the_field('media-email');?></h3>
@@ -230,7 +230,7 @@
                         <h3><?php echo the_field('events-email');?></h3>
                     </div>
                     <div class="row staff-thumb mx-auto">
-                        <img src="<?php echo the_field('events_pic');?>" alt="Manager - <?php echo the_field('events');?>" class="staff-img mx-auto">
+                        <img src="<?php echo the_field('events_pic');?>" alt="<?php echo the_field('events');?>" class="staff-img mx-auto">
                         <div class="overlay mx-auto">   
                             <h2><?php echo the_field('events');?></h2>
                             <h3 class="mt-5 pt-3"><?php echo the_field('events-email');?></h3>

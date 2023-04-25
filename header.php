@@ -15,18 +15,19 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="author" content="KSDT Radio">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-    <meta name="author" content="KSDT Radio">
 	<?php wp_head(); ?>
 </head>
 
 
-<body class="gifbg">
+<body class="gifbg bgtemp">
+    <!-- <div id="loader"></div> -->
     <!-- Using https://getbootstrap.com/docs/5.3/components/navbar/ as a reference -->
-    <nav class="navbar navbar-expand-lg navbar-cheight sticky-top" style="background-color: var(--black)" role="navigation">
+    <nav class="navbar navbar-expand-lg navbar-cheight sticky-top" style="background-color: var(--black)" role="navigation" id="nav-header">
         <div class="container-fluid">
             <!-- Logo -->
             <a class="navbar-brand" id="navbar-adjLogo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img id="nav-ksdt"></a>
@@ -55,5 +56,19 @@
             </div>
         </div>
     </nav>
-    <section role="main">
-        <a id="main-content">
+    <section role="main" id="main-sec">
+    <script> 
+        // Loading 
+        const imageUrl = "<?php echo get_stylesheet_directory_uri(); ?>" + "/img/gif/backgroundflip.gif";
+        const bgElement = document.querySelector("body");
+
+        let preloaderImg = document.createElement("img");
+        preloaderImg.src = imageUrl;
+
+        preloaderImg.addEventListener('load', (event) => {
+            bgElement.classList.add("thegif");
+            bgElement.classList.remove("bgtemp");
+            preloaderImg = null;
+        
+        });
+    </script>

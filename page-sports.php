@@ -1,6 +1,4 @@
 <?php get_header();?>
-    
-
 
 <script>
     const date = /[A-S][a-z]+\s[0-9]+\s\([A-Za-z]+\)/mg;
@@ -9,16 +7,15 @@
     const results = /((?<=\s)([WLT]\s[0-9]+-[0-9]+)|(Postponed|Cancelled)|((\s{4})(?=\n)))/mg;
     const overall = /Overall\s*[0-9]+-[0-9]+/;
     
-    const baseball = getTextData("https://ucsdtritons.com/services/schedule_txt.ashx?schedule=372");
-    console.log(results.exec(baseball));
+    getTextData("http://localhost:8080/services/schedule_txt.ashx?schedule=372").then((baseball => {
+        console.log(results.exec(baseball));
+    }));
     async function getTextData(theUrl) {
-        const textData = await fetch(theUrl, 
-        { 
-            credentials: "omit",
+        return await fetch(theUrl, 
+        {
             method: 'GET',
-            mode: "no-cors",
             headers: {
-                "Content-Type": "text/plain",
+                "Target-URL": "https://ucsdtritons.com",
             },
         }).then(response => {
             if (!response.ok) {
@@ -28,7 +25,6 @@
         }).then(text => {
             return text;
         });
-        return textData;
     }
 </script>
 <?php get_footer();?>

@@ -1,13 +1,24 @@
 <?php
 /**
  * Sports Broadcasting Page
- * 
+ * col-lg mb-2 mt-5 my-lg-5 ms-lg-5 rainbox my-5 ms-1 me-3 w-100
  */
+
+
 get_header();
 ?>
-<div class="container-flex">
-    <div class="row mx-3 w-100 text-center">
-        <div class="col-lg mb-2 mt-5 my-lg-5 ms-lg-5 rainbox my-5 ms-1 me-1 w-100" style= "background: var(--transblack2);">
+<style>
+    @media (max-width: 320px){
+        .container{
+            max-width: 320px;
+        }
+    }
+</style>
+
+
+<div class="container-flex overflow-x-hidden">
+    <div class="row mx-3 w-100 text-center overflow-auto">
+        <div class="col-sm mt-5 my-sm-5 ms-sm-1 rainbox my-5 ms-1 me-5 w-100" style= "background: var(--transblack2);">
             <h1>Sports Broadcasting</h1>
             <div class="row overflow-scroll flex-nowrap text-center gy-5 w-100">
                 <div class="col"> 

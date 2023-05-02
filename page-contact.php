@@ -10,7 +10,7 @@ get_header();
 <div class="container-flex" id="contact-page">
     <!-- Header -->
     <div class="row mx-0" id="contact-header">
-        <!-- Text section -->
+        <!-- General KSDT contact info -->
         <div class="col-xxl mw-fit" id="contact-info">
             <div class="row" id="contact-location">
                 <h1>location<br></h1>
@@ -47,6 +47,7 @@ get_header();
         <div class="container">
             <!-- Row 1 -->
             <div class="row m-0 row-cols-xxl-4 row-cols-md-2 row-cols-1 staff-row">
+                <!-- General Manager -->
                 <div class="col my-5 staff-cont">
                     <div class="row staff-type">
                         <h2>General Manager</h2>
@@ -63,6 +64,7 @@ get_header();
                         </div>
                     </div>         
                 </div>
+                <!-- Marketing -->
                 <div class="col my-5 staff-cont">
                     <div class="row staff-type">
                         <h2>Marketing</h2>
@@ -79,6 +81,7 @@ get_header();
                         </div>
                     </div>         
                 </div>
+                <!-- Music Submissions -->
                 <div class="col my-5 staff-cont">
                     <div class="row staff-type">
                         <h2>Music Submissions</h2>
@@ -95,6 +98,7 @@ get_header();
                         </div>
                     </div>         
                 </div>
+                <!-- Music Director -->
                 <div class="col my-5 staff-cont">
                     <div class="row staff-type">
                         <h2>Music Director</h2>
@@ -114,6 +118,7 @@ get_header();
             </div>
             <!-- Row 2 -->
             <div class="row m-0 row-cols-xxl-4 row-cols-md-2 row-cols-1 staff-row">
+                <!-- Computer Engineer -->
                 <div class="col my-5 staff-cont">
                     <div class="row staff-type">
                         <h2>Computer Engineer</h2>
@@ -130,6 +135,7 @@ get_header();
                         </div>
                     </div>         
                 </div>
+                <!-- Audio Engineer 1 -->
                 <div class="col my-5 staff-cont">
                     <div class="row staff-type">
                         <h2>Audio Engineer</h2>
@@ -146,6 +152,7 @@ get_header();
                         </div>
                     </div>         
                 </div>
+                <!-- Audio Engineer 2 -->
                 <div class="col my-5 staff-cont">
                     <div class="row staff-type">
                         <h2>Audio Engineer</h2>
@@ -162,6 +169,7 @@ get_header();
                         </div>
                     </div>         
                 </div>
+                <!-- Design -->
                 <div class="col my-5 staff-cont">
                     <div class="row staff-type">
                         <h2>Design</h2>
@@ -181,6 +189,7 @@ get_header();
             </div>
             <!-- Row 3 -->
             <div class="row m-0 row-cols-xxl-4 row-cols-md-2 row-cols-1 staff-row">
+                <!-- Office Manager -->
                 <div class="col my-5 staff-cont">
                     <div class="row staff-type">
                         <h2>Office Manager</h2>
@@ -197,6 +206,7 @@ get_header();
                         </div>
                     </div>         
                 </div>
+                <!-- Programming Director -->
                 <div class="col my-5 staff-cont">
                     <div class="row staff-type">
                         <h2>Programming Director</h2>
@@ -213,6 +223,7 @@ get_header();
                         </div>
                     </div>         
                 </div>
+                <!-- Media -->
                 <div class="col my-5 staff-cont">
                     <div class="row staff-type">
                         <h2>Media</h2>
@@ -229,6 +240,7 @@ get_header();
                         </div>
                     </div>         
                 </div>
+                <!-- Event Coordinator -->
                 <div class="col my-5 staff-cont">
                     <div class="row staff-type">
                         <h2>Event Coordinator</h2>

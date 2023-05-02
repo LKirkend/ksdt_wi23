@@ -1,6 +1,6 @@
 <?php
 /**
- * The page containing the scheduler element.
+ * This page is for editing a specific existing booking
  *
  * Authors: Logan Kirkendall
  * 

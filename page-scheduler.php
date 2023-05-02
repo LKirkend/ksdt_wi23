@@ -1,6 +1,6 @@
 <?php
 /**
- * The page containing the scheduler element.
+ * The page containing the scheduler element (where users can reserve practice room times).
  *
  * Authors: Logan Kirkendall
  * 

@@ -11,12 +11,13 @@
 get_header();
 ?>
 <div class="container-fluid px-sm-5 p-2" id="main-header">
-    <!-- logo and play button -->
     <div class="row gx-md-5 mx-auto mw-100 pt-sm-5 px-xxl-5 mx-xxl-5" style="height: 480px">
+        <!-- KSDT logo -->
         <div class="col-md py-2">
             <img class="made-in-ucsd" style="position:absolute; top:350px; left:0px;">
             <img class="d-flex mx-auto mx-lg-0" id="home-logo">
         </div>
+        <!-- Play button -->
         <div class="col-md card mx-auto ms-lg-5 ms-sm-auto p-0 rainbox h-100" id="tune-in-box">
             <div class="row">
                 <div class="col">
@@ -26,6 +27,7 @@ get_header();
                     </a>
                 </div>
             </div>
+            <!-- Current song info -->
             <div class="row h-100 mx-0 overflow-y-scroll overflow-x-hidden" id="current-bottom">
                 <div class="play-btn col-5 px-0 px-lg-3 h-lg-100 my-auto mh-100 py-sm-4">
                     <img id="radio-toggle" src='<?php echo get_stylesheet_directory_uri() . "/img/logos/playbutton.svg"?>' onclick="togglePlay()" class="play-button pt-0 mx-0 h-100 pe-lg-0 h-lg-100 mh-100 mt-0 pb-sm-5 my-lg-auto my-md-0 pb-lg-0" onerror="this.classList.add('play-button2');">
@@ -35,6 +37,7 @@ get_header();
                 </div>
             </div> 
             <img class="orange-flower" style="position:absolute; top:290px; right:-50px;">
+            <!-- Link to sports broadcast -->
             <div class="row">
                 <div class="col">
                     <a class="row" href="https://s4.radio.co/sdb5184873/listen">

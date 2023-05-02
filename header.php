@@ -61,7 +61,6 @@
         // Loading 
         const imageUrl = "<?php echo get_stylesheet_directory_uri(); ?>" + "/img/gif/backgroundflip.gif";
         const bgElement = document.querySelector("body");
-        console.log(bgElement);
 
         let preloaderImg = document.createElement("img");
         preloaderImg.src = imageUrl;
@@ -69,8 +68,6 @@
         preloaderImg.addEventListener('load', (event) => {
             bgElement.classList.add("thegif");
             bgElement.classList.remove("bgtemp");
-            console.log(imageUrl);
-            console.log(bgElement.style.backgroundImage);
             preloaderImg = null;
         
         });

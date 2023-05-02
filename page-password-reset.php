@@ -1,4 +1,11 @@
-<?php get_header(); ?>
+<?php 
+/**
+ * Password reset page (opened upon clicking "Forgot your password?" button on login page)
+ * 
+ * @package KSDT_WI23
+ */
+get_header(); 
+?>
 
 <div class="container-flex mx-5" style="height:866px;">
   <div class="row center rainbox mx-auto w-100 my-5" style="background-color: var(--transblack2); max-width: 98%;">

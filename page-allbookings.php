@@ -1,4 +1,11 @@
-<?php get_header(); ?>
+<?php 
+/**
+ * This page is for Admins to view all the current practice room bookings.
+ * 
+ * @package KSDT_WI23
+ */
+get_header(); 
+?>
 
 <div class="container-flex" style="height:1300px;">  
   <div class="row pt-5">

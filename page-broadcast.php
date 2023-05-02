@@ -5,7 +5,7 @@
  * Designers: 
  * Authors: Zach Lawrence, Logan Kirkendall
  * 
- * @package ksdt_wi23
+ * @package KSDT_WI23
  */
 
 get_header();

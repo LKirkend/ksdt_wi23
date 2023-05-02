@@ -1,4 +1,11 @@
-<?php get_header();?>
+<?php 
+/**
+ * This page includes KSDT's general contact info, including it's address and phone number, as well as the emails of each staff member.
+ * 
+ * @package KSDT_WI23
+ */
+get_header();
+?>
 
 <div class="container-flex" id="contact-page">
     <!-- Header -->

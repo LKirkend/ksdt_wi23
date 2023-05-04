@@ -2,7 +2,7 @@
 /**
  * Sports broadcasting page
  * 
- * 
+ * Proxy server required to work. Code for it is located in /js/proxydist/, README shows how to use. 
  * 
  * Authors: Logan Kirkendall, Zach Lawrence, Catherine Zhang, Christine Nguyen, Chloe Keggen
  * 

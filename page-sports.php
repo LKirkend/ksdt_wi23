@@ -5,11 +5,9 @@
  * 
  * 
  * Authors: Logan Kirkendall, Zach Lawrence, Catherine Zhang, Christine Nguyen, Chloe Keggen
- * Designers: Logan Kirkendall
  * 
- * TODO: 
- *  Debug 
- *  Finish 
+ * TODO:  
+ *  Style 
  *  Refactor 
  * 
  * @author Logan Kirkendall
@@ -21,33 +19,34 @@ get_header();
 <div class="container-flex overflow-x-hidden">
     <div class="row mx-auto w-100 text-center px-2">
         <div class="col-md mt-1 me-lg-5 mx-md-3 mt-sm-3 my-md-5 rainbox w-100" style= "background: var(--transblack2);">
-            <h1>Sports Broadcasting</h1>
-            <div class="row overflow-scroll flex-nowrap text-center gy-5">
+            <h1 class="mt-3 mb-4">Sports Broadcasting</h1>
+            <div class="row overflow-scroll flex-nowrap text-center gy-5" id="tabs">
                 <div class="col-3 col-sm-2 col-md sports-tab" onclick="changeSchedule(0)"> 
-                    <p class="fs-6 lh-1 "> Men's<br>Baseball</p>
+                    <p > Men's<br>Baseball</p>
                 </div>
                 <div class="col-3 col-sm-2 col-md sports-tab" onclick="changeSchedule(1)"> 
-                    <p class="fs-6 lh-1 ">Men's<br>Basketball</p>
+                    <p >Men's<br>Basketball</p>
                 </div>
                 <div class="col-3 col-sm-2 col-md sports-tab" onclick="changeSchedule(2)">  
-                    <p class="fs-6 lh-1 ">Women's<br>Basketball</p>
+                    <p >Women's<br>Basketball</p>
                 </div>
                 <div class="col-3 col-sm-2 col-md sports-tab" onclick="changeSchedule(3)"> 
-                    <p class="fs-6 lh-1 ">Men's<br>Volleyball</p>
+                    <p >Men's<br>Volleyball</p>
                 </div>
                 <div class="col-3 col-sm-2 col-md sports-tab" onclick="changeSchedule(4)"> 
-                    <p class="fs-6 lh-1 ">Women's<br>Volleyball</p>
+                    <p >Women's<br>Volleyball</p>
                 </div>
                 <div class="col-3 col-sm-2 col-md sports-tab" onclick="changeSchedule(5)"> 
-                    <p class="fs-6 lh-1 ">Men's<br>Soccer</p>
+                    <p >Men's<br>Soccer</p>
                 </div>
                 <div class="col-3 col-sm-2 col-md sports-tab" onclick="changeSchedule(6)"> 
-                    <p class="fs-6 lh-1 ">Women's<br>Soccer</p>
+                    <p >Women's<br>Soccer</p>
                 </div>
             </div>
-            <div class="container-md text-center" id="info" style="min-height:1800px"></div> 
+            <div class="container-flex text-center" id="info" style="min-height:750px"></div> 
+            
         </div>
-        <div class="col-md rainbox mx-auto me-md-3 ms-lg-5 my-2 my-sm-3 my-md-5 w-100" style= "background: var(--transblack2); max-width:250px;"><h1>Video</h1></div>
+        <div class="col-md rainbox mx-auto me-md-3 my-2 my-sm-3 my-md-5 w-100" style= "background: var(--transblack2); max-width:250px; max-height:250px;"><h1>Listen</h1></div>
     </div>
 </div>
 <?php get_footer(); ?>
@@ -105,13 +104,13 @@ get_header();
         rowDiv.classList.add("schedule-game");
 
         const dateDiv = document.createElement("div");
-        dateDiv.classList.add("col"); dateDiv.classList.add("game-date");
+        dateDiv.classList.add("col"); dateDiv.classList.add("game-date"); dateDiv.classList.add("px-0");
         const timeDiv = document.createElement("div");
-        timeDiv.classList.add("col"); timeDiv.classList.add("game-time");
+        timeDiv.classList.add("col"); timeDiv.classList.add("game-time");timeDiv.classList.add("px-0");
         const locationDiv = document.createElement("div");
-        locationDiv.classList.add("col"); locationDiv.classList.add("game-location");
+        locationDiv.classList.add("col"); locationDiv.classList.add("game-location");locationDiv.classList.add("px-0");
         const resultDiv = document.createElement("div");
-        resultDiv.classList.add("col"); resultDiv.classList.add("game-result");
+        resultDiv.classList.add("col"); resultDiv.classList.add("game-result");resultDiv.classList.add("px-0");
 
         // Get vals
         const date = game[0];

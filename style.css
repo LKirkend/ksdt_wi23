@@ -1465,6 +1465,46 @@ hr {
 	opacity:1;
 }
 
+/* Sports Broadcast 
+--------------------------------------------- */
+.event-overall{
+	font-family:"Porkys";
+	font-size: 32PX;
+	color: white;
+	padding-top:32px;
+	padding-bottom:32px;
+	text-shadow: 0px 4px 4px var(--shadow);
+}
+#schedule-game{
+	
+}
+.schedule-game span{
+	font-size: 1.6vw;
+}
+.game-date{
+	color: white;
+	font-family: "Europa Grotesk SH";
+	white-space: nowrap;
+}
+.game-time{
+	color: white;
+	font-family: "Europa Grotesk SH";
+	white-space: nowrap;
+}
+.game-location{
+	color: white;
+	font-family: "Europa Grotesk SH";
+	font-size: clamp(1rem, 2.5vw, 2rem); 
+	white-space: nowrap;
+}
+.game-result{
+	color: white;
+	font-family: "Europa Grotesk SH";
+	white-space: nowrap;
+}
+.sports-tab{
+	cursor: pointer;
+}
 
 /* Blog Page
 --------------------------------------------- */

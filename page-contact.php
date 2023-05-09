@@ -27,6 +27,7 @@
         <!-- Pics section -->
         <div class="col-xxl" id="contact-pics">
             <img class="position-absolute z-0 d-none d-xxl-block" id="cont-img1" src="<?php echo the_field('pic1')?>">
+            <img class="ucsd-blue" style="position:absolute; top:245px; right:60px; transform:rotate(31deg);">
             <img class="position-absolute z-1 d-none d-xxl-block" id="cont-img2" src="<?php echo the_field('pic2')?>">
         </div>
     </div>

@@ -21,6 +21,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
     <meta name="author" content="KSDT Radio">
 	<?php wp_head(); ?>
+    <style type ="text/css">
+        .dropdown:hover .dropdown-menu{
+            display: block
+        }
+    </style>
 </head>
 
 
@@ -48,9 +53,21 @@
                             $title = strtoupper($menu_item->title);
                             $url = $menu_item->url;
                             ?>
-                        <li class="nav-item align-middle mx-auto py-2" id="nav-item-padding">
-                            <a class="nav-link text-white" id="nav-link-bordered" href="<?php echo $url; ?>"><?php echo $title; ?></a>
-                        </li>
+                        <?php if($title == 'BROADCAST') : ?>
+                            <li class="nav-item align-middle mx-auto py-2 dropdown" id="nav-item-padding">
+                                <a href="<?php echo $url; ?>" class="nav-link text-white dropdown-toggle nav-link-bordered" id=" navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    RADIO
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="http://localhost/wordpress/broadcast/" class="dropdown-item">BROADCAST</a></li>
+                                <li><a href="http://localhost/wordpress/broadcast/sports/" class="dropdown-item">SPORTS</a></li>
+                            </ul>
+                            </li>
+                        <?php else : ?>
+                            <li class="nav-item align-middle mx-auto py-2" id="nav-item-padding">
+                                <a class="nav-link text-white" id="nav-link-bordered" href="<?php echo $url; ?>"><?php echo $title; ?></a>
+                            </li>
+                        <?php endif;?>
                     <?php endforeach; ?>
                 </ul>
             </div>

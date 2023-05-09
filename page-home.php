@@ -12,11 +12,11 @@ get_header();
 ?>
 <div class="container-fluid px-sm-5 p-2" id="main-header">
     <!-- logo and play button -->
-    <div class="row gx-md-5 mx-auto mw-100 pt-sm-5 px-xxl-5 mx-xxl-5">
+    <div class="row gx-md-5 mx-auto mw-100 pt-sm-5 px-xxl-5 mx-xxl-5" style="height: 480px">
         <div class="col-md py-2">
             <img class="d-flex mx-auto mx-lg-0" id="home-logo">
         </div>
-        <div class="col-md card mx-auto ms-lg-5 ms-sm-auto p-0 rainbox" id="tune-in-box">
+        <div class="col-md card mx-auto ms-lg-5 ms-sm-auto p-0 rainbox h-100" id="tune-in-box">
             <div class="row">
                 <div class="col">
                     <a href="https://s4.radio.co/s2c33c7adb/listen">
@@ -33,6 +33,19 @@ get_header();
                     <?php include(__DIR__ . '/spinitron/widgets/current-show.php') ?>
                 </div>
             </div> 
+            <div class="row">
+                <div class="col">
+                    <a class="row" href="<?php  global $wp;
+$current_url = home_url( add_query_arg( array(), $wp->request ) ); echo($current_url . "/sports");?>">
+                        <div class="col pe-0 text-end" style="text-shadow: 5px 5px 4px var(--shadow)">
+                            <p class="mt-5">Sports Broadcast</p>
+                        </div>
+                        <div class="col-2 ps-0">
+                            <img class="right-arrow mt-4">
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
     <!-- scroll to learn more -->

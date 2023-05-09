@@ -18,35 +18,43 @@ get_header();
 
 <div class="container-flex overflow-x-hidden">
     <div class="row mx-auto w-100 text-center px-2">
-        <div class="col-md mt-1 me-lg-5 mx-md-3 mt-sm-3 my-md-5 rainbox w-100" style= "background: var(--transblack2);">
-            <h1 class="mt-3 mb-4">Sports Broadcasting</h1>
-            <div class="row overflow-scroll flex-nowrap text-center gy-5" id="tabs">
+        <div class="col-md-8 order-md-1 order-5 mt-1 me-lg-5 my-2 mx-md-3 mt-sm-3 my-md-5 rainbox" style= "background: var(--transblack2);">
+            <h1 class="mt-3 mb-4">Sports Schedule</h1>
+            <div class="row overflow-x-auto overflow-y-none flex-nowrap text-center gy-5" id="tabs">
                 <div class="col-3 col-sm-2 col-md sports-tab" onclick="changeSchedule(0)"> 
-                    <p > Men's<br>Baseball</p>
+                    <p id="tab-0" class="">Men's<br>Baseball</p>
                 </div>
                 <div class="col-3 col-sm-2 col-md sports-tab" onclick="changeSchedule(1)"> 
-                    <p >Men's<br>Basketball</p>
+                    <p id="tab-1" class="">Men's<br>Basketball</p>
                 </div>
                 <div class="col-3 col-sm-2 col-md sports-tab" onclick="changeSchedule(2)">  
-                    <p >Women's<br>Basketball</p>
+                    <p id="tab-2" class="">Women's<br>Basketball</p>
                 </div>
                 <div class="col-3 col-sm-2 col-md sports-tab" onclick="changeSchedule(3)"> 
-                    <p >Men's<br>Volleyball</p>
+                    <p id="tab-3" class="">Men's<br>Volleyball</p>
                 </div>
                 <div class="col-3 col-sm-2 col-md sports-tab" onclick="changeSchedule(4)"> 
-                    <p >Women's<br>Volleyball</p>
+                    <p id="tab-4" class="">Women's<br>Volleyball</p>
                 </div>
                 <div class="col-3 col-sm-2 col-md sports-tab" onclick="changeSchedule(5)"> 
-                    <p >Men's<br>Soccer</p>
+                    <p id="tab-5" class="">Men's<br>Soccer</p>
                 </div>
                 <div class="col-3 col-sm-2 col-md sports-tab" onclick="changeSchedule(6)"> 
-                    <p >Women's<br>Soccer</p>
+                    <p id="tab-6" class="">Women's<br>Soccer</p>
                 </div>
             </div>
-            <div class="container-flex text-center" id="info" style="min-height:750px"></div> 
-            
+            <div class="container-flex text-center mb-3" id="info" style="min-height:750px"></div> 
         </div>
-        <div class="col-md rainbox mx-auto me-md-3 my-2 my-sm-3 my-md-5 w-100" style= "background: var(--transblack2); max-width:250px; max-height:250px;"><h1>Listen</h1></div>
+        <div class="col-md-3 order-md-5 order-1 rainbox mx-auto me-md-3 my-2 my-sm-3 my-md-5" style= "background: var(--transblack2); max-width:250px; max-height:285px;">
+            <div class="row">
+                <div class="col">
+                    <h1>Listen</h1>
+                </div>                      
+                <div class="play-btn col-5 m-auto w-100">
+                    <img id="radio-toggle" src='<?php echo get_stylesheet_directory_uri() . "/img/logos/playbutton.svg"?>' onclick="togglePlay()" class="play-button mb-3 my-auto mx-auto w-100" onerror="this.classList.add('play-button2');">
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <?php get_footer(); ?>
@@ -62,12 +70,19 @@ get_header();
     }
 
     /**
-     * @desc
+     * @desc Changes which schedule is displayed
      */
     async function changeSchedule(eventInd){
         let defer = $.Deferred(),
         filtered = defer.then(() => displaySchedule(eventInd));
         clearSchedule(defer);
+    }
+
+    function changeColor(eventInd){
+        for(var i = 0; i < 7; i++){
+            var tab = document.getElementById("tab-" + i);
+            (i == eventInd) ? tab.classList.add("tab-pink") : tab.classList.remove("tab-pink");
+        }
     }
     /** 
      * @desc Displays the desired schedule of the user, based on which game tab is clicked. Clears then inserts data into the schedule.
@@ -95,6 +110,7 @@ get_header();
             // Create div elements 
             insertRow(game);
         });
+        changeColor(eventInd);
     }
 
     function insertRow(game){
@@ -226,10 +242,10 @@ get_header();
      * @desc Helper function that clears the overall results and each game entry from the calendar.
      */
     async function clearSchedule(deferred){
-        const overallDiv = (document.getElementsByClassName("event-overall").length != 0) ? document.querySelectorAll(".event-overall")[0] : null;
+        const overallDiv = (document.getElementsByClassName("event-overall").length != 0) ? document.querySelectorAll(".event-overall") : null;
         const rowDivs = (document.getElementsByClassName("schedule-game").length != 0) ? document.querySelectorAll(".schedule-game") : null;
 
-        if(overallDiv){overallDiv.remove();} // Null check
+        if(overallDiv){for(const overall of overallDiv){overall.remove();}} // Null check
         if(rowDivs){
             for(let row of rowDivs){
                 await row.remove();

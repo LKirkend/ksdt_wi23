@@ -33,8 +33,8 @@ get_header();
                 <div class="col py-0 px-0 h-auto mb-auto my-auto mt-sm-0 mt-md-4 mb-lg-auto mt-lg-4" id="show-current">
                     <?php include(__DIR__ . '/spinitron/widgets/current-show.php') ?>
                 </div>
-            </div> 
-            <img class="orange-flower" style="position:absolute; top:290px; right:-50px;">
+            </div>
+            <img class="orange-flower" style="position:absolute; top:390px; right:-50px;">
             <div class="row">
                 <div class="col">
                     <a class="row" href="https://s4.radio.co/sdb5184873/listen">

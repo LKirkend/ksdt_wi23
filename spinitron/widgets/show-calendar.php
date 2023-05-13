@@ -58,17 +58,19 @@ foreach ($result['items'] as $show): ?>
         console.log(calendarMap)
     }));
     function mapProgramSchedule(json){
-
         calendar = new Map()
         var j = 0;
         for(var i = 0; i < 6; i++){
-            const day = (new DateTime(json[j].start))->format("D")
+            const day = (new Date(json[j].start)).getDay()
             const dayShows = []
             calendar.set(day, dayShows)
-            var tmpDay
-            while((tmpDay = (new DateTime(json[j].start)->format("D")) === day)){
+            var tmpDay = day
+            while(tmpDay == day){
+                if(j >= json.length)
+                    return calendar
+                tmpDay=(new Date(json[j].start)).getDay()
                 dayShows.push(json[j])
-                j++;
+                j++
             }
         }
         return calendar;

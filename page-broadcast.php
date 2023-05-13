@@ -37,7 +37,7 @@ get_header();
 				<div class="row">
 					<div class="col">
 						<div id="spin-upcoming">
-							<?php include(__DIR__ . '/spinitron/widgets/upcoming-shows.php') ?>
+							<?php include(__DIR__ . '/spinitron/widgets/show-calendar.php') ?>
 						</div>
 					</div>
 				</div>

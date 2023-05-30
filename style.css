@@ -951,9 +951,30 @@ textarea {
 		border: 1px solid white;
 		border-radius: 10px;
 	}
+	.nav-link-bordered {
+		font-family: "Europa Grotesk SH";
+		font-size: 1.125em; /* 18px */
+		font-weight: 400;
+		line-height: 0.3em; /* 19px */
+		background-color: var(--black);
+		text-decoration: none;
+		border: 1px solid white;
+		border-radius: 10px;
+	}
 }
 @media(max-width:991px){
 	#nav-link-bordered {
+		font-family: "Europa Grotesk SH";
+		font-size: 1.125em; /* 18px */
+		font-weight: 400;
+		line-height: 1.1875em; /* 19px */
+		letter-spacing: 0%;
+		text-decoration: none;
+		color: #fff;
+		background-color: var(--black);
+		text-decoration: none;
+	}
+	.nav-link-bordered {
 		font-family: "Europa Grotesk SH";
 		font-size: 1.125em; /* 18px */
 		font-weight: 400;

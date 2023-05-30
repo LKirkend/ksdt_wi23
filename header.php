@@ -48,9 +48,22 @@
                             $title = strtoupper($menu_item->title);
                             $url = $menu_item->url;
                             ?>
-                        <li class="nav-item align-middle mx-auto py-2" id="nav-item-padding">
-                            <a class="nav-link text-white" id="nav-link-bordered" href="<?php echo $url; ?>"><?php echo $title; ?></a>
-                        </li>
+                        <!-- Dropdown menu -->
+                        <?php if($title == 'BROADCAST') : ?>
+                            <li class="nav-item dropdown mx-auto py-2" id="nav-item-padding">
+                                <a class="nav-link text-white dropdown-toggle nav-link-bordered text-center" id=" navbarDropdown" role="button" data-bs-toggle="dropdown">
+                                    RADIO
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="http://localhost/wordpress/broadcast/" class="dropdown-item text-center">BROADCAST</a></li>
+                                    <li><a href="http://localhost/wordpress/broadcast/sports/" class="dropdown-item text-center">SPORTS</a></li>
+                                </ul>
+                            </li>
+                        <?php else : ?>
+                            <li class="nav-item align-middle mx-auto py-2" id="nav-item-padding">
+                                <a class="nav-link text-white" id="nav-link-bordered" href="<?php echo $url; ?>"><?php echo $title; ?></a>
+                            </li>
+                        <?php endif;?>
                     <?php endforeach; ?>
                 </ul>
             </div>

@@ -35,7 +35,8 @@ get_header();
             </div> 
             <div class="row">
                 <div class="col">
-                    <a class="row" href="https://s4.radio.co/sdb5184873/listen">
+                    <a class="row" href="<?php  global $wp;
+$current_url = home_url( add_query_arg( array(), $wp->request ) ); echo($current_url . "/sports");?>">
                         <div class="col pe-0 text-end" style="text-shadow: 5px 5px 4px var(--shadow)">
                             <p class="mt-5">Sports Broadcast</p>
                         </div>

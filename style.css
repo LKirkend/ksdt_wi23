@@ -115,6 +115,7 @@ h1 {
 	letter-spacing: 0%;
 	text-decoration: none;
 	color: white;
+	text-shadow: 0px 4px 4px var(--shadow);
 }
 
 h2{
@@ -955,9 +956,30 @@ textarea {
 		border: 1px solid white;
 		border-radius: 10px;
 	}
+	.nav-link-bordered {
+		font-family: "Europa Grotesk SH";
+		font-size: 1.125em; /* 18px */
+		font-weight: 400;
+		line-height: 0.3em; /* 19px */
+		background-color: var(--black);
+		text-decoration: none;
+		border: 1px solid white;
+		border-radius: 10px;
+	}
 }
 @media(max-width:991px){
 	#nav-link-bordered {
+		font-family: "Europa Grotesk SH";
+		font-size: 1.125em; /* 18px */
+		font-weight: 400;
+		line-height: 1.1875em; /* 19px */
+		letter-spacing: 0%;
+		text-decoration: none;
+		color: #fff;
+		background-color: var(--black);
+		text-decoration: none;
+	}
+	.nav-link-bordered {
 		font-family: "Europa Grotesk SH";
 		font-size: 1.125em; /* 18px */
 		font-weight: 400;
@@ -1236,6 +1258,8 @@ textarea {
 .play-button{
 	width: 186px;
     height: 186px;
+	padding-right: 12px;
+    padding-top: 10px;
 }
 .play-button2{
 	content:url("img/logos/playbutton.png");
@@ -1356,7 +1380,7 @@ textarea {
 }
 #spin-recent::-webkit-scrollbar-button{
 	visibility:hidden;
-	height:30px;
+	height:0px;
 }
 #spin-recent::-webkit-scrollbar-thumb{
 	background-color:var(--yellow);
@@ -1470,6 +1494,81 @@ hr {
 	opacity:1;
 }
 
+/* Sports Broadcast 
+--------------------------------------------- */
+
+.event-overall{
+	font-family:"Porkys";
+	font-size: 32PX;
+	color: white;
+	padding-top:32px;
+	padding-bottom:32px;
+	text-shadow: 0px 4px 4px var(--shadow);
+}
+#tabs p{
+	font-size:1.5vh;
+}
+
+@media(min-width: 1400px){
+	#tabs p{
+		font-size:3vh;
+	}
+}
+.schedule-game span{
+	font-size: 2.5vw;
+}
+@media(max-width:772px){
+	.schedule-game span{
+		font-size: 3.5vw;
+	}
+}
+.game-date{
+	color: white;
+	font-family: "Europa Grotesk SH";
+	white-space: nowrap;
+}
+.game-time{
+	color: white;
+	font-family: "Europa Grotesk SH";
+	white-space: nowrap;
+}
+.game-location{
+	color: white;
+	font-family: "Europa Grotesk SH";
+	white-space: nowrap;
+}
+.game-result{
+	color: white;
+	font-family: "Europa Grotesk SH";
+	white-space: nowrap;
+}
+.sports-tab{
+	cursor: pointer;
+}
+
+.tab-pink{
+	color: var(--lpink);
+	text-shadow: 0px 2px 2px var(--shadow);
+}
+
+#tabs::-webkit-scrollbar{
+	width:4px;
+}
+#tabs::-webkit-scrollbar-track-piece{
+	background-color:#BCB9AC;
+	border-radius:10px;
+	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.5); 
+}
+#tabs::-webkit-scrollbar-button{
+	visibility:hidden;
+	height:0px;
+}
+#tabs::-webkit-scrollbar-thumb{
+	background-color:var(--yellow);
+	width:4px;
+	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.5); 
+	border-radius: 10px;
+}
 
 /* Blog Page
 --------------------------------------------- */

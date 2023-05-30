@@ -29,14 +29,34 @@
 	</div>
 </nav>
 
-<audio id="radioplayer" src="https://s4.radio.co/s2c33c7adb/listen" preload="auto" muted="true"></audio>
+<audio id="radioplayer" src="https://s4.radio.co/s2c33c7adb/listen" preload="auto" muted="true"></audio> <!-- Regular -->
+<audio id="sportsplayer" src="https://s4.radio.co/sdb5184873/listen" preload="auto" muted="true"></audio> <!-- Sports -->
+
 
 <?php if(is_page('home') || is_page('broadcast')) { ?>
 	<script type="text/javascript">
 			var player = document.getElementById('radioplayer');
 			var toggleButton = document.getElementById('radio-toggle');
-			var onAir = document.getElementById('nav-onair');
-			console.log(player);
+			function togglePlay(){
+				if(player.muted == true){
+					player.play();
+					player.muted = false;
+				}
+				else{
+					player.pause();
+					player.muted = true;
+				}
+				toggleButton.classList.toggle("pause-button");
+				toggleButton.classList.toggle("play-button");
+			}
+	</script>
+<?php } ?>
+
+<?php if(is_page('sports')) { ?>
+	<script type="text/javascript">
+			var player = document.getElementById('sportsplayer');
+			var toggleButton = document.getElementById('radio-toggle');
+
 			function togglePlay(){
 				if(player.muted == true){
 					player.play();

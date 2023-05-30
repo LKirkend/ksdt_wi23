@@ -10,7 +10,7 @@ const options = {
 fetch(url, options).then(res => res.text()).then(txt => console.log(txt)); // ...
 ```
 
-cd into this directory and run:
-npm install
+cd into this directory and run:\
+npm install\
 node index.js
 

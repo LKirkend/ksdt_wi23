@@ -49,7 +49,6 @@ foreach ($result['items'] as $show): ?>
     </div>
     <?php $count += 1; ?>
 <?php endforeach ?>
-
 <script>
     //Time difference is wonky for the whole week for some reason; I think it has to do with timezone issues
     //Whole week coverage is YYYY-MM-DD(i)T15:00:00-0700 -> YYYY-MM-DD(i+4)T07:00:00-0700

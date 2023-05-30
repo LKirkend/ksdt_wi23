@@ -55,8 +55,8 @@
                                     RADIO
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="http://localhost/wordpress/broadcast/" class="dropdown-item text-center">BROADCAST</a></li>
-                                    <li><a href="http://localhost/wordpress/broadcast/sports/" class="dropdown-item text-center">SPORTS</a></li>
+                                    <li><a href="<?php echo $url; ?>" class="dropdown-item text-center">BROADCAST</a></li>
+                                    <li><a href="<?php echo str_replace('broadcast','sports',$url); ?>" class="dropdown-item text-center">SPORTS</a></li>
                                 </ul>
                             </li>
                         <?php else : ?>

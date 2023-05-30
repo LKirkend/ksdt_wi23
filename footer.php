@@ -37,7 +37,6 @@
 	<script type="text/javascript">
 			var player = document.getElementById('radioplayer');
 			var toggleButton = document.getElementById('radio-toggle');
-
 			function togglePlay(){
 				if(player.muted == true){
 					player.play();

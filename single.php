@@ -77,13 +77,13 @@ get_header();
         </div>
     <?php } ?>
     <!-- Read more -->
-    <div class="row rainbox pt-3 pb-5 px-5" id="read-more-section">
+    <div class="row rainbox" id="read-more-section">
         <div class="row pb-5 pt-4 mx-auto mx-md-none d-inline text-lg-start text-center" id="read-more-title">
             <div class="col">
                 read more
             </div>
         </div>
-        <div class="row read-more-container">     
+        <div class="row px-5 pb-5 read-more-container">     
             <div class="col">      
                 <?php echo do_shortcode('[bdp_masonry effect=”effect-2″ grid="3" design="design1" limit="3" show_tags="false" pagination=”false” show_read_more="false" show_date="false" show_content="false"]');?>
             </div>

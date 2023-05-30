@@ -13,9 +13,11 @@ get_header();
 <div class="container-fluid px-sm-5 p-2" id="main-header">
     <!-- logo and play button -->
     <div class="row gx-md-5 mx-auto mw-100 pt-sm-5 px-xxl-5 mx-xxl-5" style="height: 480px">
+    <div class="row gx-md-5 mx-auto mw-100 pt-sm-5 px-xxl-5 mx-xxl-5" style="height: 480px">
         <div class="col-md py-2">
             <img class="d-flex mx-auto mx-lg-0" id="home-logo">
         </div>
+        <div class="col-md card mx-auto ms-lg-5 ms-sm-auto p-0 rainbox h-100" id="tune-in-box">
         <div class="col-md card mx-auto ms-lg-5 ms-sm-auto p-0 rainbox h-100" id="tune-in-box">
             <div class="row">
                 <div class="col">

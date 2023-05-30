@@ -858,14 +858,19 @@ textarea {
 	width:288px;
 	height:190px;
 }
+.right-arrow{
+	content:url("img/logos/right-arrow.svg");
+	width:77px;
+	height: 77px;
+}
 .rainbox{
 	box-sizing: border-box;
 	border-radius: 10px;
-	border: 3px solid transparent;
-	border-image: var(--rainbowborder);
-	background-origin: border-box;
-	background-clip: content-box, border-box;
-	border-image-slice: 1;
+	border: 3px solid transparent!important;
+	border-image: var(--rainbowborder)!important;
+	background-origin: border-box!important;
+	background-clip: content-box, border-box!important;
+	border-image-slice: 1!important;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .mw-fit{
@@ -1269,7 +1274,7 @@ textarea {
 }
 
 #scroll-sec{
-	padding-top:100px;
+	padding-top:450px;
 }
 #scroll-text{
 	font-family: 'Porkys';
@@ -1345,7 +1350,7 @@ textarea {
 /* Broadcast
 --------------------------------------------- */
 .my-7{
-	margin-top: 6em;
+	margin-top: 6em!important;
 	margin-bottom: 6em;
 }
 
@@ -1833,6 +1838,7 @@ figcaption{
 	font-family: "Porkys";
 	text-shadow: 0px 4px 4px var(--shadow);
 	white-space: nowrap;
+	color: white;
 }
 
 #contact-page h3{

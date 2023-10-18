@@ -6,7 +6,7 @@ const express = require('express'),
 app.use(bodyParser.json({}));
 
 app.all('*', function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "http://localhost");
+    res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Methods", "GET");
     res.header("Access-Control-Allow-Headers", req.header('access-control-request-headers'));
 
@@ -23,8 +23,8 @@ app.all('*', function (req, res, next) {
     }
 });
 
-app.set('port', process.env.PORT || 8080);
+app.set('port', process.env.PORT || 406);
 
-app.listen(app.get('port'), "127.0.0.1", function () {
+app.listen(app.get('port'), '127.0.0.1', function () {
     console.log('Proxy server listening on port ' + app.get('port'));
 });

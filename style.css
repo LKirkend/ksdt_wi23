@@ -1009,6 +1009,11 @@ textarea {
 	height: 47px;
 	width: 47px;
 }
+#yt-logo{
+	content:url("img/logos/yt.svg");
+	height: 47px;
+	width: 47px;
+}
 #twitter-logo{
 	content:url("img/logos/twitter.svg");
 	height: 47px;

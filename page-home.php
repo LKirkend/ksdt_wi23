@@ -10,7 +10,7 @@
 
 get_header();
 ?>
-<div class="container-fluid px-sm-5 p-2" id="main-header">
+<div class="container-fluid px-lg-5 p-2" id="main-header">
     <!-- logo and play button -->
     <div class="row gx-md-5 mx-auto mw-100 pt-sm-5 px-xxl-5 mx-xxl-5" style="height: 480px">
         <div class="col-md py-2">

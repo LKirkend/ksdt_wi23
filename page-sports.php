@@ -170,7 +170,8 @@ get_header();
      * @desc Helper function that separates entries in a sports schedule page 
      */
     async function sortSchedule(eventInd){
-        return await getTextData("http://localhost:8080/services/schedule_txt.ashx?schedule=" + eventUrls[eventInd]).then((event => {
+	console.log("Hitting local");
+        return await getTextData("http://localhost:406/services/schedule_txt.ashx?schedule=" + eventUrls[eventInd]).then((event => {
                 const entry = /[A-S][a-z]{2}\s[0-9]+.*/g;
                 const overall = /Overall\s*[0-9]+-[0-9]+/g;
                 const entries = Array.from(event.matchAll(entry), (m) => m[0]);

@@ -19,33 +19,12 @@ get_header();
 <div class="container-flex overflow-x-hidden">
     <div class="row mx-auto w-100 text-center px-2">
         <div class="col-md-8 order-md-1 order-5 mt-1 px-0 e-lg-5 my-2 mx-md-3 mt-sm-3 my-md-5 rainbox" style= "background: var(--transblack2);">
-            <h1 class="mt-3 mb-4">Sports Schedule</h1>
-            <div class="row overflow-x-auto w-100 mx-auto overflow-y-none flex-nowrap text-center gy-5" id="tabs">
-                <div class="col-3 col-sm-2 col-md sports-tab" onclick="changeSchedule(0)"> 
-                    <p id="tab-0" class="">Men's<br>Baseball</p>
-                </div>
-                <div class="col-3 col-sm-2 col-md sports-tab" onclick="changeSchedule(1)"> 
-                    <p id="tab-1" class="">Men's<br>Basketball</p>
-                </div>
-                <div class="col-3 col-sm-2 col-md sports-tab" onclick="changeSchedule(2)">  
-                    <p id="tab-2" class="">Women's<br>Basketball</p>
-                </div>
-                <div class="col-3 col-sm-2 col-md sports-tab" onclick="changeSchedule(3)"> 
-                    <p id="tab-3" class="">Men's<br>Volleyball</p>
-                </div>
-                <div class="col-3 col-sm-2 col-md sports-tab" onclick="changeSchedule(4)"> 
-                    <p id="tab-4" class="">Women's<br>Volleyball</p>
-                </div>
-                <div class="col-3 col-sm-2 col-md sports-tab" onclick="changeSchedule(5)"> 
-                    <p id="tab-5" class="">Men's<br>Soccer</p>
-                </div>
-                <div class="col-3 col-sm-2 col-md sports-tab" onclick="changeSchedule(6)"> 
-                    <p id="tab-6" class="">Women's<br>Soccer</p>
-                </div>
-            </div>
-            <div class="container-flex text-center mb-3" id="info" style="min-height:750px"></div> 
+            <div class="row mt-3 mb-2"><h1>Sports Schedule</h1></div>
+            <div class="row">
+                <div class="col mx-3 overflow-x-hidden"><?php echo do_shortcode('[table id=1 /]') ?></div>
+            </div> 
         </div>
-        <div class="col-md-3 order-md-5 order-1 rainbox px-0 mx-auto me-md-3 my-2 my-sm-3 my-md-5" style= "background: var(--transblack2); max-width:250px; max-height:285px;">
+        <div class="col-md-3 order-md-5 order-1 rainbox px-0 mx-auto me-md-3 my-2 my-sm-3 my-md-5" style= "background: var(--transblack2); max-width:600px; max-height:285px;">
             <div class="row">
                 <div class="col">
                     <h1>Listen</h1>

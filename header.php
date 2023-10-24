@@ -70,7 +70,7 @@
         </div>
     </nav>
     <section role="main" id="main-sec">
-    <script> 
+    <!-- <script> 
         // Loading 
         const imageUrl = "<?php echo get_stylesheet_directory_uri(); ?>" + "/img/gif/backgroundflip.gif";
         const bgElement = document.querySelector("body");
@@ -84,4 +84,4 @@
             preloaderImg = null;
         
         });
-    </script>
+    </script> -->

@@ -1305,6 +1305,9 @@ textarea {
 #insta-box{
 	background: var(--transblack1);
 }
+#yt-box{
+	background: var(--transblack1);
+}
 #welcome{
 	content:url("img/logos/home-welcomeksdt.svg");
 	height:102px;
@@ -1316,6 +1319,7 @@ textarea {
 	padding-bottom:2rem;
 	height:100%;
 }
+
 .insta-img-thumbnail{
 	transition: 0.3s;
 	cursor: pointer;

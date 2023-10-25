@@ -84,7 +84,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--black: #1a1717;
 	--hpink: #FD0C72;
 	--lpink: #fdd0e5;
-	--transblack1: rgba(26, 23, 23, 0.2);
+	--transblack1: rgba(49, 18, 18, 0.2);
 	--transblack2: rgba(26, 23, 23, 0.4);
 	--shadow: rgba(0, 0, 0, 0.25);
 	--rainbowborder: linear-gradient(to bottom, var(--orange), var(--yellow), white, var(--hpink));
@@ -1494,6 +1494,13 @@ textarea {
 	width:80%!important;
 	margin-left:30px;
 }
+#sched-cont{
+	background-color: var(--transblack2);
+}
+/* Overloading schedule widget */
+
+
+
 hr {
 	border: 2.5px dashed var(--cream);
 	background-color: rgba(0,0,0,0);

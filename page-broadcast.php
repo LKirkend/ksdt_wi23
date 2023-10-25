@@ -44,7 +44,7 @@ get_header();
 			</div>
 		</div>
 	</div>
-	<div class="row mb-5 w-100 mx-3 mx-md-2 mx-xxl-5 w-auto" id="sched-cont">
+	<div class="row mb-5 w-100 mx-3 mx-md-2 mx-xxl-5 mt-xxl-4 w-auto" id="sched-cont">
 		<div class="col rainbox">
 			<div class="row my-3">
 				<div class="col text-center"><h1>Schedule</h1></div>

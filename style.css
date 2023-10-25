@@ -1495,7 +1495,7 @@ textarea {
 	margin-left:30px;
 }
 #sched-cont{
-	background-color: var(--transblack2);
+	background-color: var(--transblack1);
 }
 /* Overloading schedule widget */
 

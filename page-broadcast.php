@@ -23,7 +23,9 @@ get_header();
 				<div class="row">
 					<div class="col">
 						<div id="spin-recent">
-							<?php include(__DIR__ . '/spinitron/widgets/recent-spins.php') ?>
+							<?php include __DIR__ . '/spinitron/widgets/recent-spins.php'; 
+							?>
+						
 						</div>
 					</div>
 				</div>
@@ -37,7 +39,25 @@ get_header();
 				<div class="row">
 					<div class="col">
 						<div id="spin-upcoming">
-							<?php include(__DIR__ . '/spinitron/widgets/upcoming-shows.php') ?>
+							<?php
+							//testing- it prints 
+							// $fileinfo = glob('../../../media/2022*');
+							// print_r($fileinfo);
+							?>
+							<form action="search.php">
+								<input type="text" name="Search" placeholder="Audio yyyy-mm-dd-hh">
+								<button type="submit">Search</button>
+							</form>
+						
+						<?php 
+							if(isset($_POST['submit-search'])) {
+								$search = mysqli_real_escape_string($conn, $_POST['Search']);
+								echo preg_match($search, '../../../media*');
+							}
+							?>
+							<?php include(__DIR__ . '/spinitron/widgets/upcoming-shows.php')
+							
+							?>
 						</div>
 					</div>
 				</div>

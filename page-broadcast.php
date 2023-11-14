@@ -44,7 +44,7 @@ get_header();
 							// $fileinfo = glob('../../../media/2022*');
 							// print_r($fileinfo);
 							?>
-							<form action="search.php">
+							<form action="search.php" method="POST">
 								<input type="text" name="Search" placeholder="Audio yyyy-mm-dd-hh">
 								<button type="submit">Search</button>
 							</form>

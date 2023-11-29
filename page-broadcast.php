@@ -41,19 +41,23 @@ get_header();
 						<div id="spin-upcoming">
 							<?php
 							//testing- it prints 
-							// $fileinfo = glob('../../../media/2022*');
-							// print_r($fileinfo);
+							 $fileinfo = glob('../../../media/*mp3');
+							 print_r($fileinfo);
 							?>
-							<form action="search.php" method="POST">
+							<form method="POST">
 								<input type="text" name="Search" placeholder="Audio yyyy-mm-dd-hh">
-								<button type="submit">Search</button>
+								<button type="submit" name="search-submit">Search</button>
 							</form>
 						
-						<?php 
-							if(isset($_POST['submit-search'])) {
-								$search = mysqli_real_escape_string($conn, $_POST['Search']);
-								echo preg_match($search, '../../../media*');
+							<!-- ---lists the files in archive database -->
+							<?php 
+							$mydb = new wpdb('root','yME3KiL8aFi944hZ7jn','archive','localhost');
+							$rows = $mydb->get_results("SELECT date FROM shows");
+							echo "<ul>";
+							foreach ($rows as $show) {
+							echo "<li>".$show->filepath."</li>";
 							}
+							echo "</ul>";
 							?>
 							<?php include(__DIR__ . '/spinitron/widgets/upcoming-shows.php')
 							
